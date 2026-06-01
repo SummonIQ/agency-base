@@ -1,3 +1,18 @@
+<!-- SUMMONIQ-OSS-HEADER:START -->
+<div align="center">
+
+  <h1>Agency Base</h1>
+  <p>A comprehensive agency management platform that helps agencies streamline their operations, manage clients, and grow their business. This application provides a powerful set of tools to m...</p>
+
+  <p>
+    <a href="https://github.com/SummonIQ/agency-base"><img alt="Repository" src="https://img.shields.io/badge/github-SummonIQ%2Fagency-base-24292f?logo=github"></a>
+    <a href="https://unlicense.org/"><img alt="License: Unlicense" src="https://img.shields.io/badge/license-Unlicense-blue.svg"></a>
+  </p>
+
+</div>
+
+---
+<!-- SUMMONIQ-OSS-HEADER:END -->
 # AgencyBase
 
 A comprehensive agency management platform that helps agencies streamline their operations, manage clients, and grow their business. This application provides a powerful set of tools to manage projects, track performance, and optimize agency workflows.
