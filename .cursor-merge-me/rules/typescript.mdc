@@ -1,0 +1,10 @@
+---
+description: 
+globs: *.tsx,*.ts,*.d.ts
+---
+# TypeScript Best Practices
+- Use TypeScript for all code
+- Prefer interfaces over types
+- Avoid enums; use const maps instead
+- Implement proper type safety and inference
+- Use `satisfies` operator for type validation

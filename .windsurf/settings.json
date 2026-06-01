@@ -1,0 +1,46 @@
+{
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[xml]": {
+    "editor.autoClosingBrackets": "never",
+    "editor.defaultFormatter": "redhat.vscode-xml",
+    "files.trimFinalNewlines": true
+  },
+  "biome.enabled": true,
+  "biome.lsp.trace.server": "messages",
+  "biome.requireConfiguration": true,
+  "css.customData": [".vscode/tailwind.json"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnSave": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "npm.packageManager": "bun",
+  "eslint.enable": true,
+  "eslint.nodePath": "/Users/steven/.nvm/versions/node/v22.14.0/bin/node",
+  "eslint.runtime": "/Users/steven/.nvm/versions/node/v22.14.0/bin/node",
+  "html.autoClosingTags": false,
+  "javascript.autoClosingTags": false,
+  "javascript.preferences.jsxAttributeCompletionStyle": "default",
+  "notebook.defaultFormatter": "biomejs.biome",
+  "terminal.integrated.tabs.defaultColor": null,
+  "typescript.autoClosingTags": false,
+  "typescript.format.indentSwitchCase": false,
+  "workbench.activityBar.location": "default",
+  "workbench.statusBar.visible": true
+}

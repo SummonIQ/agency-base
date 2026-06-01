@@ -1,0 +1,6 @@
+---
+description: Tailwind Best Practices and Helpers
+globs: *.tsx
+---
+# Tailwind CSS Best Practices
+- Follow responsive design principles: Utilize Tailwind CSS classes to ensure responsiveness across various screen sizes.

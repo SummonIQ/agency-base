@@ -1,0 +1,31 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "never",
+    "source.fixAll.biome": "always"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "eslint.runtime": "/Users/steven/.nvm/versions/node/v22.14.0/bin/node",
+  "typescript.format.indentSwitchCase": false,
+  "editor.insertSpaces": true,
+  "eslint.enable": true,
+  "biome.enabled": true,
+  // "terminal.integrated.tabs.defaultColor": null,
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  // Remove left-side icons
+  "workbench.activityBar.location": "default",
+  // Remove bottom status bar
+  "workbench.statusBar.visible": true,
+  // Remove position indicator in the editor's scrollbar
+  "editor.hideCursorInOverviewRuler": true,
+  // Remove minimap
+  "editor.minimap.enabled": false,
+  "html.autoClosingTags": false,
+  "javascript.autoClosingTags": false,
+  "typescript.autoClosingTags": false
+}

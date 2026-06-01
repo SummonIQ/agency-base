@@ -1,0 +1,1082 @@
+{
+  "search_metadata": {
+    "id": "678c6e39ef17462cf5580a45",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/02ba45c60efe416c/678c6e39ef17462cf5580a45.json",
+    "created_at": "2025-01-19 03:15:05 UTC",
+    "processed_at": "2025-01-19 03:15:05 UTC",
+    "google_jobs_url": "https://www.google.com/search?q=software+engineer&udm=8",
+    "raw_html_file": "https://serpapi.com/searches/02ba45c60efe416c/678c6e39ef17462cf5580a45.html",
+    "total_time_taken": 2.35
+  },
+  "search_parameters": {
+    "q": "software engineer",
+    "engine": "google_jobs",
+    "google_domain": "google.com"
+  },
+  "filters": [
+    {
+      "name": "Salary",
+      "parameters": {
+        "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dxrIacCNYNxMEPQSV4V72mvZKprkh-0JqrwZHF1kKFt7Ijqgqhq0I4e0Fv8DDYpZueFsuug4EltYTpwf11yNR6A_pdTxpMVNUyT5IZfst15_6HysLGPDfaF4uUeDrXdY_XtYpskgv2q4rMzMjOyvIAmRCIE0",
+        "q": "Software engineer salary"
+      },
+      "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=Software+engineer+salary&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dxrIacCNYNxMEPQSV4V72mvZKprkh-0JqrwZHF1kKFt7Ijqgqhq0I4e0Fv8DDYpZueFsuug4EltYTpwf11yNR6A_pdTxpMVNUyT5IZfst15_6HysLGPDfaF4uUeDrXdY_XtYpskgv2q4rMzMjOyvIAmRCIE0&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QxKsJegQIEBAB&ictx=0",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=Software+engineer+salary"
+    },
+    {
+      "name": "Remote",
+      "parameters": {
+        "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dhhNMlqf4oAwq9QU72Xgz0usNx6eZfs8HttJ7pPV3n_cHUzbmyUDLTe73y3kKtjecm-gmxrhpzpxgTfErLaiAyBFZu7154ZpM4IkmQcIY_VUxuo3CiuRNL_u6_E6fDUeZYhxJOEGZFExUhuCsZNf9CGKns_E",
+        "q": "software engineer remote"
+      },
+      "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+remote&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dhhNMlqf4oAwq9QU72Xgz0usNx6eZfs8HttJ7pPV3n_cHUzbmyUDLTe73y3kKtjecm-gmxrhpzpxgTfErLaiAyBFZu7154ZpM4IkmQcIY_VUxuo3CiuRNL_u6_E6fDUeZYhxJOEGZFExUhuCsZNf9CGKns_E&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QxKsJegQIERAB&ictx=0",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+remote"
+    },
+    {
+      "name": "Date posted",
+      "options": [
+        {
+          "name": "Yesterday",
+          "parameters": {
+            "uds": "ADvngMhIMFRilCNydd26jz9LbtMIejz1vwBrTeIvJFmFi-1dphkWhLPZwlPTvJ0pMs0O2LeSeD9bDzUJbK22LCGl7E_G2joi3blKMe-b72S-7Rx7LRAr4lHDIXBTxpkSVCHgGGAw_eI2kLhie0Qw9mEdeuCQaUvKUqDmEtcGCNNHEFhlEsBUi7TPC4fkqVCWbhsicnr5eJ2Xv_dq0rxc0uYNasTNwqNq44UUCAIS2BVhFcxcIZvvRVN_Jt4jYnEKST7GFpXKxJG5eXXvOHz6cZxbqurfXHNZPnAQo58Yv68pPZzz86InSSWJO7QYBcjbC-kLY1D24DCor1aFCOXcjXbkFkEEj1dAFg",
+            "q": "software engineer since yesterday"
+          },
+          "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+since+yesterday&uds=ADvngMhIMFRilCNydd26jz9LbtMIejz1vwBrTeIvJFmFi-1dphkWhLPZwlPTvJ0pMs0O2LeSeD9bDzUJbK22LCGl7E_G2joi3blKMe-b72S-7Rx7LRAr4lHDIXBTxpkSVCHgGGAw_eI2kLhie0Qw9mEdeuCQaUvKUqDmEtcGCNNHEFhlEsBUi7TPC4fkqVCWbhsicnr5eJ2Xv_dq0rxc0uYNasTNwqNq44UUCAIS2BVhFcxcIZvvRVN_Jt4jYnEKST7GFpXKxJG5eXXvOHz6cZxbqurfXHNZPnAQo58Yv68pPZzz86InSSWJO7QYBcjbC-kLY1D24DCor1aFCOXcjXbkFkEEj1dAFg&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QkbEKegQICxAD",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+since+yesterday"
+        },
+        {
+          "name": "Last 3 days",
+          "parameters": {
+            "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7d_8afgQLiqo3_9NMFkEhigtucYFw7wERGPsEogfeIFsVZcDQUAAkqde5D_h1ofRVFskM46_DbXAexxI-CcE5VwyBupBGkY9Nyi12QPPkstyh_7vRvDcKlPoYy2T6S3n3Rq4qKwPY0TZXwvdmew8n45NAWd3yafMLf5KjKYtFZVTcm-azJP_98p0ZNzQh2JSv7LwO9EpdAQPe0tW3xGQEr9naqjLpv4b2ZuR4XMsGzzD3mxLqrrTFdgiiGnXhfu8htTSun4T3_rUDQM9T4OBY6QVo2HuhMjBlaqLc1u7j7OoIn-KsC5DyZVCaAiFq7syUB5SwMzg",
+            "q": "software engineer in the last 3 days"
+          },
+          "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+in+the+last+3+days&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7d_8afgQLiqo3_9NMFkEhigtucYFw7wERGPsEogfeIFsVZcDQUAAkqde5D_h1ofRVFskM46_DbXAexxI-CcE5VwyBupBGkY9Nyi12QPPkstyh_7vRvDcKlPoYy2T6S3n3Rq4qKwPY0TZXwvdmew8n45NAWd3yafMLf5KjKYtFZVTcm-azJP_98p0ZNzQh2JSv7LwO9EpdAQPe0tW3xGQEr9naqjLpv4b2ZuR4XMsGzzD3mxLqrrTFdgiiGnXhfu8htTSun4T3_rUDQM9T4OBY6QVo2HuhMjBlaqLc1u7j7OoIn-KsC5DyZVCaAiFq7syUB5SwMzg&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QkbEKegQICxAE",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+in+the+last+3+days"
+        },
+        {
+          "name": "Last week",
+          "parameters": {
+            "uds": "ADvngMiOP4HOZ0X4JIzY0rRQVEUgA6PIUrJ1TFhu6w0ypDUwpSOFsTDZ1IdU9ifKjDsYHgTPdBkQ5A5PHDHDTm4yJtJ4raxt0CeGWs3JzUOEem60w_tMOwnQi5SSi7fxRu2U4vmlJ9w_YQCHV4l2YOvGoIqxxYVaatdmmCrEsAwPms1-j4bczy1O_Lj0qPDCYwLvjX0z1hsY1YcNwiZNsMRu1Q6n-KWAin0zxD1PoQ-7jaOQ9o2EtWyO3iTC7QFMRqlRVOYqfICwttrO-2gdCSjVf-qj2LWcWJzsI4Bjirna0VMusKhoR8jPlr-W46cROtH106dar-Bgm8fbeJw1KMP-rhh8L_D_IQ",
+            "q": "software engineer in the last week"
+          },
+          "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+in+the+last+week&uds=ADvngMiOP4HOZ0X4JIzY0rRQVEUgA6PIUrJ1TFhu6w0ypDUwpSOFsTDZ1IdU9ifKjDsYHgTPdBkQ5A5PHDHDTm4yJtJ4raxt0CeGWs3JzUOEem60w_tMOwnQi5SSi7fxRu2U4vmlJ9w_YQCHV4l2YOvGoIqxxYVaatdmmCrEsAwPms1-j4bczy1O_Lj0qPDCYwLvjX0z1hsY1YcNwiZNsMRu1Q6n-KWAin0zxD1PoQ-7jaOQ9o2EtWyO3iTC7QFMRqlRVOYqfICwttrO-2gdCSjVf-qj2LWcWJzsI4Bjirna0VMusKhoR8jPlr-W46cROtH106dar-Bgm8fbeJw1KMP-rhh8L_D_IQ&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QkbEKegQICxAF",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+in+the+last+week"
+        },
+        {
+          "name": "Last month",
+          "parameters": {
+            "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dGtr34N84RTr8F99yncwrVICFwJW6egGhtNMgS3Q0MWpNJxu-QxIMjywQEm425aLwvTHkksFyXC62lVCUvKWdR_rFydDjwYPXT5BvekD5gR14Q0iAvlADalPAZPmPz9vU3_yEpHChplNkwrRfMhNuNr1J3meLMluaRsBt4NvER8Cu9CksdaYsa1Tr0RtDs1syt4JPbelvkXjuLBSF7F4BFYipDA87JXlu2v7UiDh6nxkI_xw4PhN_zpPkresHu89WP9Z9jzLviIHSuuUiktCKMFx1eRsLtxuvDVRCxdG-kmk2tqjZQcvU1LEpP0vkHpZVOXt4_A",
+            "q": "software engineer in the last month"
+          },
+          "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+in+the+last+month&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dGtr34N84RTr8F99yncwrVICFwJW6egGhtNMgS3Q0MWpNJxu-QxIMjywQEm425aLwvTHkksFyXC62lVCUvKWdR_rFydDjwYPXT5BvekD5gR14Q0iAvlADalPAZPmPz9vU3_yEpHChplNkwrRfMhNuNr1J3meLMluaRsBt4NvER8Cu9CksdaYsa1Tr0RtDs1syt4JPbelvkXjuLBSF7F4BFYipDA87JXlu2v7UiDh6nxkI_xw4PhN_zpPkresHu89WP9Z9jzLviIHSuuUiktCKMFx1eRsLtxuvDVRCxdG-kmk2tqjZQcvU1LEpP0vkHpZVOXt4_A&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QkbEKegQICxAG",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+in+the+last+month"
+        }
+      ]
+    },
+    {
+      "name": "Job type",
+      "options": [
+        {
+          "name": "Full time",
+          "parameters": {
+            "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dAB8XqbJax8-hNEriuFcirlvXxS1Id1fpnAhNfgskYOdajPEjF5TTM0B8G3qhMzGPJw6RYaLQfyZ73MMXbrj_5dBTASUSzfg-ogCYEy4lZcEIaU4G-EWLBeA0B1waMKXXIx6fPKH4JM7AEY_964KpNBj0VitESpqjUnQv8X95eqc1jbLx1b3TxuXBW9VFH2sY7aiKx8KBw02WbKZp0jQiwmk5iORSmKCVukNzRap-Ktx9DBD5c4nLP1cvNrhoSUQbucJKTKac1u34kjTGK5l4iiSJk3A24V-9tQgxhErqQg-yJLQb",
+            "q": "software engineer full time"
+          },
+          "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+full+time&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dAB8XqbJax8-hNEriuFcirlvXxS1Id1fpnAhNfgskYOdajPEjF5TTM0B8G3qhMzGPJw6RYaLQfyZ73MMXbrj_5dBTASUSzfg-ogCYEy4lZcEIaU4G-EWLBeA0B1waMKXXIx6fPKH4JM7AEY_964KpNBj0VitESpqjUnQv8X95eqc1jbLx1b3TxuXBW9VFH2sY7aiKx8KBw02WbKZp0jQiwmk5iORSmKCVukNzRap-Ktx9DBD5c4nLP1cvNrhoSUQbucJKTKac1u34kjTGK5l4iiSJk3A24V-9tQgxhErqQg-yJLQb&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QkbEKegQIDBAD",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+full+time"
+        },
+        {
+          "name": "Part time",
+          "parameters": {
+            "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dAB8XqbJax8-hNEriuFcirlvXxS1Id1fpnAhNfgskYOeVyRNi4XZPrr8pLNSDrW8_0mi3cYJ5XEX_OpTIAfEbZ0VEQB053trOhXzWfiCw-LPs4KXuulHCLWu5BNjlW664dz-Je5v5yc2H7LmiUPYRJ9xXl24V_cBs9dEo86PTZEF6Rk4WpOIbCELdlJHefStJWqaWNhUXMtuD8flQWFvLvuTQ9uGzm_QI5JtSN064uOs_oNbWwi-f1BrG2gVIRpQ6alnHDCDyIhkfABjlLqwakEV2uQUYGyqIQfqb7MO1vhqcNOr6",
+            "q": "software engineer part time"
+          },
+          "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+part+time&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dAB8XqbJax8-hNEriuFcirlvXxS1Id1fpnAhNfgskYOeVyRNi4XZPrr8pLNSDrW8_0mi3cYJ5XEX_OpTIAfEbZ0VEQB053trOhXzWfiCw-LPs4KXuulHCLWu5BNjlW664dz-Je5v5yc2H7LmiUPYRJ9xXl24V_cBs9dEo86PTZEF6Rk4WpOIbCELdlJHefStJWqaWNhUXMtuD8flQWFvLvuTQ9uGzm_QI5JtSN064uOs_oNbWwi-f1BrG2gVIRpQ6alnHDCDyIhkfABjlLqwakEV2uQUYGyqIQfqb7MO1vhqcNOr6&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QkbEKegQIDBAE",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+part+time"
+        },
+        {
+          "name": "Contract",
+          "parameters": {
+            "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7drUyIhu2hXbXZDIXr21I5lipmt3oHmirLELDr9LbknS73eemfcVCqEvwRmezFeKSSxybjNrvAYTaVSoCi-N-oIH01IXCoUfyNZ8akYiCE32OeNM1-YyrPAVWQvuArNT31kVigYdFXQ01Sp9o8q697HCx8x4kXs8shesQeFcDKQ6ioFy81RSKg-BII7wT3GM5iR0LpawBA9-XJ9jFVG8jOZuZNJzp2kpP1aDNaLzvgLhVODtRd1hp3sRd1VMYFqATpfycUtDIrR9CFT-6v7K_r_41jl3QZE5UY08X9OWYpZwEC9Soo",
+            "q": "software engineer contract"
+          },
+          "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+contract&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7drUyIhu2hXbXZDIXr21I5lipmt3oHmirLELDr9LbknS73eemfcVCqEvwRmezFeKSSxybjNrvAYTaVSoCi-N-oIH01IXCoUfyNZ8akYiCE32OeNM1-YyrPAVWQvuArNT31kVigYdFXQ01Sp9o8q697HCx8x4kXs8shesQeFcDKQ6ioFy81RSKg-BII7wT3GM5iR0LpawBA9-XJ9jFVG8jOZuZNJzp2kpP1aDNaLzvgLhVODtRd1hp3sRd1VMYFqATpfycUtDIrR9CFT-6v7K_r_41jl3QZE5UY08X9OWYpZwEC9Soo&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QkbEKegQIDBAF",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+contract"
+        },
+        {
+          "name": "Internship",
+          "parameters": {
+            "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dF0wXJIzXxUciGCnpiPe4sZm9qMbQ-DVwH8zrrZxu2TvSxNLvkDyQxgNzqUOoV8mGp0799Dw2nl9y6ge_KZLMl8fwMSY1K9Xj2ZuQPza9yQ41WR0fNlRJnAxRvZNuReKcYG8Msruu5w5SOmD0c-C1937MCsMdgjZa3FpQ1TiB-qGg2nHpOQMI2VkqYgX0o4ZyPSd2jL8vaTXaO2byncgOIazXIEhvIWDkaaOBsOS7dYJsleIAB2-84T3XI50iPcGhMSeD7cpWNyUiJ85Y_r5ZZ-CdR1QCOIdQ2kEVp5H4FtLmmAYD",
+            "q": "software engineer internship"
+          },
+          "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+internship&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dF0wXJIzXxUciGCnpiPe4sZm9qMbQ-DVwH8zrrZxu2TvSxNLvkDyQxgNzqUOoV8mGp0799Dw2nl9y6ge_KZLMl8fwMSY1K9Xj2ZuQPza9yQ41WR0fNlRJnAxRvZNuReKcYG8Msruu5w5SOmD0c-C1937MCsMdgjZa3FpQ1TiB-qGg2nHpOQMI2VkqYgX0o4ZyPSd2jL8vaTXaO2byncgOIazXIEhvIWDkaaOBsOS7dYJsleIAB2-84T3XI50iPcGhMSeD7cpWNyUiJ85Y_r5ZZ-CdR1QCOIdQ2kEVp5H4FtLmmAYD&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QkbEKegQIDBAG",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+internship"
+        }
+      ]
+    },
+    {
+      "name": "No degree",
+      "parameters": {
+        "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dIWrK_48v1T90KhIAhdhQxlJdnB0Md7r68TCgZ9E5gI5bKamWx0XlfDlRwO4EFFmtB4AdF2BG_fsuyO7g-QZf2qkPgZER3xXdXGUzFE28JpZLB3h5ZJ8c6l6njMtF6FTpcp5XASAztiogrbjrTuONU2F3VQ0",
+        "q": "software engineer no degree"
+      },
+      "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=software+engineer+no+degree&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dIWrK_48v1T90KhIAhdhQxlJdnB0Md7r68TCgZ9E5gI5bKamWx0XlfDlRwO4EFFmtB4AdF2BG_fsuyO7g-QZf2qkPgZER3xXdXGUzFE28JpZLB3h5ZJ8c6l6njMtF6FTpcp5XASAztiogrbjrTuONU2F3VQ0&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QxKsJegQIDRAB&ictx=0",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=software+engineer+no+degree"
+    },
+    {
+      "name": "Degree",
+      "parameters": {
+        "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dxrIacCNYNxMEPQSV4V72mvZKprkh-0JqrwZHF1kKFt7Rwx3mVrQzomeIn5DAdJAbf4qaFJsNV4WJhpq05m_1wkZxN8-Hk6korz56D-pSls_ISaYkeKmvRt-5g3rbMNCGgXBFqVAfRyjv3u5FnKFg7rpR4z0",
+        "q": "Software engineer degree"
+      },
+      "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=Software+engineer+degree&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dxrIacCNYNxMEPQSV4V72mvZKprkh-0JqrwZHF1kKFt7Rwx3mVrQzomeIn5DAdJAbf4qaFJsNV4WJhpq05m_1wkZxN8-Hk6korz56D-pSls_ISaYkeKmvRt-5g3rbMNCGgXBFqVAfRyjv3u5FnKFg7rpR4z0&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QxKsJegQIJRAB&ictx=0",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=Software+engineer+degree"
+    },
+    {
+      "name": "Course",
+      "parameters": {
+        "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dxrIacCNYNxMEPQSV4V72mvZKprkh-0JqrwZHF1kKFt6YPcOwAhPSqLn9dClsQtS3bQdDOg2hscqQK2S8jDnqc7RzSYwk99Y90smPv3Bv4djEJCElW-PONuJIYOmKzCbBpjjvQctPhhDypwp8O1-YyPsxQUE",
+        "q": "Software engineer course"
+      },
+      "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=Software+engineer+course&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dxrIacCNYNxMEPQSV4V72mvZKprkh-0JqrwZHF1kKFt6YPcOwAhPSqLn9dClsQtS3bQdDOg2hscqQK2S8jDnqc7RzSYwk99Y90smPv3Bv4djEJCElW-PONuJIYOmKzCbBpjjvQctPhhDypwp8O1-YyPsxQUE&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QxKsJegQIJxAB&ictx=0",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=Software+engineer+course"
+    },
+    {
+      "name": "Job description",
+      "parameters": {
+        "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7drlQNXJ_q6WhUnfcnlFQAOTzuS7qJ2o4g-mkR0b5ldPkDIX2vQYWdaBVJKJau0jmY3qpmGfmN5l0JM-VcrGEooulCfh_8WlVjUW_U7BgKzQ-StKwneXe7HNbOa2zBVjx4lHA68dY6ksNwjaAZnt3x9gnDwCU",
+        "q": "Software engineer job description"
+      },
+      "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=Software+engineer+job+description&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7drlQNXJ_q6WhUnfcnlFQAOTzuS7qJ2o4g-mkR0b5ldPkDIX2vQYWdaBVJKJau0jmY3qpmGfmN5l0JM-VcrGEooulCfh_8WlVjUW_U7BgKzQ-StKwneXe7HNbOa2zBVjx4lHA68dY6ksNwjaAZnt3x9gnDwCU&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QxKsJegQIJBAB&ictx=0",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=Software+engineer+job+description"
+    },
+    {
+      "name": "Certification",
+      "parameters": {
+        "uds": "ADvngMjcH0KdF7qGWtwTBrP0nt7dnnkVFoy2MOQDV5TwvgCOtkPmE5ILCWSF09wvaM0lINbweOlZSoS41uTcHW1QiC1zhWgHNBLo10xXY6nKkoX7_MrgXG8CX5dvbbovMQoK_L_p-FLfIaNAICMXiOvnsFO3eBvcwuUcD0hWNbEdHbwJIi0O1Xg",
+        "q": "Software engineer certification"
+      },
+      "link": "https://www.google.com/search?sca_esv=f0954a09cd36ddc6&q=Software+engineer+certification&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dnnkVFoy2MOQDV5TwvgCOtkPmE5ILCWSF09wvaM0lINbweOlZSoS41uTcHW1QiC1zhWgHNBLo10xXY6nKkoX7_MrgXG8CX5dvbbovMQoK_L_p-FLfIaNAICMXiOvnsFO3eBvcwuUcD0hWNbEdHbwJIi0O1Xg&udm=8&sa=X&ved=2ahUKEwipkpro6ICLAxUHVTABHcIiLR0QxKsJegQIJhAB&ictx=0",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&q=Software+engineer+certification"
+    }
+  ],
+  "jobs_results": [
+    {
+      "title": "Software Engineer",
+      "company_name": "Anduril Industries",
+      "location": "Costa Mesa, CA",
+      "via": "Indeed",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=o6SdhiYIslvymh3uAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXMsQrCMBCAYVz7CE43OIhoIoKLnUoRUXDyAUpazyQS70LuxL6E72xd_n_7qu-sWt74oR9XEI7kIyEW2MCFexB0ZQjABCdmn3BeB9UsB2tFkvGiTuNgBn5ZJux5tE_u5Z9OwsTl5BS73X47mkx-tWjo_i4xwXm6aIkoEAlanhy4org1tM0PKFQZZpAAAAA&shmds=v1_AUFQtOPg71NCzJQhfpddFFy9krHIxwAGSqSKwstI_UJ_i0Q2fA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=o6SdhiYIslvymh3uAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/678c6e39ef17462cf5580a45/images/a54ed6275f0d35a9389b495a30745404cee37129f103b34306efcdfd86e4bdad.jpeg",
+      "extensions": [
+        "5 days ago",
+        "138K–207K a year",
+        "Full-time",
+        "Paid time off",
+        "Dental insurance",
+        "Health insurance"
+      ],
+      "detected_extensions": {
+        "posted_at": "5 days ago",
+        "salary": "138K–207K a year",
+        "schedule_type": "Full-time",
+        "paid_time_off": true,
+        "dental_coverage": true,
+        "health_insurance": true
+      },
+      "description": "Anduril Industries is a defense technology company with a mission to transform U.S. and allied military capabilities with advanced technology. By bringing the expertise, technology, and business model of the 21st century's most innovative companies to the defense industry, Anduril is changing how military systems are designed, built and sold. Anduril's family of systems is powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center. As the world enters an era of strategic competition, Anduril is committed to bringing cutting-edge autonomy, AI, computer vision, sensor fusion, and networking technology to the military in months, not years.\n\nThe Forge team at Anduril is responsible for the development and maintenance of our in-house supply chain, manufacturing, and deployment mission execution software. This platform is critical in supporting our operations and ensuring that we can rapidly and effectively meet our defense objectives.\n\nAs a Software Engineer on the Forge team you will be architecting and implementing mission-critical applications that enforce lean business process, add multiplicative leverage to Anduril employees, and scale Anduril into a next-generation defense prime. Your contributions will directly influence our present and future success. We are looking for a developer that has a knack for quickly understanding distributed systems and creates features that will drive bottom-line value for the business.\n\nWHAT YOU'LL DO\n• * Work in a mini-startup environment to create elegant SaaS or on-premise solutions that outperform existing market offerings\n• Work with a high-functioning team of developers with an emphasis on finishing business-critical projects\n• Write high-quality code that enhances the performance, scalability, and reliability of the Forge platform\n• Engage in code reviews, architectural discussions, and discussions to continuously improve our systems\n• Provide technical support for Forge users and troubleshoot issues as they arise\n• Have an area of deep expertise in a portion of the full stack (i.e. backend, frontend, integration)\n• Automate company operations to drive bottom-line dollar savings\n\nREQUIRED QUALIFICATIONS\n• * 5+ years of experience in a software engineering role building products, ideally in a fast-paced environment\n• Degree in Computer Science, Information Systems, Electrical Engineering or related technical degree\n• Experience working with large enterprise applications and platforms with high availability requirements\n• Proficiency with web-based technologies such as Javascript, React, Typescript, and web frameworks such as Remix or NextJS\n• Ability to empathize with end-users, to turn needs into features, and to balance user experience with engineering constraints\n• U.S. Person status is required as this position needs to access export controlled data\n\nPREFERRED QUALIFICATIONS\n• * We encourage people from all backgrounds to apply but our tech stack uses AWS, Typescript, and React/Remix so familiarity with all of these tools and languages would be useful\n• Experience in hyper growth startup-like environments, with demonstrated successes in scaling and maturing software development processes, team culture and methods, and ability to balance short-term and long-term trade offs\n• Previous experience with supply chain, manufacturing, or related enterprise software is a plus\n• Eligible to obtain and maintain a U.S. TS clearance\n\nThe salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only. Actual salary offer may vary based on (but not limited to) work experience, education and/or training, critical skills, and/or business considerations. Highly competitive equity grants are included in the majority of full time offers; and are considered part of Anduril's total compensation package. Additionally, Anduril offers top-tier benefits for full-time employees, including:\n• Platinum Healthcare Benefits: For U.S. roles, we offer top tier platinum coverage (medical, dental, vision) that are 100% covered by Anduril for you and 90% covered for your dependents.\n• For UK roles, Private Medical Insurance (PMI): Anduril will cover the full cost of the insurance premium for an employee and dependents.\n• For AUS roles, Private health plan through Bupa: Coverage is fully subsidized by Anduril.\n• Basic Life/AD&D and long-term disability insurance 100% covered by Anduril, plus the option to purchase additional life insurance for you and your dependents.\n• Extremely generous company holiday calendar including a holiday hiatus in December, and highly competitive PTO plans.\n• 16 weeks of paid Caregiver & Wellness Leave to care for a family member, bond with your baby, or tend to your own medical condition.\n• Family Planning & Parenting Support: Fertility (eg, IVF, preservation), adoption, and gestational carrier coverage with additional benefits and resources to provide support from planning to parenting.\n• Mental Health Resources: We provide free mental health resources 24/7 including therapy, life coaching, and more. Additional work-life services, such as free legal and financial support, available to you as well.\n• A professional development stipend is available to all Andurilians.\n• Daily Meals and Provisions: For many of our offices this means breakfast, lunch and fully stocked micro-kitchens.\n• Company-funded commuter benefits available based on your region.\n• Relocation assistance (depending on role eligibility).\n• 401(k) retirement savings plan - both a traditional and Roth 401(k). (US roles only)\n\nThe recruiter assigned to this role can share more information about the specific compensation and benefit details associated with this role during the hiring process.\n\nAnduril is an equal-opportunity employer committed to creating a diverse and inclusive workplace. The Anduril team is made up of incredibly talented and unique individuals, who together are disrupting industry norms by creating new paths towards the future of defense technology. All qualified applicants will be treated with respect and receive equal consideration for employment without regard to race, color, creed, religion, sex, gender identity, sexual orientation, national origin, disability, uniform service, Veteran status, age, or any other protected characteristic per federal, state, or local law, including those with a criminal history, in a manner consistent with the requirements of applicable state and local laws, including the CA Fair Chance Initiative for Hiring Ordinance. We actively encourage members of recognized minorities, women, Veterans, and those with disabilities to apply, and we work to create a welcoming and supportive environment for all applicants throughout the interview process. If you are someone passionate about working on problems that have a real-world impact, we'd love to hear from you!\n\nTo view Anduril's candidate data privacy policy, please visit https://anduril.com/applicant-privacy-notice/.",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "5+ years of experience in a software engineering role building products, ideally in a fast-paced environment",
+            "Degree in Computer Science, Information Systems, Electrical Engineering or related technical degree",
+            "Experience working with large enterprise applications and platforms with high availability requirements",
+            "Proficiency with web-based technologies such as Javascript, React, Typescript, and web frameworks such as Remix or NextJS",
+            "Ability to empathize with end-users, to turn needs into features, and to balance user experience with engineering constraints",
+            "U.S. Person status is required as this position needs to access export controlled data"
+          ]
+        },
+        {
+          "title": "Benefits",
+          "items": [
+            "The salary range for this role is an estimate based on a wide range of compensation factors, inclusive of base salary only",
+            "Actual salary offer may vary based on (but not limited to) work experience, education and/or training, critical skills, and/or business considerations",
+            "Highly competitive equity grants are included in the majority of full time offers; and are considered part of Anduril's total compensation package",
+            "Additionally, Anduril offers top-tier benefits for full-time employees, including:",
+            "Platinum Healthcare Benefits: For U.S. roles, we offer top tier platinum coverage (medical, dental, vision) that are 100% covered by Anduril for you and 90% covered for your dependents",
+            "For UK roles, Private Medical Insurance (PMI): Anduril will cover the full cost of the insurance premium for an employee and dependents",
+            "For AUS roles, Private health plan through Bupa: Coverage is fully subsidized by Anduril",
+            "Basic Life/AD&D and long-term disability insurance 100% covered by Anduril, plus the option to purchase additional life insurance for you and your dependents",
+            "Extremely generous company holiday calendar including a holiday hiatus in December, and highly competitive PTO plans",
+            "16 weeks of paid Caregiver & Wellness Leave to care for a family member, bond with your baby, or tend to your own medical condition",
+            "Family Planning & Parenting Support: Fertility (eg, IVF, preservation), adoption, and gestational carrier coverage with additional benefits and resources to provide support from planning to parenting",
+            "Mental Health Resources: We provide free mental health resources 24/7 including therapy, life coaching, and more",
+            "Additional work-life services, such as free legal and financial support, available to you as well",
+            "A professional development stipend is available to all Andurilians",
+            "Daily Meals and Provisions: For many of our offices this means breakfast, lunch and fully stocked micro-kitchens",
+            "Company-funded commuter benefits available based on your region",
+            "Relocation assistance (depending on role eligibility)",
+            "401(k) retirement savings plan - both a traditional and Roth 401(k). (US roles only)"
+          ]
+        },
+        {
+          "title": "Responsibilities",
+          "items": [
+            "As a Software Engineer on the Forge team you will be architecting and implementing mission-critical applications that enforce lean business process, add multiplicative leverage to Anduril employees, and scale Anduril into a next-generation defense prime",
+            "Work in a mini-startup environment to create elegant SaaS or on-premise solutions that outperform existing market offerings",
+            "Work with a high-functioning team of developers with an emphasis on finishing business-critical projects",
+            "Write high-quality code that enhances the performance, scalability, and reliability of the Forge platform",
+            "Engage in code reviews, architectural discussions, and discussions to continuously improve our systems",
+            "Provide technical support for Forge users and troubleshoot issues as they arise",
+            "Have an area of deep expertise in a portion of the full stack (i.e. backend, frontend, integration)",
+            "Automate company operations to drive bottom-line dollar savings"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "Indeed",
+          "link": "https://www.indeed.com/viewjob?jk=ce1036519ad621ff&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://www.linkedin.com/jobs/view/software-engineer-at-anduril-industries-4125059338?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Salary.com",
+          "link": "https://www.salary.com/job/elite/software-engineer/j202208230021043888730?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Built In",
+          "link": "https://builtin.com/job/software-engineer/3799397?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Careers - BlueWing Ventures",
+          "link": "https://careers.bluewing.vc/companies/anduril/jobs/44754584-software-engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jobs - Space Talent",
+          "link": "https://jobs.spacetalent.org/companies/anduril/jobs/44754584-software-engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Long Journey Ventures",
+          "link": "https://jobs.longjourney.vc/companies/anduril/jobs/44623997-software-engineer-wms?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Ladders",
+          "link": "https://www.theladders.com/job/software-engineer-anduril-costa-mesa-ca_78180115?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlciIsImNvbXBhbnlfbmFtZSI6IkFuZHVyaWwgSW5kdXN0cmllcyIsImFkZHJlc3NfY2l0eSI6IkNvc3RhIE1lc2EsIENBIiwiaHRpZG9jaWQiOiJvNlNkaGlZSXNsdnltaDN1QUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Senior Software Engineer (Backend)",
+      "company_name": "Autopilot",
+      "location": "Irvine, CA",
+      "via": "LinkedIn",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=wJ6xChTcld6zfWaAAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXNsQ4BQRCA4WjvBSSqKRFuRaJAdUSE9h5A9tbYW9bMZmdwr-GNneYvv7_4Dop1jRQ4Q803_diMcCAfCDHDeGfdA-k6gTmcuQFBm10LTHBk9hFH21Y1ycYYkVh6UavBlY6fhgkb7sydG_nnIm0Pp2gVL8vVoisT-emweimnEFkhEJzyu5_OYF_9ABLn-HWUAAAA&shmds=v1_AUFQtOPGp2gK6P3PGRjDyI9ZmCLMP8ubNAhtTly_n-5hbnSFRA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=wJ6xChTcld6zfWaAAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/678c6e39ef17462cf5580a45/images/a54ed6275f0d35a97b327ac8e665a221dee3a7672278d2b97a1a274b14186516.jpeg",
+      "extensions": [
+        "3 days ago",
+        "160K–205K a year",
+        "Full-time",
+        "No degree mentioned",
+        "Health insurance",
+        "Dental insurance",
+        "Paid time off"
+      ],
+      "detected_extensions": {
+        "posted_at": "3 days ago",
+        "salary": "160K–205K a year",
+        "schedule_type": "Full-time",
+        "qualifications": "No degree mentioned",
+        "health_insurance": true,
+        "dental_coverage": true,
+        "paid_time_off": true
+      },
+      "description": "• Location*\n• Irvine, CA (Main Office in Irvine Spectrum, 5 days on-site, flexible hours)\n\nAbout Autopilot\n\nAutopilot is a cutting-edge registered investment advisor (RIA) revolutionizing how people invest.\n\nWe are a Seed Stage startup backed by Craft Ventures, a renowned investor with a track record of backing industry-leading companies like Airbnb, Lyft, Affirm, Palantir, Postmates, Reddit, Slack, SpaceX, and Replit.\n\nOur mission is twofold:\n• To bring the best investing experience to our customers, with a focus on convenience, excitement, and responsibility.\n• To decrease corruption in financial institutions by instilling transparency into everything we create.\n\nAs one of the fastest-growing startups of 2023-2024, Autopilot is ranked among the Top 50 Most Downloaded Finance Apps. With over $500M in assets under management (AUM) and a rapidly growing community of 61,000+ subscribers, Autopilot is quickly becoming a leader in fintech. We connect to the largest financial brokerages in the U.S., delivering cutting-edge trading tools inspired by market icons such as Nancy Pelosi, Jim Cramer, Warren Buffett, and Bill Ackman, as well as innovative pilots like Quiver Quantitative and Liquidity Tracker.\n\nThe Opportunity\n\nWe’re seeking a Senior Software Engineer (Backend) to join our talented engineering team. In this role, you’ll work closely with our founders and cross-functional teams to drive technical excellence, build scalable systems, and contribute directly to shaping the future of investing. This is a hands-on, highly impactful role in a fast-paced, engineering- and product-focused company.\n\nWhat You'll Do\n• Design, build, and maintain robust backend systems that power our trading platform and integrate with major U.S. brokerages.\n• Lead the development of our pilot portal, enabling seamless user interactions for data input, persistence, and broker integration.\n• Reverse-engineer undocumented APIs and implement distributed systems that scale as we grow.\n• Collaborate with frontend engineers, product managers, and cross-functional teams to deliver high-quality, user-centric solutions.\n• Drive impact in a hands-on capacity, directly contributing to a rapidly growing and innovative company.\n\nQualifications\n• 3-6+ years of professional experience as a backend engineer, ideally in a fast-paced startup environment.\n• Strong proficiency in TypeScript for backend development.\n• Experience with Google Cloud Platform (GCP) or similar cloud infrastructure.\n• Expertise in distributed systems, API integration, and cloud-hosted applications.\n• Proven track record of building and scaling backend systems to support rapid growth.\n\nPreferred Qualifications\n• Experience in Fintech, particularly with integrations involving platforms like Robinhood, Stripe, Plaid, or similar platforms/apps.\n• Familiarity with AWS, GCP, or other cloud infrastructure.\n• Passion for building user-centered solutions and delivering impact.\n• A self-starter mentality with strong ownership and problem-solving skills.\n\nCompensation & Benefits\n• Compensation: $160,000 - $205,000 base salary + bonus + equity. Compensation varies depending on location, interview performance, and leveling.\n• Benefits: Generous UNLIMITED PTO (and we mean it!).\n• Mandated two-week holiday shutdown at the end of the year for Christmas and New Year’s + company holidays.\n• Autopilot covers 99% of premiums for employee and dependent benefits (health, dental, vision).\n• Top-of-the-line equipment: laptops, external monitors, standing desks, etc.\n• Access to a beautiful WeWork office in Irvine Spectrum:\n• Free monthly/paid parking pass.\n• Onsite gym.\n• Shared communal space with other thriving companies and startups.\n• Walkable access to a variety of restaurants and amenities.\n\nWhy Join Autopilot?\n\nAt Autopilot, we’re building a fast-paced, engineering-driven culture where you’ll work directly with our founders and team members to make an immediate impact. This is an opportunity to shape the future of finance while working hands-on with a talented, collaborative group of innovators.\n\nIf you’re passionate about scaling backend systems, solving complex technical challenges, and being part of a growing, product-first company, we’d love to hear from you.\n\nApply now and join us in shaping the future of finance!",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "3-6+ years of professional experience as a backend engineer, ideally in a fast-paced startup environment",
+            "Strong proficiency in TypeScript for backend development",
+            "Experience with Google Cloud Platform (GCP) or similar cloud infrastructure",
+            "Expertise in distributed systems, API integration, and cloud-hosted applications",
+            "Proven track record of building and scaling backend systems to support rapid growth"
+          ]
+        },
+        {
+          "title": "Benefits",
+          "items": [
+            "Compensation & Benefits",
+            "Compensation: $160,000 - $205,000 base salary + bonus + equity",
+            "Compensation varies depending on location, interview performance, and leveling",
+            "Benefits: Generous UNLIMITED PTO (and we mean it!)",
+            "Mandated two-week holiday shutdown at the end of the year for Christmas and New Year’s + company holidays",
+            "Autopilot covers 99% of premiums for employee and dependent benefits (health, dental, vision)",
+            "Top-of-the-line equipment: laptops, external monitors, standing desks, etc",
+            "Free monthly/paid parking pass",
+            "Onsite gym"
+          ]
+        },
+        {
+          "title": "Responsibilities",
+          "items": [
+            "To bring the best investing experience to our customers, with a focus on convenience, excitement, and responsibility",
+            "Design, build, and maintain robust backend systems that power our trading platform and integrate with major U.S. brokerages",
+            "Lead the development of our pilot portal, enabling seamless user interactions for data input, persistence, and broker integration",
+            "Reverse-engineer undocumented APIs and implement distributed systems that scale as we grow",
+            "Collaborate with frontend engineers, product managers, and cross-functional teams to deliver high-quality, user-centric solutions",
+            "Drive impact in a hands-on capacity, directly contributing to a rapidly growing and innovative company"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "LinkedIn",
+          "link": "https://www.linkedin.com/jobs/view/senior-software-engineer-backend-at-autopilot-4124191779?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTZW5pb3IgU29mdHdhcmUgRW5naW5lZXIgKEJhY2tlbmQpIiwiY29tcGFueV9uYW1lIjoiQXV0b3BpbG90IiwiYWRkcmVzc19jaXR5IjoiSXJ2aW5lLCBDQSIsImh0aWRvY2lkIjoid0o2eENoVGNsZDZ6ZldhQUFBQUFBQT09In0="
+    },
+    {
+      "title": "Software Engineer, Computer Vision",
+      "company_name": "SpaceX",
+      "location": "Hawthorne, CA",
+      "via": "Space Crew",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=4M6hG7JpihtancW0AAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xWNsQrCMBBAce0PCE43iyYiOKiTiCiuBXEraTiTSHsXciftb_jH1uXBW96rvrNqX_NLB1cQLhQSIZYVnLnPH8UCjySJCdZw5xYEXfERJr8yhw4Xx6ia5WCtSGeCqNPkjefeMmHLo31zK380Eqd-7pxis91tRpMpLOd1dh6fkAhubtDIhXA6n34I1qMQlAAAAA&shmds=v1_AUFQtOO24mI2S5P3EuiYvaEG9aBeqAu1PeiuTG0xGEjbTWKepA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=4M6hG7JpihtancW0AAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/678c6e39ef17462cf5580a45/images/a54ed6275f0d35a91e4bc0dd5e2342d406b93c73f8ed74249e6cb4a7114c05ff.png",
+      "extensions": [
+        "20 hours ago",
+        "120K–170K a year",
+        "Full-time",
+        "Health insurance",
+        "Dental insurance",
+        "Paid time off"
+      ],
+      "detected_extensions": {
+        "posted_at": "20 hours ago",
+        "salary": "120K–170K a year",
+        "schedule_type": "Full-time",
+        "health_insurance": true,
+        "dental_coverage": true,
+        "paid_time_off": true
+      },
+      "description": "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not. Today SpaceX is actively developing the technologies to make this possible, with the ultimate goal of enabling human life on Mars.\n\nSOFTWARE ENGINEER, COMPUTER VISION\n\nWe are looking for good people and driven, adaptable, resilient software engineers with experience developing software to accelerate quality, speed, and efficiency of manufacturing processes at SpaceX.\n\nOur team is building out the next generation of in-process monitoring tools for SpaceX as we develop the Starship, Raptor and Starlink programs while scaling up the Falcon and Dragon programs. We have the unique opportunity to work across all programs at SpaceX and be impactful to them all. Our team consists of engineers developing best in class in process monitoring solutions for data collection and automated analysis. We use statistical analysis, automated defect recognition, and machine learning to support and expedite the company’s manufacturing rate and quality goals. We also develop reliable, scalable, and efficient numerical analysis solvers to support these processes via simulation.\n\nRESPONSIBILITIES:\n• Develop and own process monitoring software for a variety of SpaceX production locations and programs\n• Develop automated defect recognition computer vision models for manufacturing\n• Design and write the software to connect hardware and tooling to process monitoring systems\n• Work with data pipelines from production line to web application interfaces\n• Work closely with simulation and machine learning experts to link model outputs to process inputs\n• Deep dive into your users’ problems to find and create efficient solutions\n• Work closely with our production engineers and technicians to provide the best first principles solution to their needs\n• Participate in, or lead design reviews with peers and stakeholders to decide amongst available technologies\n• Review code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency\n\nBASIC QUALIFICATIONS:\n• Bachelor's degree in computer science, engineering, math, or engineering discipline; OR 2+ years of professional experience in software development in lieu of a degree\n• Development experience in Python, C++, or C#\n\nPREFERRED SKILLS AND EXPERIENCE:\n• Experience in Python, C++, C# or similar object-oriented language\n• Experience in computer vision libraries such as OpenCV and CUDA\n• Experience with machine learning operations in production with tools like MLFlow, Ray, Tensorboard,\n• Experience deploying applications to production with Docker and Kubernetes\n• Experience integrating sensors and automation with in-house solutions\n• Experience with web development frameworks such as Flask, SQLAlchemy and FastAPI\n• Experience working with stream data processing using Apache Kafka or similar technologies\n• Experience with front-end frameworks such as React or similar JavaScript UI frameworks\n• Experience with database technologies such as PostgreSQL, SQL Server, or similar database technologies\n• Experience with Linux applications and server components\n• Experience with data exploration and monitoring tools like Prometheus, Grafana, and Jupyter\n• Experience with manufacturing\n• Knowledge of statistics, machine learning algorithms and frameworks such as PyTorch, Tensorflow, JAX, Scikit-learn\n• Knowledge of version control, testing, continuous integration, build, deployment and monitoring\n\nCOMPENSATION AND BENEFITS:\n\nPay Range:\nSoftware Engineer/Level I: $120,000.00 - $145,000.00/per year\nSoftware Engineer/Level II: $140,000.00 - $170,000.00/per year\n\nYour actual level and base salary will be determined on a case-by-case basis and may vary based on the following considerations: job-related knowledge and skills, education, and experience.\n\nBase salary is just one part of your total rewards package at SpaceX. You may also be eligible for long-term incentives, in the form of company stock, stock options, or long-term cash awards, as well as potential discretionary bonuses and the ability to purchase additional stock at a discount through an Employee Stock Purchase Plan. You will also receive access to comprehensive medical, vision, and dental coverage, access to a 401(k) retirement plan, short & long-term disability insurance, life insurance, paid parental leave, and various other discounts and perks. You may also accrue 3 weeks of paid vacation & will be eligible for 10 or more paid holidays per year. Exempt employees are eligible for 5 days of sick leave per year.\n\nITAR REQUIREMENTS:\n• To conform to U.S. Government export regulations, applicant must be a (i) U.S. citizen or national, (ii) U.S. lawful, permanent resident (aka green card holder), (iii) Refugee under 8 U.S.C. § 1157, or (iv) Asylee under 8 U.S.C. § 1158, or be eligible to obtain the required authorizations from the U.S. Department of State. Learn more about the ITAR here.\n\nSpaceX is an Equal Opportunity Employer; employment with SpaceX is governed on the basis of merit, competence and qualifications and will not be influenced in any manner by race, color, religion, gender, national origin/ethnicity, veteran status, disability status, age, sexual orientation, gender identity, marital status, mental or physical disability or any other legally protected status.\n\nApplicants wishing to view a copy of SpaceX’s Affirmative Action Plan for veterans and individuals with disabilities, or applicants requiring reasonable accommodation to the application/interview process should notify the Human Resources Department at (310) 363-6000.",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "Bachelor's degree in computer science, engineering, math, or engineering discipline; OR 2+ years of professional experience in software development in lieu of a degree",
+            "Development experience in Python, C++, or C#",
+            "To conform to U.S. Government export regulations, applicant must be a (i) U.S. citizen or national, (ii) U.S. lawful, permanent resident (aka green card holder), (iii) Refugee under 8 U.S.C. § 1157, or (iv) Asylee under 8 U.S.C. § 1158, or be eligible to obtain the required authorizations from the U.S"
+          ]
+        },
+        {
+          "title": "Benefits",
+          "items": [
+            "Pay Range:",
+            "Software Engineer/Level I: $120,000.00 - $145,000.00/per year",
+            "Software Engineer/Level II: $140,000.00 - $170,000.00/per year",
+            "Base salary is just one part of your total rewards package at SpaceX",
+            "You may also be eligible for long-term incentives, in the form of company stock, stock options, or long-term cash awards, as well as potential discretionary bonuses and the ability to purchase additional stock at a discount through an Employee Stock Purchase Plan",
+            "You will also receive access to comprehensive medical, vision, and dental coverage, access to a 401(k) retirement plan, short & long-term disability insurance, life insurance, paid parental leave, and various other discounts and perks",
+            "You may also accrue 3 weeks of paid vacation & will be eligible for 10 or more paid holidays per year",
+            "Exempt employees are eligible for 5 days of sick leave per year"
+          ]
+        },
+        {
+          "title": "Responsibilities",
+          "items": [
+            "We also develop reliable, scalable, and efficient numerical analysis solvers to support these processes via simulation",
+            "Develop and own process monitoring software for a variety of SpaceX production locations and programs",
+            "Develop automated defect recognition computer vision models for manufacturing",
+            "Design and write the software to connect hardware and tooling to process monitoring systems",
+            "Work with data pipelines from production line to web application interfaces",
+            "Work closely with simulation and machine learning experts to link model outputs to process inputs",
+            "Deep dive into your users’ problems to find and create efficient solutions",
+            "Work closely with our production engineers and technicians to provide the best first principles solution to their needs",
+            "Participate in, or lead design reviews with peers and stakeholders to decide amongst available technologies",
+            "Review code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "Space Crew",
+          "link": "https://spacecrew.com/space-jobs/m61ude7r-spacex-software-engineer-computer-vision?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Wellfound",
+          "link": "https://wellfound.com/jobs/3195473-software-engineer-computer-vision?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://www.linkedin.com/jobs/view/software-engineer-computer-vision-at-spacex-4128676287?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Built In",
+          "link": "https://builtin.com/job/software-engineer-computer-vision/3824813?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "The Muse",
+          "link": "https://www.themuse.com/jobs/spacex/software-engineer-computer-vision?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "MilwaukeeJobs.com",
+          "link": "https://www.milwaukeejobs.com/job/detail/82365181/Software-Engineer-Computer-Vision?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Glassdoor",
+          "link": "https://www.glassdoor.com/job-listing/software-engineer-computer-vision-spacex-JV_IC1146793_KO0,33_KE34,40.htm?jl=1009604005936&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.com/job/amWMY96lWUocpHTV8hvKWg5Pu9snlN625_XtLk2S6aQNPXKRDGuE0A?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlciwgQ29tcHV0ZXIgVmlzaW9uIiwiY29tcGFueV9uYW1lIjoiU3BhY2VYIiwiYWRkcmVzc19jaXR5IjoiSGF3dGhvcm5lLCBDQSIsImh0aWRvY2lkIjoiNE02aEc3SnBpaHRhbmNXMEFBQUFBQT09In0="
+    },
+    {
+      "title": "Ground Software Engineer",
+      "company_name": "Turion Space",
+      "location": "Irvine, CA",
+      "via": "Turion Space Careers - Pinpoint",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=HQGDLJk4J9d0K-sRAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXNsQrCMBCAYVz7CJ1uFk1EcNFJRIqudS9JPJNIvQu5VPsMPrVx-cfvb76LRneZJ7pDz4_yMRnhTD4SYoY1XNmCoMkuABN0zH7E9hBKSbLXWmRUXoop0SnHL82Elmf9ZCv_DBIql0ZTcNjuNrNK5JftbcqxWn0yDiESXPK73lZwOv4AIQsKdI0AAAA&shmds=v1_AUFQtOP2ZX26WpEsHzVDLMzTBQHi2ubCxHTAyA3CBIZc1Va8MA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=HQGDLJk4J9d0K-sRAAAAAA%3D%3D",
+      "extensions": [
+        "100K–140K a year",
+        "Full-time",
+        "Paid time off",
+        "Health insurance",
+        "Dental insurance"
+      ],
+      "detected_extensions": {
+        "salary": "100K–140K a year",
+        "schedule_type": "Full-time",
+        "paid_time_off": true,
+        "health_insurance": true,
+        "dental_coverage": true
+      },
+      "description": "Ground Software Engineer\n\nDepartment: Vehicle / Ground Software\n\nEmployment Type: Full Time\n\nLocation: Irvine, California\n\nReporting To: Sammy Roberts\n\nCompensation: $100,000 - $140,000 / year\n\nDescription\nAt Turion Space, you’ll be part of a dynamic team dedicated to pioneering space technology and innovation. We are building cutting-edge Mission Control Systems, developing tools for GNC and AI engineers, and creating applications that directly impact space missions. You'll work on challenging projects that push the boundaries of what’s possible, from designing scalable distributed systems to delivering high-performance APIs used by real-world operators and developers. Join us to help shape the future of space exploration and make a tangible impact on missions that matter. UNLEASH HUMANITY'S GALACTIC POTENTIAL.\n\nKey Responsibilities\n• Drive the software engineering process from concept to delivery, taking ownership of the full product development lifecycle.\n• Engage with users and stakeholders to understand their needs, turning challenges into innovative and impactful software solutions.\n• Contribute to team discussions on architecture, design, and code reviews, ensuring high-quality and scalable system designs.\n• Develop mission-critical software systems, including Mission Control Systems (MCS), tools for internal teams, and applications that support real-world space missions.\n• Build and maintain APIs and tools that enhance Turion Space's operations, improving efficiency and scalability for various subsystems and external customers.\n• Collaborate with cross-functional teams to refine and continuously improve software products, ensuring they meet the evolving needs of our missions.\n• Deliver impactful solutions that power mission-critical operations, crafting intuitive interfaces and automation tools that simplify complex tasks.\n\nQualifications\n\nMinimum Qualifications:\n• Bachelor's Degree in Computer Science, Engineering, Mathematics, or a related technical field, or equivalent practical experience.\n• 2-5 years of software development experience.\n• Expertise in full-stack development and proven ability to personally design, build, and test complex software systems.\n• Flexibility to be on call and work extended hours or weekends as needed to support mission-critical operations.\n• Must be able to obtain a Secret and/or a TS/SCI clearance.\n\nPreferred Skills and Experience:\n• Proficiency in Go, Python, or JavaScript/TypeScript.\n• Experience with API Development (Echo, FastAPI, Express, Fastify).\n• Experience with relational databases, ideally PostgreSQL, including designing schemas, writing complex queries, and optimizing performance.\n• Experience with React or similar frameworks.\n• Experience in building, deploying, and maintaining production-grade systems.\n\nNice to Haves:\n• Experience designing and building microservices and distributed systems.\n• Familiarity with NoSQL databases (e.g., Couchbase, MongoDB, Cassandra) and their use in scalable, distributed applications.\n• Experience with Kubernetes.\n• Experience with AWS (EC2, S3, Batch, Lambda).\n• Experience with Jira or other defect-tracking software.\n• Experience with data engineering and managing large-scale data pipelines.\n• Involvement in the space industry or related fields, with a passion for space exploration.\n\nITAR Requirements:\n• This position may include access to technology and/or software source code that is subject to U.S. export controls. To conform to U.S. Government export regulations, applicant must be a (i) U.S. citizen or national, (ii) U.S. lawful, permanent resident (aka green card holder), (iii) Refugee under 8 U.S.C. § 1157, or (iv) Asylee under 8 U.S.C. § 1158, or be eligible to obtain the required authorizations from the U.S. Department of State.\n\nBenefits\n• Health Insurance: Comprehensive medical, dental, and vision coverage.\n• Retirement Plans: Access to a 401(k) plan.\n• Paid Time Off: Generous vacation days, personal days, and holidays to ensure you have time to recharge.\n• Professional Development: Opportunities for ongoing training, workshops, and courses to advance your skills and career growth.\n• Team Building Activities: Regular social events, team outings, and company-sponsored activities to foster a positive work environment.\n• Diverse and Inclusive Culture: A commitment to diversity and inclusion, with initiatives to support a welcoming and equitable work environment.\n\nTurion Space is an Equal Opportunity Employer; employment with Turion Space is governed on the basis of merit, competence and qualifications and will not be influenced in any manner by race, color, religion, gender, national origin/ethnicity, veteran status, disability status, age, sexual orientation, gender identity, marital status, mental or physical disability or any other legally protected status. Applicants wishing to view a copy of Turion’s Affirmative Action Plan for veterans and individuals with disabilities, or applicants requiring reasonable accommodation to the application/interview process should notify the Human Resources Department.",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "Bachelor's Degree in Computer Science, Engineering, Mathematics, or a related technical field, or equivalent practical experience",
+            "2-5 years of software development experience",
+            "Expertise in full-stack development and proven ability to personally design, build, and test complex software systems",
+            "Flexibility to be on call and work extended hours or weekends as needed to support mission-critical operations",
+            "Must be able to obtain a Secret and/or a TS/SCI clearance",
+            "Experience designing and building microservices and distributed systems",
+            "Familiarity with NoSQL databases (e.g., Couchbase, MongoDB, Cassandra) and their use in scalable, distributed applications",
+            "Experience with Kubernetes",
+            "Experience with AWS (EC2, S3, Batch, Lambda)",
+            "Experience with Jira or other defect-tracking software",
+            "Experience with data engineering and managing large-scale data pipelines",
+            "Involvement in the space industry or related fields, with a passion for space exploration",
+            "This position may include access to technology and/or software source code that is subject to U.S. export controls",
+            "To conform to U.S. Government export regulations, applicant must be a (i) U.S. citizen or national, (ii) U.S. lawful, permanent resident (aka green card holder), (iii) Refugee under 8 U.S.C. § 1157, or (iv) Asylee under 8 U.S.C. § 1158, or be eligible to obtain the required authorizations from the U.S"
+          ]
+        },
+        {
+          "title": "Benefits",
+          "items": [
+            "Compensation: $100,000 - $140,000 / year",
+            "Health Insurance: Comprehensive medical, dental, and vision coverage",
+            "Retirement Plans: Access to a 401(k) plan",
+            "Paid Time Off: Generous vacation days, personal days, and holidays to ensure you have time to recharge",
+            "Professional Development: Opportunities for ongoing training, workshops, and courses to advance your skills and career growth",
+            "Team Building Activities: Regular social events, team outings, and company-sponsored activities to foster a positive work environment",
+            "Diverse and Inclusive Culture: A commitment to diversity and inclusion, with initiatives to support a welcoming and equitable work environment"
+          ]
+        },
+        {
+          "title": "Responsibilities",
+          "items": [
+            "You'll work on challenging projects that push the boundaries of what’s possible, from designing scalable distributed systems to delivering high-performance APIs used by real-world operators and developers",
+            "UNLEASH HUMANITY'S GALACTIC POTENTIAL",
+            "Drive the software engineering process from concept to delivery, taking ownership of the full product development lifecycle",
+            "Engage with users and stakeholders to understand their needs, turning challenges into innovative and impactful software solutions",
+            "Contribute to team discussions on architecture, design, and code reviews, ensuring high-quality and scalable system designs",
+            "Develop mission-critical software systems, including Mission Control Systems (MCS), tools for internal teams, and applications that support real-world space missions",
+            "Build and maintain APIs and tools that enhance Turion Space's operations, improving efficiency and scalability for various subsystems and external customers",
+            "Collaborate with cross-functional teams to refine and continuously improve software products, ensuring they meet the evolving needs of our missions",
+            "Deliver impactful solutions that power mission-critical operations, crafting intuitive interfaces and automation tools that simplify complex tasks"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "Turion Space Careers - Pinpoint",
+          "link": "https://turionspace.pinpointhq.com/jobs/89234?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Indeed",
+          "link": "https://www.indeed.com/viewjob?jk=92dc8cc95be12ff6&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "ZipRecruiter",
+          "link": "https://www.ziprecruiter.com/c/Turion-Space/Job/Ground-Software-Engineer/-in-Irvine,CA?jid=4c8147b9a7683610&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Monster",
+          "link": "https://www.monster.com/job-openings/ground-software-engineer-irvine-ca--ebe7dce1-fbd2-4057-8210-71e1068ddd04?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Space Crew",
+          "link": "https://spacecrew.com/space-jobs/m5gez5uq-turion-space-ground-software-engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://www.linkedin.com/jobs/view/ground-software-engineer-at-evona-4123838991?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "JoinThe.Space",
+          "link": "https://jointhe.space/job/ground-software-engineer-4/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.com/job/c7GTt8tyh_ukXMnD2x2nKlPTKdWZ5hLourGOGXRZOkuPL29EMSrbyw?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJHcm91bmQgU29mdHdhcmUgRW5naW5lZXIiLCJjb21wYW55X25hbWUiOiJUdXJpb24gU3BhY2UiLCJhZGRyZXNzX2NpdHkiOiJJcnZpbmUsIENBIiwiaHRpZG9jaWQiOiJIUUdETEprNEo5ZDBLLXNSQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Senior Software Engineer – Xcelerator Data Hub",
+      "company_name": "Siemens Digital Industries Software",
+      "location": "Costa Mesa, CA",
+      "via": "Careers | Siemens Digital Industries Software - Siemens",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=eSwId4dtuvqe5G7iAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_0WOPQrCQBBGsfUIVlOLJiKk0UoS8Qes0tjJJI6blXUm7IyY0jt4Hi_jSYyVzVc93vuG78FwUxJ7iVDKxR4YCdbsPBNF-DxfcKwpUETrgQINYXuvYAp7qUAJY92AMGxEXKDRsjFrdZGmqiFxami-Tmq5pcJUSZdepdLfnLTpM21Ao9M8m3VJy26clZ5uxAqFd94wwI7Pd7XoSf_PPEMuvRgOpDiBfPUFTTTCW8AAAAA&shmds=v1_AUFQtOMRNHxUi_hJzpN2cwLAQV9xcQKOEZBkc-S_COFHhITPTQ&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=eSwId4dtuvqe5G7iAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/678c6e39ef17462cf5580a45/images/a54ed6275f0d35a9e151442ff258f160171182cf55386e61e6e4f0f0992dea4b.png",
+      "extensions": [
+        "Full-time",
+        "Paid time off"
+      ],
+      "detected_extensions": {
+        "schedule_type": "Full-time",
+        "paid_time_off": true
+      },
+      "description": "Design, develop, modify, and implement software programming for products (both internal and external) with focus on surpassing customer expectations, on achieving high quality and on-time delivery. Responsible for ensuring the overall functional quality of the released product on all required platforms and mechanism. Ability to understand complex products, solutions, and problems. Creates, documents, and executes software designs which may involve significant re-architecture of important systems, defining and coordinating implementation of wide-reaching impacts. Acts as Technical lead of major projects within one area of a product. Frequently consults with customers in regard to future upgrades and products. Influences the technical direction for one area of a product. Promotes innovation through the ability to introduce new technology/knowledge into at least one area of a product and to our people. Provides high-level technical expertise, including performing in-depth and complex software systems programming and analysis. Provide problem resolution and technical leadership for the group. Possesses broad knowledge of internal operating systems, applications implications and customer areas. Technical Lead in guiding junior engineers. Works without supervision on highly complex projects with complete latitude for independent judgment and technical expertise. Extensive knowledge of the field.\n\nSenior Software Engineer – Xcelerator Data Hub\n\nSiemens Digital Industries Software (DISW) business segments provide a strong suite of Integration products that its customers have been successfully using for several years. These products provide integration within DISW portfolio and between DISW portfolio and selected non-DISW Strategic Adjacent systems. As part of DISW transition to the Cloud & SaaS, these integrations are also transitioning and being enabled to operate in Cloud & Hybrid mode for our customers.\n\nThis is one of the key focus areas for Siemens Xcelerator Data Hub program, through a Cloudification Governance model. We are looking for experienced, passionate, and enthusiastic technical team member to be part of this critical program\n\nResponsibilities\n• Focal Data Hub technical contact for specific DISW Business Segments to enable their integration products for Cloud & Hybrid operation – focus between AWS, Azure & Kubernetes\n• Work closely & collaboratively with Business Segment team to evaluate existing integrations, identify, and recommend all aspects of technical approach for Cloud transition of integration products\n• Support Business Segments in developing their technical transition plan\n• Support scoping, planning & and execution of proofs-of-concept as required\n• Work with cross-functional teams of architects and product experts\n• Work with the Data Hub infrastructure team for creation and configuration of cloud environments\n• Track progress & maintain a scorecard for transition & cloud readiness of every assigned integration, and align with Business Segment representative(s)\n\nRequirements:\n• Bachelor's Degree in Computer Science, Engineering, or other STEM discipline supplemented with 10+ years of real-world programming & architecture experience\n• Strong architectural background & hands-on experience in defining or implementing complex software architectures – 5+ years\n• Understanding of core AWS/Azure services, uses, and basic architecture best practices – 4+ years\n• Proficiency in developing and deploying cloud-based solutions leveraging at-least one of the hyper-scalers (AWS, Azure, others), Containerization, DevOps – 4+ years\n• Active & demonstrated experience on Cloud security models and implementation\n• Experience in providing active Technical Leadership & guidance – 4+ years\n• Cross Organization engagement & Ability to interface with internal and external stakeholders of varying technical abilities (Development, Partners, Operations etc.\n• Superior verbal and written communications skills with high attention to detail including precise and effective communications\n• Ability to work autonomously in a highly demanding and often ambiguous environment, with attention to detail and organizational skills\n\nQualified Applicants must be legally authorized for employment in the United States. Qualified Applicants will not require employer sponsored work authorization now or in the future for employment in the United States.\n\nPreferred Knowledge/Skills, Education, and Experience\n• Working knowledge & hands-on experience in implementing some of Siemens Digital Industries products (Teamcenter, Opcenter, Simcenter, Capital, Xpedition, Polarion, Tecnomatix, CAD)\n• Working knowledge & experience in some of PLM, ALM, MBSE, EDA, MOM software\n• Understanding and experience with considerations regarding integration landscapes, data & process governance\n• Deep industrial knowledge and experience in one or more sectors; Enterprise / IT, PLM, OT\n\nWhy us?\n\nWorking at Siemens Software means flexibility - Choosing between working at home and the office at other times is the norm here. We offer great benefits and rewards, as you'd expect from a world leader in industrial software.\n\nA collection of over 377,000 minds building the future, one day at a time in over 200 countries. We're dedicated to equality, and we welcome applications that reflect the diversity of the communities we work in. All employment decisions at Siemens are based on qualifications, merit, and business need. Bring your curiosity and creativity and help us shape tomorrow!\n\nSiemens Software. Transform the Everyday\n\nThe salary range for this position is $121,400 to $218,500 and this role is eligible to earn incentive compensation. The actual compensation offered is based on the successful candidate’s work location as well as additional factors, including job-related skills, experience, and relevant education/training.Siemens offers a variety of health and wellness benefits to employees. Details regarding our benefits can be found here: www.benefitsquickstart.com . In addition, this position is eligible for time off in accordance with Company policies, including paid sick leave, paid parental leave, PTO (for non-exempt employees) or non-accrued flexible vacation (for exempt employees).\n\n#LI-PLM\n\n#LI-HYBRID\n\n#SWSaaS\n\nEqual Employment Opportunity Statement\n\nSiemens is an Equal Opportunity and Affirmative Action Employer encouraging diversity in the workplace. All qualified applicants will receive consideration for employment without regard to their race, color, creed, religion, national origin, citizenship status, ancestry, sex, age, physical or mental disability unrelated to ability, marital status, family responsibilities, pregnancy, genetic information, sexual orientation, gender expression, gender identity, transgender, sex stereotyping, order of protection status, protected veteran or military status, or an unfavorable discharge from military service, and other categories protected by federal, state or local law.\n\nReasonable Accommodations\n\nIf you require a reasonable accommodation in completing a job application, interviewing, completing any pre-employment testing, or otherwise participating in the employee selection process, please fill out the accommodations form by clicking on this link Accommodation for disability form. If you’re unable to complete the form, you can reach out to our AskHR team for support at 1-866-743-6367. Please note our AskHR representatives do not have visibility of application or interview status.\n\nEEO is the Law\n\nApplicants and employees are protected under Federal law from discrimination. To learn more, Click here.\n\nPay Transparency Non-Discrimination Provision\n\nSiemens follows Executive Order 11246, including the Pay Transparency Nondiscrimination Provision. To learn more, Click here.\n\nCalifornia Privacy Notice\n\nCalifornia residents have the right to receive additional notices about their personal information. To learn more, click here.\n\nJob Family: Research & Development\n\nReq ID: 438134",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "Works without supervision on highly complex projects with complete latitude for independent judgment and technical expertise",
+            "Extensive knowledge of the field",
+            "We are looking for experienced, passionate, and enthusiastic technical team member to be part of this critical program",
+            "Bachelor's Degree in Computer Science, Engineering, or other STEM discipline supplemented with 10+ years of real-world programming & architecture experience",
+            "Strong architectural background & hands-on experience in defining or implementing complex software architectures – 5+ years",
+            "Understanding of core AWS/Azure services, uses, and basic architecture best practices – 4+ years",
+            "Proficiency in developing and deploying cloud-based solutions leveraging at-least one of the hyper-scalers (AWS, Azure, others), Containerization, DevOps – 4+ years",
+            "Active & demonstrated experience on Cloud security models and implementation",
+            "Experience in providing active Technical Leadership & guidance – 4+ years",
+            "Cross Organization engagement & Ability to interface with internal and external stakeholders of varying technical abilities (Development, Partners, Operations etc",
+            "Superior verbal and written communications skills with high attention to detail including precise and effective communications",
+            "Ability to work autonomously in a highly demanding and often ambiguous environment, with attention to detail and organizational skills",
+            "Qualified Applicants must be legally authorized for employment in the United States",
+            "Qualified Applicants will not require employer sponsored work authorization now or in the future for employment in the United States"
+          ]
+        },
+        {
+          "title": "Benefits",
+          "items": [
+            "The salary range for this position is $121,400 to $218,500 and this role is eligible to earn incentive compensation",
+            "The actual compensation offered is based on the successful candidate’s work location as well as additional factors, including job-related skills, experience, and relevant education/training.Siemens offers a variety of health and wellness benefits to employees",
+            "In addition, this position is eligible for time off in accordance with Company policies, including paid sick leave, paid parental leave, PTO (for non-exempt employees) or non-accrued flexible vacation (for exempt employees)",
+            "Siemens follows Executive Order 11246, including the Pay Transparency Nondiscrimination Provision"
+          ]
+        },
+        {
+          "title": "Responsibilities",
+          "items": [
+            "Design, develop, modify, and implement software programming for products (both internal and external) with focus on surpassing customer expectations, on achieving high quality and on-time delivery",
+            "Responsible for ensuring the overall functional quality of the released product on all required platforms and mechanism",
+            "Ability to understand complex products, solutions, and problems",
+            "Creates, documents, and executes software designs which may involve significant re-architecture of important systems, defining and coordinating implementation of wide-reaching impacts",
+            "Acts as Technical lead of major projects within one area of a product",
+            "Frequently consults with customers in regard to future upgrades and products",
+            "Influences the technical direction for one area of a product",
+            "Promotes innovation through the ability to introduce new technology/knowledge into at least one area of a product and to our people",
+            "Provides high-level technical expertise, including performing in-depth and complex software systems programming and analysis",
+            "Provide problem resolution and technical leadership for the group",
+            "Possesses broad knowledge of internal operating systems, applications implications and customer areas",
+            "Technical Lead in guiding junior engineers",
+            "Focal Data Hub technical contact for specific DISW Business Segments to enable their integration products for Cloud & Hybrid operation – focus between AWS, Azure & Kubernetes",
+            "Work closely & collaboratively with Business Segment team to evaluate existing integrations, identify, and recommend all aspects of technical approach for Cloud transition of integration products",
+            "Support Business Segments in developing their technical transition plan",
+            "Support scoping, planning & and execution of proofs-of-concept as required",
+            "Work with cross-functional teams of architects and product experts",
+            "Work with the Data Hub infrastructure team for creation and configuration of cloud environments",
+            "Track progress & maintain a scorecard for transition & cloud readiness of every assigned integration, and align with Business Segment representative(s)"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "Careers | Siemens Digital Industries Software - Siemens",
+          "link": "https://jobs.sw.siemens.com/costa-mesa-ca/senior-software-engineer-xcelerator-data-hub/669953484629446CB82E4EF3C85F1FC5/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Siemens Digital Industries Software Jobs",
+          "link": "https://sw-siemens.dejobs.org/costa-mesa-ca/senior-software-engineer-xcelerator-data-hub/D0C739D1ADB4436ABD8171F04A652787/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://www.linkedin.com/jobs/view/senior-software-engineer-%E2%80%93-xcelerator-data-hub-at-siemens-digital-industries-software-4036049215?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Zettlor",
+          "link": "https://www.zettlor.com/job-posts/288b72f0-d652-4fb2-b75b-d7d5dbb81aec?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Offered.AI",
+          "link": "https://www.offered.ai/jobs/cll5vx02b0cgys60k50torpl5?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTZW5pb3IgU29mdHdhcmUgRW5naW5lZXIg4oCTIFhjZWxlcmF0b3IgRGF0YSBIdWIiLCJjb21wYW55X25hbWUiOiJTaWVtZW5zIERpZ2l0YWwgSW5kdXN0cmllcyBTb2Z0d2FyZSIsImFkZHJlc3NfY2l0eSI6IkNvc3RhIE1lc2EsIENBIiwiaHRpZG9jaWQiOiJlU3dJZDRkdHV2cWU1RzdpQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Satellite Flight and Payload Software Engineer (Experienced / Senior)",
+      "company_name": "Boeing",
+      "location": "Huntington Beach, CA",
+      "via": "Boeing",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=t7uYtc-TxymDekbEAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xWOsQrCMBRFce0nOMgbVbQRwUUnK1VxEroKJU2fSSS-V5In1m_z56zL5Uzn3Ow7ym6VFgzBC8IxeOsENLVw1Z_AuoWK7_LWEaEk6wkxwrTsO4weyWALCiokz3EGS7hwAwl1NA6Y4MRsA453TqRLW6VSCrlNosWb3PBTMWHDvXpwk_5TJzdUujB8qdebVZ93ZOeTgtGTBU9wfpEMKIO5QG3cAg77H7VTUce-AAAA&shmds=v1_AUFQtONS2lM0F-Mpi8mUyPe9DedtOPn6OuowcTsqie4b61UpKA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=t7uYtc-TxymDekbEAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/678c6e39ef17462cf5580a45/images/a54ed6275f0d35a92210f97c8e78a24a7b1d3886c0ee4987e2664755d6dd5c1a.png",
+      "extensions": [
+        "12 days ago",
+        "Full-time",
+        "Dental insurance",
+        "Health insurance"
+      ],
+      "detected_extensions": {
+        "posted_at": "12 days ago",
+        "schedule_type": "Full-time",
+        "dental_coverage": true,
+        "health_insurance": true
+      },
+      "description": "Job Description\n\nAt Boeing, we innovate and collaborate to make the world a better place. From the seabed to outer space, you can contribute to work that matters with a company where diversity, equity and inclusion are shared values. We’re committed to fostering an environment for every teammate that’s welcoming, respectful and inclusive, with great opportunity for professional growth. Find your future with us.\n\nThe Boeing Research & Technology (BR&T) Mission Systems & Autonomy (MS&A) software capability is seeking a Satellite Flight and Payload Software Engineer (Experienced / Senior) in Huntington Beach, California.\n\nThe selected candidate will work with the BR&T Payload Products & Technologies (PP&T) product team focused on the concept, requirements, architecture, design, and development of advanced space-based imaging sensor payloads. The position will involve creating software products for image sensor payloads and space vehicle flight control.\n\nThe selected candidate will work with the PP&T product team on providing complete solutions, including systems engineering, optics design, algorithms, software development, firmware development, and electronics. The candidate will work with software product-line owner, program managers, and development leads to create common software products and tailor for use on a portfolio of customer-funded programs.\n\nThe successful candidate will work across programs to ensure software products are developed for commonality and tailored to meet mission need. The candidate will work with development leads for satellite flight and payload software, firmware, and algorithms to ensure engineering excellence and achieve program objectives.\n\nPosition Responsibilities\n• Develop flight and payload software requirements, architectures, designs, interfaces, and code in VxWorks and Linux.\n• Develop flight software that implement guidance, navigation, control algorithm, and image processing.\n• Integrate command and telemetry systems that communicate with payload, ground system,s and mission operations.\n• Integrate flight software into processor in the loop and hardware in the loop.\n• Provide support in real-time operating systems, real-time software, and schedulers.\n• Support the integration of software components in VxWorks.\n• Drive flight and payload software product line architecture and strategic reuse across all programs.\n• Drive software execution to deliver products on-cost and on-schedule to programs.\n• Responsible for satellite and payload software safety, assurance, quality, and engineering excellence.\n\nThis position is expected to be 100% onsite. The selected candidate will be required to work onsite at one of the listed location options. This is at the hiring team’s discretion and could potentially change in the future.\n\nThis position requires the ability to obtain a U.S. Security Clearance for which the U.S. Government requires U.S. Citizenship. An interim and/or final U.S. Secret Clearance Post-Start is required.\n\nCoding Challenge:\n\nTo be considered for this position you will be required to complete a technical assessment as part of the selection process. Failure to complete the assessment will remove you from consideration.\n\nBasic Qualifications (Required Skill/Experience):\n• 5+ years of experience with software development in a collaborative team environment using agile principles and a structured development process, including code reviews and DevOps processes/tools\n• 5+ or more years of experience developing and debugging software using high level programming languages (C and C++)\n• 3+ years of experience working with real-time operating systems (RTOS)\n• 1+ years of experience with satellite or space-based payloads\n• 1 + years of experience using Systems Engineering tools (i.e., CAMEO, CORE 9, etc.) for Model-Based Systems Engineering (MBSE)\n• 1+ years of experience automating software builds, unit tests, integration tests, deployment, and installations using a DevOps toolchain using Artifactory and/or GitLab\n\nPreferred Qualifications (Desired Skills/Experience):\n• 10+ years' related work experience or an equivalent combination of education and experience\n• Bachelor of Science degree (or greater) from an accredited course of study in engineering, computer science, mathematics, physics, chemistry, or other technical degree is strongly preferred.\n• Active Security Clearance\n• Experience working with satellite communications or telemetry systems\n• Experience with new product development with small, agile teams on fast-paced, dynamic, customer-funded programs\n• Experience with fault tolerant architectures and designs\n\nTypical Education/Experience:\n\nExperienced (Level 3)\n\nEducation/experience typically acquired through advanced technical education from an accredited course of study in engineering, computer science, mathematics, physics, or chemistry (e.g., Bachelor) and typically 5 or more years' related work experience or an equivalent combination of technical education and experience (e.g., PhD, Master+3 years' related work experience). In the USA, ABET accreditation is the preferred, although not required, accreditation standard.\n\nSenior (Level 4)\n\nEducation/experience typically acquired through advanced technical education from an accredited course of study in engineering, computer science, mathematics, physics, or chemistry (e.g,. Bachelor) and typically 9 or more years' related work experience or an equivalent combination of technical education and experience (e.g., PhD+4 years' related work experience, Master+7 years' related work experience). In the USA, ABET accreditation is the preferred, although not required, accreditation standard.\n\nRelocation:\n\nThis position offers relocation based on candidate eligibility. Note: Basic relocation will be offered for eligible internal candidates.\n\nShift:\n\nThis position is for 1st shift.\n\nDrug Free Workplace:\n\nBoeing is a Drug Free Workplace where post offer applicants and employees are subject to testing for marijuana, cocaine, opioids, amphetamines, PCP, and alcohol when criteria is met as outlined in our policies.\n\nAt Boeing, we strive to deliver a Total Rewards package that will attract, engage and retain the top talent. Elements of the Total Rewards package include competitive base pay and variable compensation opportunities.\n\nThe Boeing Company also provides eligible employees with an opportunity to enroll in a variety of benefit programs, generally including health insurance, flexible spending accounts, health savings accounts, retirement savings plans, life and disability insurance programs, and a number of programs that provide for both paid and unpaid time away from work.\n\nThe specific programs and options available to any given employee may vary depending on eligibility factors such as geographic location, date of hire, and the applicability of collective bargaining agreements.\n\nPlease note that the salary information shown below is a general guideline only. Pay is based upon candidate experience and qualifications, as well as market and business considerations.\n\nSummary pay range for Experienced: $118,150 – $159,850\n\nSummary pay range for Senior: $141,950 – $192,050\n\nApplications for this position will be accepted until January 23, 2025.\n\nExport Control Requirements: U.S. Government Export Control Status: This position must meet export control compliance requirements. To meet export control compliance requirements, a “U.S. Person” as defined by 22 C.F.R. §120.15 is required. “U.S. Person” includes U.S. Citizen, lawful permanent resident, refugee, or asylee.\n\nExport Control Details: US based job, US Person required\n\nEqual Opportunity Employer:\n\nBoeing is an Equal Opportunity Employer. Employment decisions are made without regard to race, color, religion, national origin, gender, sexual orientation, gender identity, age, physical or mental disability, genetic factors, military/veteran status or other characteristics protected by law.",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "This position requires the ability to obtain a U.S. Security Clearance for which the U.S. Government requires U.S. Citizenship",
+            "An interim and/or final U.S. Secret Clearance Post-Start is required",
+            "5+ years of experience with software development in a collaborative team environment using agile principles and a structured development process, including code reviews and DevOps processes/tools",
+            "5+ or more years of experience developing and debugging software using high level programming languages (C and C++)",
+            "3+ years of experience working with real-time operating systems (RTOS)",
+            "1+ years of experience with satellite or space-based payloads",
+            "1 + years of experience using Systems Engineering tools (i.e., CAMEO, CORE 9, etc.) for Model-Based Systems Engineering (MBSE)",
+            "1+ years of experience automating software builds, unit tests, integration tests, deployment, and installations using a DevOps toolchain using Artifactory and/or GitLab",
+            "Experienced (Level 3)",
+            "Education/experience typically acquired through advanced technical education from an accredited course of study in engineering, computer science, mathematics, physics, or chemistry (e.g., Bachelor) and typically 5 or more years' related work experience or an equivalent combination of technical education and experience (e.g., PhD, Master+3 years' related work experience)",
+            "Senior (Level 4)",
+            "Education/experience typically acquired through advanced technical education from an accredited course of study in engineering, computer science, mathematics, physics, or chemistry (e.g,",
+            "Bachelor) and typically 9 or more years' related work experience or an equivalent combination of technical education and experience (e.g., PhD+4 years' related work experience, Master+7 years' related work experience)",
+            "Export Control Requirements: U.S. Government Export Control Status: This position must meet export control compliance requirements",
+            "To meet export control compliance requirements, a “U.S. Person” as defined by 22 C.F.R. §120.15 is required",
+            "“U.S. Person” includes U.S. Citizen, lawful permanent resident, refugee, or asylee",
+            "Export Control Details: US based job, US Person required"
+          ]
+        },
+        {
+          "title": "Benefits",
+          "items": [
+            "Elements of the Total Rewards package include competitive base pay and variable compensation opportunities",
+            "The Boeing Company also provides eligible employees with an opportunity to enroll in a variety of benefit programs, generally including health insurance, flexible spending accounts, health savings accounts, retirement savings plans, life and disability insurance programs, and a number of programs that provide for both paid and unpaid time away from work",
+            "The specific programs and options available to any given employee may vary depending on eligibility factors such as geographic location, date of hire, and the applicability of collective bargaining agreements",
+            "Summary pay range for Experienced: $118,150 – $159,850",
+            "Summary pay range for Senior: $141,950 – $192,050"
+          ]
+        },
+        {
+          "title": "Responsibilities",
+          "items": [
+            "The selected candidate will work with the BR&T Payload Products & Technologies (PP&T) product team focused on the concept, requirements, architecture, design, and development of advanced space-based imaging sensor payloads",
+            "The position will involve creating software products for image sensor payloads and space vehicle flight control",
+            "The selected candidate will work with the PP&T product team on providing complete solutions, including systems engineering, optics design, algorithms, software development, firmware development, and electronics",
+            "The candidate will work with software product-line owner, program managers, and development leads to create common software products and tailor for use on a portfolio of customer-funded programs",
+            "The successful candidate will work across programs to ensure software products are developed for commonality and tailored to meet mission need",
+            "The candidate will work with development leads for satellite flight and payload software, firmware, and algorithms to ensure engineering excellence and achieve program objectives",
+            "Develop flight and payload software requirements, architectures, designs, interfaces, and code in VxWorks and Linux",
+            "Develop flight software that implement guidance, navigation, control algorithm, and image processing",
+            "Integrate command and telemetry systems that communicate with payload, ground system,s and mission operations",
+            "Integrate flight software into processor in the loop and hardware in the loop",
+            "Provide support in real-time operating systems, real-time software, and schedulers",
+            "Support the integration of software components in VxWorks",
+            "Drive flight and payload software product line architecture and strategic reuse across all programs",
+            "Drive software execution to deliver products on-cost and on-schedule to programs",
+            "Responsible for satellite and payload software safety, assurance, quality, and engineering excellence",
+            "This position is expected to be 100% onsite",
+            "The selected candidate will be required to work onsite at one of the listed location options",
+            "To be considered for this position you will be required to complete a technical assessment as part of the selection process"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "Boeing",
+          "link": "https://jobs.boeing.com/job/huntington-beach/satellite-flight-and-payload-software-engineer-experienced-senior/185/74071267632?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "ZipRecruiter",
+          "link": "https://www.ziprecruiter.com/c/The-Boeing-Company/Job/Satellite-Flight-and-Payload-Software-Engineer-(Experienced-Senior)/-in-Huntington-Beach,CA?jid=a9393399b7bf1e52&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.com/job/70qqohstqovDqb5tVNBJOn5QzS6bSBpJH-d4OBH4lNFy0BFFB5Vw0g?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://www.linkedin.com/jobs/view/satellite-flight-and-payload-software-engineer-experienced-senior-at-boeing-4117182240?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Jooble",
+          "link": "https://jooble.org/jdp/8163488839720573734?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "JobMonkeyJobs",
+          "link": "https://www.jobmonkeyjobs.com/career/26392428/Satellite-Flight-Payload-Software-Engineer-Experienced-Senior-California-Huntington-Beach-1300?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://us.bebee.com/job/4f870939698c511043acb05002231ead?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Teal",
+          "link": "https://www.tealhq.com/job/satellite-flight-and-payload-software-engineer-experienced-senior_9e55249a-810a-4d15-bc98-0ac433c54682?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTYXRlbGxpdGUgRmxpZ2h0IGFuZCBQYXlsb2FkIFNvZnR3YXJlIEVuZ2luZWVyIChFeHBlcmllbmNlZCAvIFNlbmlvcikiLCJjb21wYW55X25hbWUiOiJCb2VpbmciLCJhZGRyZXNzX2NpdHkiOiJIdW50aW5ndG9uIEJlYWNoLCBDQSIsImh0aWRvY2lkIjoidDd1WXRjLVR4eW1EZWtiRUFBQUFBQT09In0="
+    },
+    {
+      "title": "Principal Software Engineer IS",
+      "company_name": "Providence",
+      "location": "Irvine, CA",
+      "via": "Swedish Jobs",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=NPGxNsFV2YNfL7jQAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXNsQrCMBCAYVz7BOJ0s2giQhediojUqdAHKGk8k0i8C7lQ-xQ-s3X5x--vvquq7nIgG5KJ0POzfExGuJILhJih7WEPdx5B0GTrgQluzC7i5uxLSXLSWiQqJ8WUYJXlt2bCkWf94lH-GcQvYoqm4HCsD7NK5LbrLvMUHkgWIRC0eVp2O7g0PwQkJhuRAAAA&shmds=v1_AUFQtOMUTRNTQdhwbzjzs72HuUFGzEVWeRbqQM5Hb8DVSiJs0g&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=NPGxNsFV2YNfL7jQAAAAAA%3D%3D",
+      "extensions": [
+        "Full-time",
+        "Paid time off",
+        "Health insurance"
+      ],
+      "detected_extensions": {
+        "schedule_type": "Full-time",
+        "paid_time_off": true,
+        "health_insurance": true
+      },
+      "description": "Description\n\nThis is a remote role. We are looking for candidates who reside in the following states: AK, CA, OR or WA.\n\nJoin a growing team of software engineers focused on building new applications, services and APIs that leverage modern technology, AI/ML and big data to serve the caregiver and patient community at Providence Health.\n\nThe Principal Software Engineer takes end-to-end ownership for development and quality of solutions that delight caregivers and add strategic value to Providence St. Joseph Health. They evaluate requirements, estimate costs, design and implement solutions and services. They define and implement the quality criteria for their solutions and services, using measurements and insights to understand and validate the quality of experience for caregivers.\n\nProvidence caregivers are not simply valued – they’re invaluable. Join our team at Enterprise Information Services and thrive in our culture of patient-focused, whole-person care, built on understanding, commitment and mutual respect. Your voice matters here, because we know that to inspire and retain the best people, we must empower them.\n\nRequired Qualifications:\n• Bachelor’s degree in computer engineering, computer science, mathematics, or equivalent educ/experience.\n• 8+ years related experience. Full stack software development preferred with increasing scope and responsibilities.\n• 8+ years experience with object-oriented programming in C#, Java, Python or equivalent.\n• Extensive experience with web-based application development using JavaScript and frameworks like React or Angular.\n• Extensive experience designing and implementing RESTful APIs and services.\n• A strong understanding of software architecture principles, design patterns and best practices.\n• Experience designing and architecting for modern microservices and SaaS models.\n• Experience designing software for reusability and modularity.\n• Familiarity with continuous delivery concepts, CI/CD and deployment automation.\n• Experience writing unit tests and using test automation frameworks like Selenium.\n• Experience with source code control systems such as GitHub.\n• Experience with creating and deploying Docker containers in AKS.\n• SQL integration development experience with SQL/NoSQL.\n• Extensive experience with Agile software development methodologies and tools such as Azure DevOps, TFS, and Jira.\n• Proven track record of working both independently and collaboratively as part of a multi-disciplined team.\n• Experience with Azure/AWS/hybrid and other cloud technologies.\n• Experience designing and successfully implementing complex projects from inception through production.\n\nPreferred Qualifications:\n• Master’s degree in computer engineering, Computer Science, Mathematics, Engineering Or equivalent educ/experience\n• Experience working closely with the UX/UI on web-based applications.\n• Experience in a healthcare setting.\n\nWhy Join Providence?\n\nOur best-in-class benefits are uniquely designed to support you and your family in staying well, growing professionally, and achieving financial security. We take care of you, so you can focus on delivering our Mission of caring for everyone, especially the most vulnerable in our communities.\n\nAccepting a new position at another facility that is part of the Providence family of organizations may change your current benefits. Changes in benefits, including paid time-off, happen for various reasons. These reasons can include changes of Legal Employer, FTE, Union, location, time-off plan policies, availability of health and welfare benefit plan offerings, and other various reasons.\n\nAbout Providence\n\nAt Providence, our strength lies in Our Promise of “Know me, care for me, ease my way.” Working at our family of organizations means that regardless of your role, we’ll walk alongside you in your career, supporting you so you can support others. We provide best-in-class benefits and we foster an inclusive workplace where diversity is valued, and everyone is essential, heard and respected. Together, our 120,000 caregivers (all employees) serve in over 50 hospitals, over 1,000 clinics and a full range of health and social services across Alaska, California, Montana, New Mexico, Oregon, Texas and Washington. As a comprehensive health care organization, we are serving more people, advancing best practices and continuing our more than 100-year tradition of serving the poor and vulnerable.\n\nThe amounts listed are the base pay range; additional compensation may be available for this role, such as shift differentials, standby/on-call, overtime, premiums, extra shift incentives, or bonus opportunities.\n\nCheck out our benefits page for more information about our Benefits and Rewards.\n\nAbout the Team\n\nProvidence Shared Services is a service line within Providence that provides a variety of functional and system support services for our family of organizations across Alaska, California, Montana, New Mexico, Oregon, Texas and Washington. We are focused on supporting our Mission by delivering a robust foundation of services and sharing of specialized expertise.\n\nProvidence is proud to be an Equal Opportunity Employer. We are committed to the principle that every workforce member has the right to work in surroundings that are free from all forms of unlawful discrimination and harassment on the basis of race, color, gender, disability, veteran, military status, religion, age, creed, national origin, sexual identity or expression, sexual orientation, marital status, genetic information, or any other basis prohibited by local, state, or federal law. We believe diversity makes us stronger, so we are dedicated to shaping an inclusive workforce, learning from each other, and creating equal opportunities for advancement.\n\nRequsition ID: 256149\nCompany: Providence Jobs\nJob Category: Development/Engineering\nJob Function: Information Technology\nJob Schedule: Full time\nJob Shift: Day\nCareer Track: Business Professional\nDepartment: 4011 SS IS HI DP 3\nAddress: CA Irvine 3345 Michelson Dr\nWork Location: Providence Health System Office-Irvine\nPay Range: $62.66 - $106.68\nThe amounts listed are the base pay range; additional compensation may be available for this role, such as shift differentials, standby/on-call, overtime, premiums, extra shift incentives, or bonus opportunities.\n\nCheck out our benefits page for more information about our Benefits and Rewards.",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "Bachelor’s degree in computer engineering, computer science, mathematics, or equivalent educ/experience",
+            "8+ years related experience"
+          ]
+        },
+        {
+          "title": "Benefits",
+          "items": [
+            "Our best-in-class benefits are uniquely designed to support you and your family in staying well, growing professionally, and achieving financial security",
+            "Accepting a new position at another facility that is part of the Providence family of organizations may change your current benefits",
+            "Changes in benefits, including paid time-off, happen for various reasons",
+            "These reasons can include changes of Legal Employer, FTE, Union, location, time-off plan policies, availability of health and welfare benefit plan offerings, and other various reasons",
+            "The amounts listed are the base pay range; additional compensation may be available for this role, such as shift differentials, standby/on-call, overtime, premiums, extra shift incentives, or bonus opportunities",
+            "Check out our benefits page for more information about our Benefits and Rewards",
+            "Pay Range: $62.66 - $106.68",
+            "The amounts listed are the base pay range; additional compensation may be available for this role, such as shift differentials, standby/on-call, overtime, premiums, extra shift incentives, or bonus opportunities"
+          ]
+        },
+        {
+          "title": "Responsibilities",
+          "items": [
+            "The Principal Software Engineer takes end-to-end ownership for development and quality of solutions that delight caregivers and add strategic value to Providence St",
+            "They evaluate requirements, estimate costs, design and implement solutions and services",
+            "They define and implement the quality criteria for their solutions and services, using measurements and insights to understand and validate the quality of experience for caregivers"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "Swedish Jobs",
+          "link": "https://providenceswedish.jobs/irvine-ca/principal-software-engineer-is/480C3F1AF859486A9332CEA2307613AC/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Indeed",
+          "link": "https://www.indeed.com/viewjob?jk=c0d48594262052f6&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "ZipRecruiter",
+          "link": "https://www.ziprecruiter.com/c/TecTammina/Job/Principal-Software-Engineer/-in-Irvine,CA?jid=68699aa7cdcbdfd1&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Smart Recruiters Jobs",
+          "link": "https://jobs.smartrecruiters.com/TecTammina/81971210-principal-software-engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Covenant Health",
+          "link": "https://covenanthealth.jobs/irvine-ca/principal-software-engineer-is/480C3F1AF859486A9332CEA2307613AC/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Glassdoor",
+          "link": "https://www.glassdoor.com/job-listing/principal-software-engineer-badu-networks-JV_IC1146798_KO0,27_KE28,41.htm?jl=1006452870419&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Salary.com",
+          "link": "https://www.salary.com/job/viant-technology/principal-software-engineer/j202410071032593528081?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Monster",
+          "link": "https://www.monster.com/job-openings/principal-software-engineer-irvine-ca--507f51e3-6d7c-47e0-9694-3215df86e04c?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJQcmluY2lwYWwgU29mdHdhcmUgRW5naW5lZXIgSVMiLCJjb21wYW55X25hbWUiOiJQcm92aWRlbmNlIiwiYWRkcmVzc19jaXR5IjoiSXJ2aW5lLCBDQSIsImh0aWRvY2lkIjoiTlBHeE5zRlYyWU5mTDdqUUFBQUFBQT09In0="
+    },
+    {
+      "title": "Principal Software Engineer, Gameplay Systems - Unannounced Game | Irvine, CA",
+      "company_name": "Blizzard Entertainment",
+      "location": "Irvine, CA",
+      "via": "Blizzard Careers - Blizzard Entertainment",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=vsQXaqEahrz28YLhAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_02OvarCQBBGsfURrKawEk1EsNFKRcK9lSDWMtmMycpmJuzMvf7gC_pWrlY2X3M-OKf_7PWrXfTsfIcB9nKyC0aCLdeeieIYCmypC3iD_U2NWoUJHBiZ5Y8dVR8MD_iJ_-k_hs0q8V8pQQmja0AYCpE60GDZmHW6yHPVkNVqaN5lTtpcmEq55mcp9T1HbVJAMhodZ_PpNeu4Hg3Xwd_vGKsUZhQNPbfEBp6_zC-YY8VozAAAAA&shmds=v1_AUFQtOODWb-9lRGJfHYOn3A3HqXC3uEUToBEO2db1ErZP-lK1Q&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=vsQXaqEahrz28YLhAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/678c6e39ef17462cf5580a45/images/a54ed6275f0d35a97c563989834c0fdd5c0b89a573a3e3d9f831478ae46ef6b7.png",
+      "extensions": [
+        "Full-time and Part-time",
+        "Paid time off",
+        "Health insurance",
+        "Dental insurance"
+      ],
+      "detected_extensions": {
+        "schedule_type": "Full-time and Part-time",
+        "paid_time_off": true,
+        "health_insurance": true,
+        "dental_coverage": true
+      },
+      "description": "Team Name:\nUnannounced Project\n\nJob Title:\nPrincipal Software Engineer, Gameplay Systems - Unannounced Game | Irvine, CA\n\nRequisition ID:\nR023167\n\nJob Description:\n\nAt Blizzard, we craft genre-defining games and legendary worlds for all to share.  Through unparalleled creativity and storytelling, we create immersive universes and iconic characters that are beloved across platforms, borders, backgrounds, and generations - only made possible by building a work environment that nurtures the artistry of game development and unleashes the aspirations of our people.\n\nAs a Principal Gameplay Systems Engineer, you will collaborate with designers and artists to define a technical vision and deliver best-in-class game systems. You will support the development of core game systems as well as collaborate in driving improvements in the underlying engine technology. You will work collaboratively with the team to define and execute a technical vision that meets the project’s needs.\n\nThis role is anticipated to be a hybrid work position, with some work on-site and some work-from-home. The potential home studio for this role is Irvine, CA.\n\nWhat you bring to the table:\n\nPriorities can often change in a fast-paced environment like ours, so this role includes, but is not limited to, the following responsibilities:\n• Leveraging your experience and knowledge to deliver best-in-class player experiences, from end to end, within the constraints of game simulation and AAA production scale.\n• Empowering designers, artists, and other engineers to deliver the vision of the game and ensuring we delight and entertain our players.\n• Collaborating with designers and engineers on gameplay teams to learn and understand their needs and offer technical solutions.\n• Optimizing team productivity by supporting content-creation pipelines, tool development, and workflow improvements.\n• Championing Blizzard’s core values.\n\nMinimum Requirements\n\nExperience\n• 9+ years of experience in gameplay systems engineering or a combination of applicable training and experience.\n• Experience creating compelling player experiences at AAA quality, including game world simulation, objectives, mission progression, interactables, UX, cinematic elements, etc.\n• Experience building comprehensive content iteration and debugging workflows to achieve creative vision in a productive, scalable manner, including at least one shipped game.\n\nKnowledge & Skills\n• The ability to understand and write production-grade C++ code.\n• The capacity to make frequent, readable, well-tested code commits.\n• The ability to communicate and articulate vision, ideas, learnings from others, and to give meaningful feedback.\n• Excellent problem-solving and debugging skills.\n• Experience analyzing game features and content for performance and optimizing the game to release quality.\n• Experience working closely in multi-disciplinary teams with people of diverse mindsets.\n• Mentorship mindset and excellent attitude to helping others level up their knowledge.\n\nExtra Points\n\nExperience\n• Computer science, mathematics, physics, or related degree.\n• Experience developing and shipping AAA game titles for PC, Xbox, and PlayStation consoles.\n\nKnowledge & Skills\n• Experience working on 3D action multiplayer games.\n• Experience with large codebase.\n\nKey Attributes\n• Passion for gameplay development, especially for the quality of player engagement and immersion.\n\nYour Platform\n\nBest known for iconic video game universes including Warcraft®, Overwatch®, Diablo®, and StarCraft®, Blizzard Entertainment, Inc. (www.blizzard.com), a division of Activision Blizzard, which was acquired by Microsoft (NASDAQ: MSFT), is a premier developer and publisher of entertainment experiences. Blizzard Entertainment has created some of the industry’s most critically acclaimed and genre-defining games over the last 30 years, with a track record that includes multiple Game of the Year awards. Blizzard Entertainment engages tens of millions of players around the world with titles available on PC via Battle.net®, Xbox, PlayStation, Nintendo Switch, iOS, and Android.\n\nOur World\n\nActivision Blizzard, Inc., is one of the world's largest and most successful interactive entertainment companies and is at the intersection of media, technology and entertainment. We are home to some of the most beloved entertainment franchises including Call of Duty®, World of Warcraft®, Overwatch®, Diablo®, Candy Crush™ and Bubble Witch™. Our combined entertainment network delights hundreds of millions of monthly active users in 196 countries, making us the largest gaming network on the planet!\n\nOur ability to build immersive and innovative worlds is only enhanced by diverse teams working in an inclusive environment. We aspire to have a culture where everyone can thrive in order to connect and engage the world through epic entertainment. We provide a suite of benefits that promote physical, emotional and financial well-being for ‘Every World’ - we’ve got our employees covered!\n\nThe videogame industry and therefore our business is fast-paced and will continue to evolve. As such, the duties and responsibilities of this role may be changed as directed by the Company at any time to promote and support our business and relationships with industry partners.\n\nWe love hearing from anyone who is enthusiastic about changing the games industry. Not sure you meet all qualifications? Let us decide! Research shows that women and members of other under-represented groups tend to not apply to jobs when they think they may not meet every qualification, when, in fact, they often do! We are committed to creating a diverse and inclusive environment and strongly encourage you to apply.\n\nWe are committed to working with and providing reasonable assistance to individuals with physical and mental disabilities. If you are a disabled individual requiring an accommodation to apply for an open position, please email your request to accommodationrequests@activisionblizzard.com. General employment questions cannot be accepted or processed here. Thank you for your interest.\n\nWe are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, gender identity, age, marital status, veteran status, or disability status, among other characteristics.\n\nRewards\n\nWe provide a suite of benefits that promote physical, emotional and financial well-being for ‘Every World’ - we’ve got our employees covered! Subject to eligibility requirements, the Company offers comprehensive benefits including:\n• Medical, dental, vision, health savings account or health reimbursement account, healthcare spending accounts, dependent care spending accounts, life and AD&D insurance, disability insurance;\n• 401(k) with Company match, tuition reimbursement, charitable donation matching;\n• Paid holidays and vacation, paid sick time, floating holidays, compassion and bereavement leaves, parental leave;\n• Mental health & wellbeing programs, fitness programs, free and discounted games, and a variety of other voluntary benefit programs like supplemental life & disability, legal service, ID protection, rental insurance, and others;\n• If the Company requires that you move geographic locations for the job, then you may also be eligible for relocation assistance.\n\nEligibility to participate in these benefits may vary for part time and temporary full-time employees and interns with the Company. You can learn more by visiting https://www.benefitsforeveryworld.com/.\n\nIn the U.S., the standard base pay range for this role is $146,000.00 - $270,004.00 Annual. These values reflect the expected base pay range of new hires across all U.S. locations. Ultimately, your specific range and offer will be based on several factors, including relevant experience, performance, and work location. Your Talent Professional can share this role’s range details for your local geography during the hiring process. In addition to a competitive base pay, employees in this role may be eligible for incentive compensation. Incentive compensation is not guaranteed. While we strive to provide competitive offers to successful candidates, new hire compensation is negotiable.",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "9+ years of experience in gameplay systems engineering or a combination of applicable training and experience",
+            "Experience creating compelling player experiences at AAA quality, including game world simulation, objectives, mission progression, interactables, UX, cinematic elements, etc",
+            "Experience building comprehensive content iteration and debugging workflows to achieve creative vision in a productive, scalable manner, including at least one shipped game",
+            "The ability to understand and write production-grade C++ code",
+            "The capacity to make frequent, readable, well-tested code commits",
+            "The ability to communicate and articulate vision, ideas, learnings from others, and to give meaningful feedback",
+            "Excellent problem-solving and debugging skills",
+            "Experience analyzing game features and content for performance and optimizing the game to release quality",
+            "Experience working closely in multi-disciplinary teams with people of diverse mindsets",
+            "Mentorship mindset and excellent attitude to helping others level up their knowledge",
+            "Computer science, mathematics, physics, or related degree",
+            "Experience developing and shipping AAA game titles for PC, Xbox, and PlayStation consoles",
+            "Experience working on 3D action multiplayer games",
+            "Experience with large codebase",
+            "Passion for gameplay development, especially for the quality of player engagement and immersion"
+          ]
+        },
+        {
+          "title": "Benefits",
+          "items": [
+            "We provide a suite of benefits that promote physical, emotional and financial well-being for ‘Every World’ - we’ve got our employees covered!",
+            "Medical, dental, vision, health savings account or health reimbursement account, healthcare spending accounts, dependent care spending accounts, life and AD&D insurance, disability insurance;",
+            "401(k) with Company match, tuition reimbursement, charitable donation matching;",
+            "Paid holidays and vacation, paid sick time, floating holidays, compassion and bereavement leaves, parental leave;",
+            "Mental health & wellbeing programs, fitness programs, free and discounted games, and a variety of other voluntary benefit programs like supplemental life & disability, legal service, ID protection, rental insurance, and others;",
+            "If the Company requires that you move geographic locations for the job, then you may also be eligible for relocation assistance",
+            "In the U.S., the standard base pay range for this role is $146,000.00 - $270,004.00 Annual",
+            "These values reflect the expected base pay range of new hires across all U.S. locations",
+            "In addition to a competitive base pay, employees in this role may be eligible for incentive compensation",
+            "Incentive compensation is not guaranteed"
+          ]
+        },
+        {
+          "title": "Responsibilities",
+          "items": [
+            "As a Principal Gameplay Systems Engineer, you will collaborate with designers and artists to define a technical vision and deliver best-in-class game systems",
+            "You will support the development of core game systems as well as collaborate in driving improvements in the underlying engine technology",
+            "You will work collaboratively with the team to define and execute a technical vision that meets the project’s needs",
+            "This role is anticipated to be a hybrid work position, with some work on-site and some work-from-home",
+            "Leveraging your experience and knowledge to deliver best-in-class player experiences, from end to end, within the constraints of game simulation and AAA production scale",
+            "Empowering designers, artists, and other engineers to deliver the vision of the game and ensuring we delight and entertain our players",
+            "Collaborating with designers and engineers on gameplay teams to learn and understand their needs and offer technical solutions",
+            "Optimizing team productivity by supporting content-creation pipelines, tool development, and workflow improvements",
+            "Championing Blizzard’s core values"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "Blizzard Careers - Blizzard Entertainment",
+          "link": "https://careers.blizzard.com/gb/en/job/R023167/Principal-Software-Engineer-Gameplay-Systems-Unannounced-Game-Irvine-CA?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://www.linkedin.com/jobs/view/principal-software-engineer-gameplay-systems-unannounced-game-irvine-ca-at-blizzard-entertainment-3914878805?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Indeed",
+          "link": "https://www.indeed.com/viewjob?jk=450d925e4c760dec&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Built In",
+          "link": "https://builtin.com/job/principal-software-engineer-gameplay-systems-unannounced-game-irvine-ca/3008404?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "ZipRecruiter",
+          "link": "https://www.ziprecruiter.com/c/Blizzard-Entertainment,-Inc./Job/Principal-Software-Engineer,-Gameplay-Systems-Unannounced-Game-%7C-Irvine,-CA/-in-Irvine,CA?jid=f776738763ce96ed&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Glassdoor",
+          "link": "https://www.glassdoor.com/job-listing/principal-software-engineer-gameplay-systems-unannounced-game-irvine-ca-blizzard-entertainment-JV_IC1146798_KO0,71_KE72,94.htm?jl=1009260489181&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Hitmarker",
+          "link": "https://hitmarker.net/jobs/blizzard-entertainment-principal-software-engineer-gameplay-systems-unannounced-game-2674986?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "SimplyHired",
+          "link": "https://www.simplyhired.com/job/AqA7Se7ZpMFn0JZnxkR5OBIu1bWTxmoONne1l-CCWPbInu2iEHaCXw?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJQcmluY2lwYWwgU29mdHdhcmUgRW5naW5lZXIsIEdhbWVwbGF5IFN5c3RlbXMgLSBVbmFubm91bmNlZCBHYW1lIHwgSXJ2aW5lLCBDQSIsImNvbXBhbnlfbmFtZSI6IkJsaXp6YXJkIEVudGVydGFpbm1lbnQiLCJhZGRyZXNzX2NpdHkiOiJJcnZpbmUsIENBIiwiaHRpZG9jaWQiOiJ2c1FYYXFFYWhyejI4WUxoQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Junior Software Developer",
+      "company_name": "SynergisticIT",
+      "location": "Costa Mesa, CA",
+      "via": "LinkedIn",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=VZW9tIVtSr4dkhQcAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXMsQrCMBCAYVz7CC7eLJoUwUUnqSAWnOpeknAmkZgLuaj1LXxk4_Jv_9d8Z03bP6OnDAPdyltlhCO-MFDCDGvoSQOjysYBRTgR2YDzvSsl8U5K5iAsF1W8EYYekiJqmuSdNP8zsqteCqrguNm2k0jRLhfDJ2K2nut0voKP0FEl4IKsVtAdfq9cFFiTAAAA&shmds=v1_AUFQtOPhx5Ak-2-RjaxpuYFnUxRYSRG61conXDVOlPuFPI3Wpw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=VZW9tIVtSr4dkhQcAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/678c6e39ef17462cf5580a45/images/a54ed6275f0d35a9fd38af1aae0df4d3c4f681bbb52f36c13200a104a49aff03.jpeg",
+      "extensions": [
+        "Full-time"
+      ],
+      "detected_extensions": {
+        "schedule_type": "Full-time"
+      },
+      "description": "Since 2010 Synergisticit has helped Jobseekers differentiate themselves by providing candidates the requisite skills and experience to outperform at interviews and clients. Here at SynergisticIT We just don't focus on getting you a tech Job we make careers.\n\nIn this market also we have been able to help our candidates get multiple job offers and $100k + salaries.\n\nplease check the below links to see the success outcomes of our candidates our participation at different Tech industry events and how we are different from other organizations in helping Jobseekers secure Tech careers\n\nhttps://www.synergisticit.com/candidate-outcomes/\n\nhttps://reg.rf.oracle.com/flow/oracle/cwoh23/OCWExhibitorCatalog/page/OCWexhibitorcatalog\n\nWe regularly interact with the Top Tech companies to give our candidates a competitive advantage see us exhibiting at Oracle Cloud World/Oracle Java One (Las Vegas) -2023/2022 and at Gartner Data Analytics Summit (Florida)-2023\n\nAll Positions are open for all visas and US citizens\n\nWe at Synergisticit understand the problem of the mismatch between employer's requirements and Employee skills and that's why since 2010 we have helped 1000's of candidates get jobs at technology clients like Apple, Google, Paypal, Western Union, Client, visa, Walmart lab s etc to name a few.\n\nWe have an excellent reputation with the clients. Currently, We are looking for entry-level software programmers, Java full-stack developers, Python/Java developers, Data analysts/ Data Scientists, and Machine Learning engineers for full-time positions with clients.\n\nWho Should Apply Recent Computer Science/Engineering /Mathematics/Statistics or Science Graduates or People looking to switch careers or who have had gaps in employment and looking to make their careers in the Tech Industry?\n\nWe assist in filing for STEM extension and also for H1b and Green card filing to Candidates\n\nhttps://www.youtube.com/watch?v=OFoqPTNORew\n\nhttps://www.youtube.com/watch?v=-HkNN1ag6Zk\n\nhttps://www.youtube.com/watch?v=OAFOhcGy9Z8\n\nhttps://youtu.be/bJJl27D8bh0\n\nWe are looking for the right matching candidates for our clients\n\nRequired Skills\n\nREQUIRED SKILLS For Java /Full stack/Software Programmer\n• Bachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, IT\n• Highly motivated, self-learner, and technically inquisitive\n• Experience in programming language Java and understanding of the software development life cycle\n• Project work on the skills\n• Knowledge of Core Java , javascript, C++, or software programming\n• Spring boot, Microservices, Docker, Jenkins, and REST API experience\n• Excellent written and verbal communication skills\n\nFor data Science/Machine learning Positions\n\nRequired Skills\n• Bachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, IT\n• Project work on the technologies needed\n• Highly motivated, self-learner, and technically inquisitive\n• Experience in programming language Java and understanding of the software development life cycle\n• Knowledge of Statistics, SAS, Python, Computer Vision, and data visualization tools\n• Excellent written and verbal communication skills\n\nPreferred skills: NLP, Text mining, Tableau, PowerBI, SAS, Tensorflow\n\nIf you get emails from our Job Placement team and are not interested please email them or ask them to take you off their distribution list and make you unavailable as they share the same database with the client servicing team and only connect with candidates who are matching client requirements.\n\nNo phone calls please. Shortlisted candidates would be reached out. No third-party or agency candidates or c2c candidates",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "REQUIRED SKILLS For Java /Full stack/Software Programmer",
+            "Bachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, IT",
+            "Highly motivated, self-learner, and technically inquisitive",
+            "Experience in programming language Java and understanding of the software development life cycle",
+            "Project work on the skills",
+            "Knowledge of Core Java , javascript, C++, or software programming",
+            "Spring boot, Microservices, Docker, Jenkins, and REST API experience",
+            "Excellent written and verbal communication skills",
+            "For data Science/Machine learning Positions",
+            "Bachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, IT",
+            "Project work on the technologies needed",
+            "Highly motivated, self-learner, and technically inquisitive",
+            "Experience in programming language Java and understanding of the software development life cycle",
+            "Knowledge of Statistics, SAS, Python, Computer Vision, and data visualization tools",
+            "Excellent written and verbal communication skills"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "LinkedIn",
+          "link": "https://www.linkedin.com/jobs/view/junior-software-developer-at-synergisticit-4045412633?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Recruit.net",
+          "link": "https://www.recruit.net/job/junior-software-developer-jobs/4DE22622865F2252?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJKdW5pb3IgU29mdHdhcmUgRGV2ZWxvcGVyIiwiY29tcGFueV9uYW1lIjoiU3luZXJnaXN0aWNJVCIsImFkZHJlc3NfY2l0eSI6IkNvc3RhIE1lc2EsIENBIiwiaHRpZG9jaWQiOiJWWlc5dElWdFNyNGRraFFjQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Software Engineering Intern",
+      "company_name": "Panasonic",
+      "location": "Irvine, CA",
+      "via": "Panasonic Careers",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=software+engineer&htidocid=wjCl49DOf8c_6pnFAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXNsQrCMBCAYVz7AoLTzaKJFFx0EhGpk-ADlCScSUq8K7lD-ww-tXX5x-9vvoumffBTP64iXChmQqyZInSkWAm2cGMPgq6GBExwZY4FV8ekOsrBWpFioqjTHEzgl2VCz5Md2Ms_vaQZHotT7Nv9bjIjxfXy7sgJUw6QCbr6nqcbOJ9-gwlMGY0AAAA&shmds=v1_AUFQtOOawhFKOdba9lFQ_8Ixmx1SgELdzxcwJo4G3yaR_wqu3A&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=software+engineer&htidocid=wjCl49DOf8c_6pnFAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/678c6e39ef17462cf5580a45/images/a54ed6275f0d35a9f7719fc03548bf757c660240ca3554184bf0273890ddd954.png",
+      "extensions": [
+        "Full-time"
+      ],
+      "detected_extensions": {
+        "schedule_type": "Full-time"
+      },
+      "description": "Overview\n\nSoftware Engineering Intern- Irvine, CA\n• Must be enrolled in school at the time of summer internship to be considered\n\nPanasonic Avionics Corporation is seeking motivated Software Engineering Interns to join our growing Software Engineering team in our Irvine, CA office. This paid internship will start in May/June and continue through August/September 2025 with an opportunity to potentially continue through the school year.\n\nWho we are:\n\nFor 40 years, Panasonic Avionics has strengthened the connection between the world’s airlines and their passengers. We are recognized globally for our experience and leadership in product innovation and customization, system reliability, and customer care.\n\nWe collaborate with over 300 airline customers to develop inflight entertainment and communications (IFEC) solutions that are designed to meet their unique fleet, brand, operations, and business requirements, based on state-of-the-art technology, connectivity, and industry know-how. Every year, more than 2.7 billion passengers enjoy an amazing entertainment experience flying onboard Panasonic-equipped aircraft.\n\nThe hourly wage range for this position is $25- $38. The final offer amount may vary and is based on the candidates' year in school. The minimum hourly wage for this role will be the greater of the posted range, or minimum wage for the location where the employee will be working, subject to local minimum wage requirements.\n\nResponsibilities\n\nHow you will spend your summer:\n• The intern spend time learning about the IFES system through hands on experience performing application audit (e.g. Paxus) and interactive validation during development, integration, dryrun, & ATP.\n• The intern will gain experience using industry tool such as Jira, JAMA, and Synergy.\n• The intern will learn about Linux, Android, and custom PAC tool such as Interactive Validation Tool (IVU)\n• The intern will be supporting customer projects and have a chance to interact with customer (e.g. Japan Airline)\n• The intern will be given opportunity to develop software or automation scripts depending on their progress and experience.\n\nWhat you'll gain:\n• Gain real-world experience in a corporate environment​\n• Explore and discover career interests​\n• Enhance communication skills​ & Build Confidence​\n• Learn from different individuals​\n\nQualifications\n\nWhat you'll need:\n• Undergraduate junior senior or graduate student\n• Ability to work cooperatively with others, take verbal as well as written instructions and communicate instructions as needed.\n• BS or MS in Computer Science or equivalent. Python, Linux, Android. Coding Skills.\n\nPanasonic is proud to be an Equal Opportunity/Affirmative Action employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, national origin, disability status, protected veteran status, and any other characteristic protected by law or company policy. All qualified individuals are required to perform the essential functions of the job with or without reasonable accommodation. Pre-employment drug testing is required for safety sensitive positions or as may otherwise be required by contract or law. Due to the high volume of responses, we will only be able to respond to candidates of interest. All candidates must have valid authorization to work in the U.S. Thank you for your interest in Panasonic Avionics Corporation.  \n\nREQ-147696",
+      "job_highlights": [
+        {
+          "title": "Qualifications",
+          "items": [
+            "Must be enrolled in school at the time of summer internship to be considered",
+            "Learn from different individuals​",
+            "Undergraduate junior senior or graduate student",
+            "Ability to work cooperatively with others, take verbal as well as written instructions and communicate instructions as needed",
+            "BS or MS in Computer Science or equivalent",
+            "Python, Linux, Android",
+            "Coding Skills",
+            "Pre-employment drug testing is required for safety sensitive positions or as may otherwise be required by contract or law"
+          ]
+        },
+        {
+          "title": "Benefits",
+          "items": [
+            "The hourly wage range for this position is $25- $38",
+            "The final offer amount may vary and is based on the candidates' year in school",
+            "Gain real-world experience in a corporate environment​"
+          ]
+        },
+        {
+          "title": "Responsibilities",
+          "items": [
+            "The minimum hourly wage for this role will be the greater of the posted range, or minimum wage for the location where the employee will be working, subject to local minimum wage requirements",
+            "The intern spend time learning about the IFES system through hands on experience performing application audit (e.g. Paxus) and interactive validation during development, integration, dryrun, & ATP",
+            "The intern will gain experience using industry tool such as Jira, JAMA, and Synergy",
+            "The intern will learn about Linux, Android, and custom PAC tool such as Interactive Validation Tool (IVU)",
+            "The intern will be supporting customer projects and have a chance to interact with customer (e.g. Japan Airline)",
+            "The intern will be given opportunity to develop software or automation scripts depending on their progress and experience",
+            "Enhance communication skills​ & Build Confidence​"
+          ]
+        }
+      ],
+      "apply_options": [
+        {
+          "title": "Panasonic Careers",
+          "link": "https://careers.na.panasonic.com/jobs/39222?lang=en-us&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Indeed",
+          "link": "https://www.indeed.com/viewjob?jk=e1a262152ef6d931&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "ZipRecruiter",
+          "link": "https://www.ziprecruiter.com/c/Panasonic/Job/Software-Engineering-Intern/-in-Irvine,CA?jid=56f5db64532d4ea0&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "JSfirm.com",
+          "link": "https://www.jsfirm.com/Engineering/Software+Engineering+Intern/Irvine-California/jobID_1470250?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Glassdoor",
+          "link": "https://www.glassdoor.com/job-listing/software-engineering-intern-pac-panasonic-avionics-corporation-JV_IC1146798_KO0,27_KE28,62.htm?jl=1009509496569&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Dice",
+          "link": "https://www.dice.com/job-detail/60d7f406-10dd-4f04-acb0-65e868bfee6f?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Panasonic North America Jobs",
+          "link": "https://panasonic.dejobs.org/irvine-ca/software-engineering-intern/C61C3D67E1954C598490491009486BD7/job/?utm_source=US+Military+Pipeline-DE&utm_medium=Military&utm_campaign=US+Military+Pipeline&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "LinkedIn",
+          "link": "https://www.linkedin.com/jobs/view/software-engineering-intern-at-panasonic-avionics-corporation-4060164457?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlcmluZyBJbnRlcm4iLCJjb21wYW55X25hbWUiOiJQYW5hc29uaWMiLCJhZGRyZXNzX2NpdHkiOiJJcnZpbmUsIENBIiwiaHRpZG9jaWQiOiJ3akNsNDlET2Y4Y182cG5GQUFBQUFBPT0ifQ=="
+    }
+  ],
+  "serpapi_pagination": {
+    "next_page_token": "eyJmYyI6IkVvd0RDc3dDUVVwSE9VcHJUekpLWkVoRlZ6VXRMWFZCTjFoRVNEZEtPVFZxWkZGVlYyVmhVelZDY1ZaVFZXOTBlR2huV2poSFVqWnhURVpoTFhscGNURm9ZMEV4WmtKUFYxZG5SMFZQZDBNMFgxTjRPRTVaUVZKelVrcDZSV042WjNka1UyeHBSMVJwYlc5WWNGcFdSbWxzYlZkaVdtdGFTRWRUZFc1VFFuaFZkbU10ZEVKYVdXdEJjbXBzZHpaRmMxbFJjR0Z6Y1RJeVNua3haMVpWY1hkc1UwTkVUMGRUZFVKc1RtZFNaR1psY1RJM2NYVjJVMEpxT1ZnNWJGUnFabDlOWlRkbFgzZHlSVnBqVUc5clRUazFNMUp5Vm5GNGFYSmthWEUyZW1OUlRreEJhRXBGV0RCNFVTMDNhRWRmYURSUkxXZE9kbGQ1T1ZwTlVDMUNWVUV3TldnNGRURjRSMHhGZFhReVN6SlhaMVpGVGxaQkxXc3dSV1l5VHpsV1prRTFlbFJzU0hacE1tcFpOV3MyYlZrMk1XSjFYemh2VUhWd1pWSXlYMGMyT1hVdExVWTJUVGhFYkhoVlQybGhUMVlTRjA4eU5rMWFMVzFKU3pSbGNYZGlhMUIzYzFjd05sRkZHaUpCUmxoeVJXTnlNWHBNUzFscVZqTlFabHB5UTBKUlVWaE1RMlUyVGxCdk5rRlIiLCJmY3YiOiIzIn0=",
+    "next": "https://serpapi.com/search.json?engine=google_jobs&google_domain=google.com&next_page_token=eyJmYyI6IkVvd0RDc3dDUVVwSE9VcHJUekpLWkVoRlZ6VXRMWFZCTjFoRVNEZEtPVFZxWkZGVlYyVmhVelZDY1ZaVFZXOTBlR2huV2poSFVqWnhURVpoTFhscGNURm9ZMEV4WmtKUFYxZG5SMFZQZDBNMFgxTjRPRTVaUVZKelVrcDZSV042WjNka1UyeHBSMVJwYlc5WWNGcFdSbWxzYlZkaVdtdGFTRWRUZFc1VFFuaFZkbU10ZEVKYVdXdEJjbXBzZHpaRmMxbFJjR0Z6Y1RJeVNua3haMVpWY1hkc1UwTkVUMGRUZFVKc1RtZFNaR1psY1RJM2NYVjJVMEpxT1ZnNWJGUnFabDlOWlRkbFgzZHlSVnBqVUc5clRUazFNMUp5Vm5GNGFYSmthWEUyZW1OUlRreEJhRXBGV0RCNFVTMDNhRWRmYURSUkxXZE9kbGQ1T1ZwTlVDMUNWVUV3TldnNGRURjRSMHhGZFhReVN6SlhaMVpGVGxaQkxXc3dSV1l5VHpsV1prRTFlbFJzU0hacE1tcFpOV3MyYlZrMk1XSjFYemh2VUhWd1pWSXlYMGMyT1hVdExVWTJUVGhFYkhoVlQybGhUMVlTRjA4eU5rMWFMVzFKU3pSbGNYZGlhMUIzYzFjd05sRkZHaUpCUmxoeVJXTnlNWHBNUzFscVZqTlFabHB5UTBKUlVWaE1RMlUyVGxCdk5rRlIiLCJmY3YiOiIzIn0%3D&q=software+engineer"
+  }
+}

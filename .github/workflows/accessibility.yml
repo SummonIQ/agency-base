@@ -1,0 +1,35 @@
+name: Accessibility Testing
+
+on:
+  push:
+    branches: [ main, master, development ]
+  pull_request:
+    branches: [ main, master, development ]
+
+jobs:
+  a11y-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+      
+      - name: Generate Prisma client
+        run: bun db:generate
+        
+      - name: Run accessibility tests
+        run: bun test:a11y
+        
+      - name: Upload accessibility test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-test-results
+          path: ./accessibility-report.json
+          if-no-files-found: ignore

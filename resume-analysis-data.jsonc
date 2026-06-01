@@ -1,0 +1,92 @@
+{
+	"analysis": {
+		"ats_analysis": {
+			"score": "number(0-100)",
+			"breakdown": {
+				"achievements": {
+					"feedback": ["string"],
+					"good_examples": ["string"],
+					"needs_improvement": ["string"],
+					"score": "number(0-100)"
+				},
+				"formatting": {
+					"feedback": ["string"],
+					"incompatible_elements": ["string"],
+					"score": "number(0-100)"
+				},
+				"keywords": {
+					"feedback": ["string"],
+					"missing": ["string"],
+					"overused": ["string"],
+					"score": "number(0-100)",
+					"suggested": ["string"]
+				},
+				"readability": {
+					"feedback": ["string"],
+					"score": "number(0-100)"
+				},
+				"sections": {
+					"details": [
+						{
+							"feedback": ["string"], // feedback on the section
+							"issues": ["string"], // issues in the section
+							"name": "string", // name of the section
+							"missing": ["string"], // missing elements in the section
+							"score": "number(0-100)"
+						}
+					],
+					"score": "number(0-100)"
+				}
+			},
+			"strengths": ["string"], // strengths of the resume - e.g. Strong action verbs, Good quantifiable achievements, Clear contact information
+			"summary": "string", // Markdown summary of the resume - e.g. The resume is well-optimized for ATS with strong use of keywords, clear formatting, and detailed achievements. Minor improvements can be made by adding an education section and expanding on certifications.
+			"weaknesses": ["string"] // weaknesses of the resume - e.g. Missing industry-specific keywords, Dense text blocks in experience section
+		},
+		"summary": {
+			"grammar_analysis": {
+				"issues_found": "number",
+				"issues": [
+					{
+						"type": ["string"], // type of issue, e.g. tense_consistency
+						"description": ["string"], // description of the issue, e.g. Mixed verb tenses in experience section
+						"example": ["string"], // example of the issue, e.g. Managed team (past) and create (present) reports
+						"suggestion": ["string"] // suggestion for the issue, e.g. Use consistent past tense for previous roles
+					}
+				]
+			},
+			"recommendations": {
+				"priority_fixes": ["string"], // priority fixes for the resume
+				"content_enhancements": ["string"], // content enhancements for the resume
+				"long_term_improvements": ["string"] // long term improvements for the resume
+			},
+			"spelling_analysis": {
+				"issues_found": "number",
+				"issues": [
+					{
+						"word": "string", // misspelled word that was found
+						"suggestion": "string", // replacement suggestion for the word
+						"context_sentence": "string" // sentence where the word was found
+					}
+				]
+			}
+		}
+	},
+	"optimized_resume": {
+		"ats_score": "number(0-100)", // score of the ATS analysis
+		"ats_summary": "string", // summary of the ATS analysis
+		"changelog": ["string"], // changelog of the resume - e.g  Standardized verb tenses, Corrected spelling errors, Added missing keywords: SEO, Agile, Reformatted education section for ATS
+		"confidence_metrics": {
+			"estimated_visibility_boost": "string", // estimated visibility boost of the resume - e.g. "top 10%"
+			"projected_shortlist_probability": "number" // projected shortlist probability of the resume - e.g. 68 = (ats_score * 0.6) + (readability * 0.4)
+		},
+		"json": "string", // Optimized resume in json format
+		"markdown": "string", // Optimized resume in markdown format
+		"optimization_strategy": "string", // strategy for optimizing the resume, e.g. "Balanced human-readability with ATS requirements"
+		"score_improvement": {
+			"delta": "number", // delta of the score from the original resume
+			"percent_change": "number", // percent change of the score
+			"significant_improvements": ["string"] // significant improvements in the optimized resume
+		},
+		"summary": "string" // summary of the optimized resume
+	}
+}

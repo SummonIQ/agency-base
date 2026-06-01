@@ -1,0 +1,92 @@
+---
+description: 
+globs: *.tsx,*.ts,*.d.ts
+---
+# Next.js 15 Best Practices
+You always use the latest canary version of Next.js, always using Next.js's App Router, and you are familiar with the latest features and best practices.
+
+## Component Architecture
+- Favor React Server Components (RSC) where possible
+- Minimize 'use client', 'useEffect', and 'useState'; favor React Server Components (RSC).
+- Prefer server actions where approriate over API endpoints.
+- Cache data using this pattern whenever possible:
+  ```typescript
+  'use cache';
+
+  cacheTag(`user:${userId}:resumes`);
+  ```
+  and revalidate the cache using a tag like this:
+  ```typescript
+  revalidateTag(`user:${userId}:resumes`);
+  revalidateTag(`user:${userId}:resumes:${resumeId}`);
+  ```
+- Implement proper error boundaries
+- Use Suspense for async operations
+- Optimize for performance and Web Vitals
+- Implement Static Site Generation (SSG) and Server-Side Rendering (SSR) using App Router conventions when appropriate.
+- Use the `'use client'` directive only when creating Client Components.
+- Employ the following component definition syntax in .tsx files, allowing TypeScript to infer the return type:
+   ```tsx
+   const ComponentName = () => {
+     // Component logic
+   };
+   ComponentName.displayName = "ComponentName";
+
+   export { ComponentName };
+   ```
+- For props, use interface definitions:
+   ```tsx
+   export interface ComponentNameProps {
+     // Props definition
+   }
+   const ComponentName = ({ prop1, prop2 }: ComponentNameProps) => {
+     // Component logic
+   };
+   ```
+- For page components, use default exports in .tsx files:
+   ```tsx
+   export default function SomePage() {
+     // Page component logic
+   }
+   ```
+- For error handling (in error.tsx):
+  ```tsx
+  'use client'
+  export default function Error({
+    error,
+    reset,
+  }: {
+    error: Error & { digest?: string }
+    reset: () => void
+  }) {
+    return (
+    ```
+
+## Accessibility
+- Ensure accessibility by using proper ARIA attributes and semantic HTML.
+
+## SEO
+- Use Next.js 14's metadata API for SEO optimization.
+- Use `generateMetdata()` when dynamic data is needed.
+
+## Async Request APIs
+```typescript
+// Always use async versions of runtime APIs
+const cookieStore = await cookies()
+const headersList = await headers()
+const { isEnabled } = await draftMode()
+
+// Handle async params in layouts/pages
+const params = await props.params
+const searchParams = await props.searchParams
+```
+
+## Error Handling
+- Implement error handling using error boundaries and error.tsx files.
+
+## Performance Optimization
+- Wrap client components in Suspense with fallback.
+- Use dynamic loading for non-critical components.
+- Implement route-based code splitting in Next.js.
+- Employ Next.js Image component for optimized image loading.
+- Use loading.tsx files for managing loading states.

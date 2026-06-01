@@ -1,0 +1,3243 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "darwin", "darwin-arm64"]
+}
+
+// Alphabetized Enums
+
+// Agency Management Enums
+enum ActionTaskStatus {
+  TODO
+  IN_PROGRESS
+  BLOCKED
+  COMPLETED
+  CANCELLED
+}
+
+enum ActionTaskPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum ClientStatus {
+  PROSPECT
+  LEAD
+  ACTIVE
+  INACTIVE
+  CHURNED
+}
+
+enum ProjectStatus {
+  DRAFT
+  PROPOSED
+  NEGOTIATING
+  ACTIVE
+  ON_HOLD
+  COMPLETED
+  CANCELLED
+}
+
+enum ProposalStatus {
+  DRAFT
+  SENT
+  VIEWED
+  NEGOTIATING
+  ACCEPTED
+  REJECTED
+  EXPIRED
+}
+
+enum ContractStatus {
+  DRAFT
+  SENT
+  NEGOTIATING
+  SIGNED
+  ACTIVE
+  COMPLETED
+  TERMINATED
+}
+
+enum InvoiceStatus {
+  DRAFT
+  SENT
+  VIEWED
+  PAID
+  OVERDUE
+  CANCELLED
+  REFUNDED
+}
+
+enum LeadSource {
+  WEBSITE
+  REFERRAL
+  COLD_OUTREACH
+  INBOUND
+  SOCIAL_MEDIA
+  PLATFORM_UPWORK
+  PLATFORM_TOPTAL
+  PLATFORM_CONTRA
+  PLATFORM_FIVERR
+  NETWORKING_EVENT
+  OTHER
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  PROPOSAL_SENT
+  NEGOTIATING
+  WON
+  LOST
+  NURTURING
+}
+
+// Email Automation Enums
+enum EmailTemplateType {
+  RECRUITING
+  LEAD_GEN
+  FOLLOW_UP
+  CLIENT
+  NURTURING
+  NOTIFICATION
+}
+
+enum EmailSequenceStatus {
+  DRAFT
+  ACTIVE
+  PAUSED
+  COMPLETED
+  CANCELLED
+}
+
+enum EmailSendStatus {
+  PENDING
+  SENDING
+  SENT
+  DELIVERED
+  OPENED
+  CLICKED
+  BOUNCED
+  FAILED
+  UNSUBSCRIBED
+}
+
+enum RecipientStatus {
+  ACTIVE
+  UNSUBSCRIBED
+  BOUNCED
+  COMPLAINED
+  PAUSED
+}
+
+enum CommunicationType {
+  EMAIL
+  PHONE
+  VIDEO_CALL
+  IN_PERSON
+  SLACK
+  LINKEDIN
+  OTHER
+}
+
+enum TimeEntryStatus {
+  DRAFT
+  SUBMITTED
+  APPROVED
+  INVOICED
+  PAID
+}
+
+enum ServiceType {
+  CONSULTING
+  DEVELOPMENT
+  DESIGN
+  MAINTENANCE
+  SUPPORT
+  TRAINING
+  OTHER
+}
+
+enum CompanySize {
+  ENTERPRISE
+  MID_SIZE
+  SMALL
+}
+
+enum ExperienceLevel {
+  ENTRY_LEVEL
+  MID_LEVEL
+  SENIOR_LEVEL
+}
+
+enum JobBoard {
+  CAREER_BUILDER
+  GOOGLE
+  LINKEDIN
+  INDEED
+  GLASSDOOR
+  ZIPRECRUITER
+  ANGELLIST
+  WELLFOUND
+  MONSTER
+  DICE
+  FLEXJOBS
+  REMOTE_OK
+  WE_WORK_REMOTELY
+  COMPANY_DIRECT
+  OTHER
+}
+
+enum JobFitAnalysisStatus {
+  ANALYZING
+  COMPLETED
+  FAILED
+  QUEUED
+}
+
+enum ApplicationStatus {
+  PENDING
+  SUBMITTED
+  FAILED
+  REJECTED
+  UNDER_REVIEW
+  INTERVIEW_REQUESTED
+  INTERVIEW_SCHEDULED
+  INTERVIEW_COMPLETED
+  OFFER_RECEIVED
+  OFFER_ACCEPTED
+  OFFER_REJECTED
+  WITHDRAWN
+  NOT_SELECTED
+}
+
+enum JobLeadStatus {
+  ADDED
+  APPLIED
+  DISMISSED
+  INTERVIEW_SCHEDULED
+  INTERVIEWED
+  OFFER_ACCEPTED
+  OFFER_MADE
+  OFFER_REJECTED
+  REJECTED
+}
+
+enum JobLeadOptimizationStatus {
+  ANALYZING
+  COMPLETED
+  FAILED
+  OPTIMIZING
+  QUEUED
+}
+
+enum JobListingStatus {
+  ADDED_TO_LEADS
+  DISMISSED
+  UNREVIEWED
+}
+
+enum JobSearchStatus {
+  COMPLETED
+  FAILED
+  PROCESSING
+  QUEUED
+}
+
+enum JobType {
+  CONTRACT
+  FULL_TIME
+  FULL_TIME_AND_PART_TIME
+  INTERNSHIP
+  PART_TIME
+  UNKNOWN
+}
+
+enum ResumeAnalysisStatus {
+  ANALYZING
+  COMPLETED
+  PROCESSING
+  FAILED
+  QUEUED
+}
+
+enum ResumeFormat {
+  PDF
+  WORD
+}
+
+enum ResumeOptimizationStatus {
+  ANALYZING
+  COMPLETED
+  FAILED
+  OPTIMIZING
+  PROCESSING
+  QUEUED
+  REFINING
+}
+
+enum ResumeRefinementStatus {
+  ANALYZING
+  COMPLETED
+  FAILED
+  PROCESSING
+  REFINING
+  QUEUED
+}
+
+enum ResumeRevisionType {
+  JOB_LEAD
+  NEW_RESUME
+}
+
+enum NotificationStatus {
+  PENDING
+  SENT
+  READ
+  FAILED
+}
+
+enum NotificationPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum NotificationCategory {
+  APPLICATION_STATUS
+  INTERVIEW_REQUEST
+  NETWORKING_REMINDER
+  SHARE
+  RESUME_FEEDBACK
+  AUTOMATION
+  JOB_SEARCH
+  RESUME_ANALYSIS
+  SYSTEM
+}
+
+enum NotificationChannel {
+  EMAIL
+  IN_APP
+  BROWSER
+}
+
+enum NotificationFrequency {
+  IMMEDIATE
+  BATCHED
+  MINIMAL
+}
+
+// Alphabetized Models with alphabetized properties
+
+model ApplicationSubmission {
+  createdAt              DateTime                       @default(now())
+  errorMessage           String?
+  id                     String                         @id @default(cuid())
+  jobLead                JobLead                        @relation(fields: [jobLeadId], references: [id], onDelete: Cascade)
+  jobLeadId              String
+  metadata               Json? // Store submission details, API responses, etc.
+  resume                 Resume?                        @relation(fields: [resumeId], references: [id])
+  resumeId               String?
+  status                 ApplicationStatus              @default(PENDING)
+  submissionUrl          String? // URL where application was submitted
+  submittedAt            DateTime?
+  updatedAt              DateTime                       @updatedAt
+  user                   User                           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId                 String
+  userAgent              String? // Track automation vs manual
+  wasAutomated           Boolean                        @default(false)
+  // Outcome tracking fields
+  outcomeEvents          ApplicationOutcomeEvent[]
+  lastStatusChangeAt     DateTime?
+  responseReceivedAt     DateTime? // When first response was received
+  finalOutcomeAt         DateTime? // When final outcome was determined
+  interviewCount         Int                            @default(0)
+  daysSinceSubmission    Int? // Calculated field for analytics
+  daysToResponse         Int? // Days from submission to first response
+  daysToFinalOutcome     Int? // Days from submission to final outcome
+}
+
+model ApplicationOutcomeEvent {
+  id                     String                @id @default(cuid())
+  applicationSubmission  ApplicationSubmission @relation(fields: [applicationSubmissionId], references: [id], onDelete: Cascade)
+  applicationSubmissionId String
+  eventType              String // "status_change", "interview_scheduled", "response_received", etc.
+  previousStatus         ApplicationStatus?
+  newStatus              ApplicationStatus
+  metadata               Json? // Additional event data (interview details, offer amount, etc.)
+  notes                  String?
+  createdAt              DateTime              @default(now())
+  createdBy              String? // Could be "system", "user", or specific user ID
+}
+
+model CoverLetter {
+  createdAt   DateTime @default(now())
+  description String?
+  id          String   @id @default(cuid())
+  json        Json?
+  lead        JobLead? @relation(fields: [leadId], references: [id])
+  leadId      String?
+  markdown    String?
+  name        String
+  updatedAt   DateTime @updatedAt
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+}
+
+model JobFitAnalysis {
+  additionalMetrics        Json
+  createdAt                DateTime             @default(now())
+  educationRelevanceScore  Int
+  experienceRelevanceScore Int
+  summary                  String
+  id                       String               @id @default(cuid())
+  jobLead                  JobLead?             @relation(fields: [jobLeadId], references: [id], onDelete: Cascade)
+  jobLeadId                String?              @unique
+  jobListing               JobListing?          @relation(fields: [jobListingId], references: [id], onDelete: Cascade)
+  jobListingId             String?
+  keywordMatch             Json
+  missingKeywords          String[]
+  jobLeadOptimization      JobLeadOptimization?
+  overallMatchScore        Int
+  progress                 Int                  @default(0)
+  recommendations          String[]
+  resume                   Resume?              @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  resumeId                 String?
+  resumeOptimization       ResumeOptimization?
+  resumeRevision           ResumeRevision?      @relation(fields: [resumeRevisionId], references: [id])
+  resumeRevisionId         String?              @unique
+  skillsAlignment          Json
+  status                   JobFitAnalysisStatus @default(QUEUED)
+  updatedAt                DateTime             @updatedAt
+  user                     User?                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId                   String?
+}
+
+model JobLead {
+  applicationSubmissions ApplicationSubmission[]
+  automationScheduledApplications AutomationScheduledApplication[]
+  coverLetters           CoverLetter[]
+  createdAt              DateTime                @default(now())
+  id                     String                  @id @default(cuid())
+  jobFitAnalysis         JobFitAnalysis?
+  jobListing             JobListing              @relation(fields: [jobListingId], references: [id], onDelete: Cascade)
+  jobListingId           String                  @unique
+  jobSearch              JobSearch?              @relation(fields: [jobSearchId], references: [id], onDelete: Cascade)
+  jobSearchId            String?
+  optimization           JobLeadOptimization?
+  resumeOptimizations    ResumeOptimization[]
+  resumeRevisions        ResumeRevision?
+  status                 JobLeadStatus           @default(ADDED)
+  title                  String
+  updatedAt              DateTime                @updatedAt
+  user                   User                    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId                 String
+}
+
+model JobLeadOptimization {
+  createdAt        DateTime                  @default(now())
+  id               String                    @id @default(cuid())
+  jobFitAnalysis   JobFitAnalysis?           @relation(fields: [jobFitAnalysisId], references: [id])
+  jobFitAnalysisId String?                   @unique
+  jobLead          JobLead                   @relation(fields: [jobLeadId], references: [id], onDelete: Cascade)
+  jobLeadId        String                    @unique
+  progress         Int                       @default(0)
+  resumeRevision   ResumeRevision?           @relation(fields: [resumeRevisionId], references: [id])
+  resumeRevisionId String?                   @unique
+  status           JobLeadOptimizationStatus @default(QUEUED)
+  updatedAt        DateTime                  @updatedAt
+  user             User?                     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId           String?
+}
+
+model JobListing {
+  applyOptions             Json?
+  benefits                 String[]
+  company                  String?
+  companyLogoUrl           String?
+  createdAt                DateTime         @default(now())
+  dentalCoverage           Boolean?
+  description              String?
+  detectedExtensions       Json?
+  extendedDetailsCollected Boolean?         @default(false)
+  extensions               String[]
+  healthInsurance          Boolean?
+  id                       String           @id @default(cuid())
+  jobBoard                 JobBoard?
+  jobBoardUrl              String?
+  jobId                    String           @unique
+  jobFitAnalyses           JobFitAnalysis[]
+  jobSearch                JobSearch?       @relation(fields: [jobSearchId], references: [id], onDelete: Cascade)
+  jobSearchId              String?
+  jobType                  JobType?
+  lead                     JobLead?
+  location                 String?
+  paidTimeOff              Boolean?
+  postedAt                 DateTime?
+  qualifications           String[]         @default([])
+  remote                   Boolean?
+  requirements             String[]         @default([])
+  responsibilities         String[]         @default([])
+  salary                   String?
+  saved                    Boolean          @default(false)
+  scheduleType             String?
+  source                   String?
+  status                   JobListingStatus @default(UNREVIEWED)
+  title                    String
+  updatedAt                DateTime         @updatedAt
+  user                     User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId                   String
+  workFromHome             Boolean?
+}
+
+model JobSearch {
+  completedAt DateTime?
+  createdAt   DateTime        @default(now())
+  endedAt     DateTime?
+  id          String          @id @default(cuid())
+  jobBoard    JobBoard?
+  jobBoardUrl String?
+  jobLeads    JobLead[]
+  jobListings JobListing[]
+  location    String?
+  metadata    Json?           // Store additional search information, status messages, etc.
+  nextToken   String?
+  pageDelay   Int?
+  progress    Int             @default(0)
+  remote      Boolean?
+  searchTerm  String
+  status      JobSearchStatus @default(QUEUED)
+  totalJobs   Int?
+  updatedAt   DateTime        @updatedAt
+  user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+}
+
+model LinkedInProfile {
+  createdAt         DateTime  @default(now())
+  email             String?
+  firstName         String
+  headline          String?
+  id                String    @id @default(cuid())
+  importedAt        DateTime
+  lastName          String
+  linkedInId        String
+  locationCity      String?
+  locationCountry   String?
+  profileData       Json?
+  profilePictureUrl String?
+  publicProfileUrl  String?
+  updatedAt         DateTime  @updatedAt
+  user              User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId            String
+
+  @@unique([userId, linkedInId])
+}
+
+model ResumeAnalysis {
+  achievements     Json?
+  createdAt        DateTime             @default(now())
+  formatting       Json?
+  grammar          Json?
+  id               String               @id @default(cuid())
+  keywords         Json?
+  optimization     ResumeOptimization?
+  progress         Int                  @default(0)
+  readability      Json?
+  recommendations  Json?
+  score            Int?
+  sections         Json?
+  resume           Resume?              @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  resumeId         String?              @unique
+  resumeRevision   ResumeRevision?      @relation(fields: [resumeRevisionId], references: [id])
+  resumeRevisionId String?              @unique
+  spelling         Json?
+  status           ResumeAnalysisStatus @default(QUEUED)
+  strengths        String[]
+  summary          String?
+  updatedAt        DateTime             @updatedAt
+  user             User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId           String
+  weaknesses       String[]
+}
+
+model ResumeOptimization {
+  analysisId                    String?                  @unique
+  analysis                      ResumeAnalysis?          @relation(fields: [analysisId], references: [id])
+  changelog                     String[]
+  estimatedVisibilityBoost      String?
+  projectedShortlistProbability Float?
+  createdAt                     DateTime                 @default(now())
+  id                            String                   @id @default(cuid())
+  jobFitAnalysis                JobFitAnalysis?          @relation(fields: [jobFitAnalysisId], references: [id])
+  jobFitAnalysisId              String?                  @unique
+  jobLead                       JobLead?                 @relation(fields: [jobLeadId], references: [id], onDelete: Cascade)
+  jobLeadId                     String?
+  optimizationStrategy          String?
+  scoreImprovement              Float?
+  score                         Float?
+  status                        ResumeOptimizationStatus @default(QUEUED)
+  previousScore                 Int?
+  progress                      Int                      @default(0)
+  resume                        Resume?                  @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  resumeId                      String?                  @unique
+  resumeRevision                ResumeRevision?          @relation(fields: [resumeRevisionId], references: [id])
+  resumeRevisionId              String?                  @unique
+  scoreDelta                    Float?
+  scorePercentChange            Float?
+  significantImprovements       String[]
+  summary                       String?
+  updatedAt                     DateTime                 @updatedAt
+  user                          User?                    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId                        String?
+}
+
+enum ResumeType {
+  ORIGINAL
+  REVISION
+}
+
+model Resume {
+  analysis               ResumeAnalysis?
+  analysisId             String?                 @unique
+  applicationSubmissions ApplicationSubmission[]
+  id                     String                  @id @default(cuid())
+  createdAt              DateTime                @default(now())
+  defaultRevisionId      String?                 @unique
+  description            String?
+  format                 ResumeFormat?
+  jobFitAnalyses         JobFitAnalysis[]
+  json                   Json?
+  markdown               String?
+  name                   String
+  optimization           ResumeOptimization?
+  performanceMetrics     ResumePerformanceMetric[]
+  revisions              ResumeRevision[]
+  updatedAt              DateTime                @updatedAt
+  url                    String?
+  userId                 String
+  user                   User                    @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Session {
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  id        String   @id @default(cuid())
+  ipAddress String?
+  token     String
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userAgent String?
+  userId    String
+
+  @@unique([token])
+  @@map("session")
+}
+
+model ResumeRevision {
+  id                  String               @id @default(cuid())
+  createdAt           DateTime             @default(now())
+  description         String?
+  format              ResumeFormat?
+  jobFitAnalysis      JobFitAnalysis?
+  jobLead             JobLead?             @relation(fields: [jobLeadId], references: [id], onDelete: Cascade)
+  jobLeadId           String?              @unique
+  jobLeadOptimization JobLeadOptimization?
+  json                Json?
+  markdown            String?
+  name                String
+  optimization        ResumeOptimization?
+  pdfDocumentUrl      String?
+  performanceMetrics  ResumePerformanceMetric[]
+  resumeAnalysis      ResumeAnalysis?
+  resumeAnalysisId    String?              @unique
+  resume              Resume               @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  resumeId            String
+  updatedAt           DateTime             @updatedAt
+  wordDocumentUrl     String?
+  user                User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId              String
+}
+
+model Subscription {
+  createdAt            DateTime @default(now())
+  currentPeriodEnd     DateTime
+  id                   String   @id @default(cuid())
+  plan                 String
+  status               String
+  stripeCustomerId     String   @unique
+  stripeSubscriptionId String   @unique
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId               String
+}
+
+model User {
+  accounts               Account[]
+  applicationSubmissions ApplicationSubmission[]
+  automationSettings     AutomationSettings?
+  automationAuditLogs    AutomationAuditLog[]
+  automationScheduledApplications AutomationScheduledApplication[]
+  coverLetters           CoverLetter[]
+  createdAt              DateTime                    @default(now())
+  defaultResumeId        String?                     @unique
+  defaultRevisionId      String?                     @unique
+  email                  String                      @unique
+  emailVerified          Boolean                     @default(false)
+  firstName              String
+  id                     String                      @id @default(cuid())
+  image                  String?                     @default("/user.png")
+  jobFitAnalyses         JobFitAnalysis[]
+  jobLeadOptimizations   JobLeadOptimization[]
+  jobListings            JobListing[]
+  jobPreferences         UserJobPreferences?
+  jobSearches            JobSearch[]
+  lastName               String
+  leads                  JobLead[]
+  linkedInProfiles       LinkedInProfile[]
+  resumePerformanceMetrics ResumePerformanceMetric[]
+  mobileAudits           MobileResponsivenessAudit[]
+  notifications          Notification[]
+  notificationPreference NotificationPreference?
+  name                   String?
+  phone                  String?                     @unique
+  phoneVerified          DateTime?
+  profile                UserProfile?
+  resumes                Resume[]
+  resumeAnalyses         ResumeAnalysis[]
+  resumeOptimizations    ResumeOptimization[]
+  resumeRevisions        ResumeRevision[]
+  sessions               Session[]
+  subscriptions          Subscription[]
+  updatedAt              DateTime                    @updatedAt
+  verificationTokens     VerificationToken[]
+  
+  // Agency Management Relations
+  clients                Client[]
+  agencyLeads            AgencyLead[]
+  projects               Project[]
+  proposals              Proposal[]
+  contracts              Contract[]
+  invoices               Invoice[]
+  timeEntries            TimeEntry[]
+  communications         Communication[]
+  outreachTemplates      OutreachTemplate[]
+  outreachActivities     OutreachActivity[]
+  portfolioProjects      PortfolioProject[]
+  services               Service[]
+  skills                 Skill[]
+  actionTasks            ActionTask[]
+  teamMembers            TeamMember[]
+
+  // Lead Intelligence Relations
+  enrichedLeads          EnrichedLead[]
+  leadIntelligenceSearches      LeadIntelligenceSearch[]
+  leadIntelligenceActivities    LeadIntelligenceActivity[]
+  leadIntelligenceEmailCampaigns LeadIntelligenceEmailCampaign[]
+  leadIntelligenceApiUsage      LeadIntelligenceApiUsageTracking[]
+  userIntegrations       UserIntegration[]
+
+  // Email Automation Relations
+  emailTemplates         EmailTemplate[]
+  emailSequences         EmailSequence[]
+  emailSends             EmailSend[]
+  emailCampaigns         EmailCampaign[]
+  emailSubscribers       EmailSubscriber[]
+  subscriberLists        SubscriberList[]
+
+  // LinkedIn Automation Relations
+  linkedInProspects      LinkedInProspect[]
+  linkedInAutomationSequences LinkedInAutomationSequence[]
+  linkedInAutomationActivities LinkedInAutomationActivity[]
+  linkedInSearches       LinkedInSearch[]
+
+  // Business Analytics Relations
+  deals                  Deal[]
+  businessActivities     BusinessActivity[]
+
+  // General Automation Relations
+  automationSequences   AutomationSequence[]
+
+  // Recruiting Relations
+  candidates            Candidate[]
+  jobApplications       JobApplication[]
+  talentPools           TalentPool[]
+  interviews            Interview[]
+  candidateNotes        CandidateNote[]
+  applicationNotes      ApplicationNote[]
+  jobRequisitions       JobRequisition[]
+
+  // Revenue Relations
+  revenueRecords        RevenueRecord[]
+  revenueForecasts      RevenueForecast[]
+
+  @@map("user")
+}
+
+model UserJobPreferences {
+  city            String?
+  companySize     CompanySize?
+  companyType     String?
+  createdAt       DateTime         @default(now())
+  experienceLevel ExperienceLevel?
+  id              String           @id @default(cuid())
+  jobTitles       String[]
+  preferRemote    Boolean?
+  remoteOnly      Boolean?
+  state           String?
+  timezone        String?          @default("America/New_York")
+  updatedAt       DateTime         @updatedAt
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId          String           @unique
+  zipCode         String?
+}
+
+model UserProfile {
+  city                         String?
+  createdAt                    DateTime @default(now())
+  educationDegree              String?
+  educationEndMonth            Int?
+  educationEndYear             Int?
+  educationInstitution         String?
+  educationInstitutionLocation String?
+  educationStartMonth          Int?
+  educationStartYear           Int?
+  emailAddress                 String?
+  firstName                    String?
+  githubUrl                    String?
+  id                           String   @id @default(cuid())
+  lastName                     String?
+  linkedinUrl                  String?
+  phoneNumber                  String?
+  state                        String?
+  streetAddress                String?
+  updatedAt                    DateTime @updatedAt
+  user                         User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId                       String?  @unique
+  websiteUrl                   String?
+  zipCode                      String?
+}
+
+model VerificationToken {
+  expires    DateTime?
+  identifier String
+  token      String    @unique
+  user       User?     @relation(fields: [userId], references: [id])
+  userId     String
+
+  @@unique([identifier, token])
+}
+
+model Account {
+  accessToken           String?
+  accessTokenExpiresAt  DateTime?
+  accountId             String
+  createdAt             DateTime  @default(now())
+  id                    String    @id
+  idToken               String?
+  password              String?
+  providerId            String
+  refreshToken          String?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  updatedAt             DateTime  @updatedAt
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("account")
+}
+
+model Verification {
+  id         String    @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime?
+  updatedAt  DateTime?
+
+  @@map("verification")
+}
+
+model MobileResponsivenessAudit {
+  id                   String   @id @default(cuid())
+  userId               String
+  createdAt            DateTime @default(now())
+  score                Int
+  highSeverityIssues   Int
+  mediumSeverityIssues Int
+  lowSeverityIssues    Int
+  totalIssues          Int
+  auditData            Json?
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Notification {
+  id             String               @id @default(cuid())
+  userId         String
+  recipientEmail String?
+  type           String
+  title          String
+  content        String
+  status         NotificationStatus   @default(PENDING)
+  priority       NotificationPriority @default(MEDIUM)
+  category       NotificationCategory @default(SYSTEM)
+  channels       NotificationChannel[] @default([])
+  metadata       Json?
+  batchId        String?
+  scheduledFor   DateTime?
+  deliveredAt    DateTime?
+  readAt         DateTime?
+  createdAt      DateTime             @default(now())
+  updatedAt      DateTime             @updatedAt
+  user           User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status, scheduledFor])
+}
+
+model NotificationPreference {
+  id                          String                 @id @default(cuid())
+  userId                      String                 @unique
+  applicationStatusEnabled    Boolean                @default(true)
+  interviewRequestsEnabled    Boolean                @default(true)
+  networkingRemindersEnabled  Boolean                @default(true)
+  shareNotificationsEnabled   Boolean                @default(true)
+  resumeFeedbackEnabled       Boolean                @default(true)
+  automationEnabled           Boolean                @default(true)
+  jobSearchEnabled            Boolean                @default(true)
+  resumeAnalysisEnabled       Boolean                @default(true)
+  systemNotificationsEnabled  Boolean                @default(true)
+  emailEnabled                Boolean                @default(true)
+  inAppEnabled                Boolean                @default(true)
+  browserEnabled              Boolean                @default(true)
+  notificationFrequency       NotificationFrequency  @default(IMMEDIATE)
+  quietHoursEnabled           Boolean                @default(false)
+  quietHoursStart             String?
+  quietHoursEnd               String?
+  dailyDigestEnabled          Boolean                @default(false)
+  dailyDigestHour             Int?
+  weeklyDigestEnabled         Boolean                @default(false)
+  weeklyDigestDay             Int?
+  weeklyDigestHour            Int?
+  batchWindowMinutes          Int                    @default(15)
+  createdAt                   DateTime               @default(now())
+  updatedAt                   DateTime               @updatedAt
+  user                        User                   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model AutomationSettings {
+  id                         String   @id @default(cuid())
+  userId                     String   @unique
+  // Safety Settings
+  requireUserApproval        Boolean  @default(true)
+  preventDuplicateApplications Boolean @default(true)
+  enableCompanyBlacklist     Boolean  @default(false)
+  companyBlacklist           String[] @default([])
+  enableKeywordBlacklist     Boolean  @default(false)
+  keywordBlacklist           String[] @default([])
+  enableSalaryThreshold      Boolean  @default(false)
+  minSalaryThreshold         Int      @default(50000)
+  maxApplicationsPerCompany  Int      @default(3)
+  pauseOnConsecutiveFailures Boolean  @default(true)
+  consecutiveFailureThreshold Int     @default(3)
+  // Rate Limit Settings
+  applicationsPerHour        Int      @default(10)
+  applicationsPerDay         Int      @default(50)
+  minIntervalMinutes         Int      @default(5)
+  respectJobBoardLimits      Boolean  @default(true)
+  // Scheduling Settings
+  enableSmartScheduling      Boolean  @default(true)
+  scheduleWeekdaysOnly       Boolean  @default(true)
+  scheduleBusinessHoursOnly  Boolean  @default(true)
+  preferredStartHour         Int      @default(9)  // 9 AM
+  preferredEndHour           Int      @default(17) // 5 PM
+  userTimezone               String   @default("America/New_York")
+  prioritizeNewListings      Boolean  @default(true)
+  // Automation Control
+  isEnabled                  Boolean  @default(false)
+  isPaused                   Boolean  @default(false)
+  pausedAt                   DateTime?
+  pauseReason                String?
+  // Tracking
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+  user                       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+}
+
+model AutomationAuditLog {
+  id                    String   @id @default(cuid())
+  userId                String
+  action                String   // "application_submitted", "application_blocked", "settings_changed", "automation_paused", etc.
+  actionType            String   // "success", "blocked", "error", "warning"
+  metadata              Json?    // Additional context (job details, reason for blocking, etc.)
+  jobLeadId             String?
+  applicationSubmissionId String?
+  createdAt             DateTime @default(now())
+  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, createdAt])
+  @@index([action])
+}
+
+model AutomationScheduledApplication {
+  id                     String    @id @default(cuid())
+  userId                 String
+  jobLeadId              String
+  scheduledFor           DateTime
+  priority               Int       @default(0) // Higher number = higher priority
+  attemptCount           Int       @default(0)
+  maxAttempts            Int       @default(3)
+  status                 String    @default("scheduled") // scheduled, processing, completed, failed, cancelled
+  lastAttemptAt          DateTime?
+  completedAt            DateTime?
+  errorMessage           String?
+  metadata               Json?     // Platform-specific scheduling data
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+  
+  user                   User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  jobLead                JobLead   @relation(fields: [jobLeadId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, status, scheduledFor])
+  @@index([scheduledFor])
+  @@index([status])
+}
+
+model ResumePerformanceMetric {
+  id                    String    @id @default(cuid())
+  userId                String
+  resumeId              String?
+  resumeRevisionId      String?
+  
+  // Performance Tracking
+  totalApplications     Int       @default(0)
+  totalResponses        Int       @default(0)
+  totalInterviews       Int       @default(0) 
+  totalOffers           Int       @default(0)
+  responseRate          Float     @default(0.0) // responses / applications
+  interviewRate         Float     @default(0.0) // interviews / applications
+  offerRate             Float     @default(0.0) // offers / applications
+  
+  // ATS & Performance Scores
+  atsScore              Int?      // Latest ATS compatibility score
+  atsScoreHistory       Json?     // Array of {score, date} objects for trending
+  optimizationScore     Int?      // Latest optimization score from analysis
+  optimizationHistory   Json?     // Array of {score, date} objects
+  
+  // Time-based Analytics
+  avgResponseTime       Float?    // Average days to get first response
+  avgInterviewTime      Float?    // Average days from application to interview
+  avgOfferTime          Float?    // Average days from application to offer
+  
+  // Keyword & Content Analysis
+  keywordEffectiveness  Json?     // Track which keywords correlate with success
+  sectionEffectiveness  Json?     // Track which resume sections perform best
+  lengthOptimal         Boolean?  // Whether resume length is optimal
+  
+  // Comparison Metrics
+  industryBenchmark     Json?     // How this resume compares to industry standards
+  personalBest          Boolean   @default(false) // Mark if this is user's best performing version
+  improvementFromPrevious Float? // % improvement from previous version
+  
+  // Tracking metadata
+  calculatedAt          DateTime  @default(now())
+  dataRange             Json?     // {startDate, endDate} for the metrics calculation
+  sampleSize            Int       @default(0) // Number of applications in the analysis
+  
+  // Relations
+  user                  User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  resume                Resume?           @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  resumeRevision        ResumeRevision?   @relation(fields: [resumeRevisionId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+  
+  @@index([userId, calculatedAt])
+  @@index([resumeId])
+  @@index([resumeRevisionId])
+  @@index([personalBest])
+}
+
+// ================================
+// AGENCY MANAGEMENT MODELS
+// ================================
+
+// Client Management
+model Client {
+  id                    String                @id @default(cuid())
+  name                  String
+  email                 String?
+  phone                 String?
+  website               String?
+  industry              String?
+  companySize           CompanySize?
+  status                ClientStatus          @default(PROSPECT)
+  source                LeadSource?
+  notes                 String?
+  
+  // Contact Information
+  primaryContactName    String?
+  primaryContactEmail   String?
+  primaryContactPhone   String?
+  primaryContactRole    String?
+  
+  // Business Details
+  annualRevenue         Float?
+  employeeCount         Int?
+  founded               DateTime?
+  description           String?
+  
+  // Relationship Management
+  firstContactDate      DateTime?
+  lastContactDate       DateTime?
+  nextFollowUpDate      DateTime?
+  
+  // Financial
+  totalRevenue          Float                 @default(0)
+  outstandingBalance    Float                 @default(0)
+  creditLimit           Float?
+  paymentTermsDays      Int                   @default(30)
+  
+  // Relations
+  projects              Project[]
+  leads                 AgencyLead[]
+  proposals             Proposal[]
+  contracts             Contract[]
+  invoices              Invoice[]
+  communications        Communication[]
+  contacts              ClientContact[]
+  revenueRecords        RevenueRecord[]
+  revenueForecasts      RevenueForecast[]
+  jobRequisitions       JobRequisition[]
+  candidateFeedback     ClientCandidateFeedback[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, status])
+  @@index([status])
+}
+
+model ClientContact {
+  id                    String                @id @default(cuid())
+  clientId              String
+  name                  String
+  email                 String?
+  phone                 String?
+  role                  String?
+  isPrimary             Boolean               @default(false)
+  notes                 String?
+  
+  client                Client                @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  communications        Communication[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([clientId])
+}
+
+// Lead/Opportunity Management
+model AgencyLead {
+  id                    String                @id @default(cuid())
+  title                 String
+  description           String?
+  source                LeadSource
+  status                LeadStatus            @default(NEW)
+  
+  // Opportunity Details
+  estimatedValue        Float?
+  estimatedStartDate    DateTime?
+  estimatedDuration     String?               // "3 months", "6 weeks", etc.
+  probability           Int?                  // 0-100 percentage
+  
+  // Contact Information
+  contactName           String?
+  contactEmail          String?
+  contactPhone          String?
+  companyName           String?
+  
+  // Lead Tracking
+  firstContactDate      DateTime?
+  lastContactDate       DateTime?
+  nextFollowUpDate      DateTime?
+  lostReason            String?
+  wonDate               DateTime?
+  
+  // Relations
+  clientId              String?
+  client                Client?               @relation(fields: [clientId], references: [id])
+  proposals             Proposal[]
+  communications        Communication[]
+  activities            OutreachActivity[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, status])
+  @@index([status])
+}
+
+// Project Management
+model Project {
+  id                    String                @id @default(cuid())
+  name                  String
+  description           String?
+  status                ProjectStatus         @default(DRAFT)
+  serviceType           ServiceType
+  
+  // Timeline
+  startDate             DateTime?
+  endDate               DateTime?
+  actualStartDate       DateTime?
+  actualEndDate         DateTime?
+  
+  // Financial
+  budgetAmount          Float?
+  actualCost            Float                 @default(0)
+  profitMargin          Float?
+  hourlyRate            Float?
+  fixedPrice            Float?
+  
+  // Progress
+  completionPercentage  Int                   @default(0)
+  totalHoursEstimated   Float?
+  totalHoursActual      Float                 @default(0)
+  
+  // Relations
+  clientId              String
+  client                Client                @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  contractId            String?
+  contract              Contract?             @relation(fields: [contractId], references: [id])
+  tasks                 Task[]
+  timeEntries           TimeEntry[]
+  deliverables          Deliverable[]
+  invoices              Invoice[]
+  milestones            Milestone[]
+  revenueRecords        RevenueRecord[]
+  revenueForecasts      RevenueForecast[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, status])
+  @@index([clientId])
+  @@index([status])
+}
+
+model Task {
+  id                    String                @id @default(cuid())
+  title                 String
+  description           String?
+  status                String                @default("TODO") // TODO, IN_PROGRESS, IN_REVIEW, COMPLETED, CANCELLED
+  priority              String                @default("MEDIUM") // LOW, MEDIUM, HIGH, URGENT
+
+  // Timeline
+  dueDate               DateTime?
+  completedAt           DateTime?
+  estimatedHours        Float?
+  actualHours           Float                 @default(0)
+
+  // Sub-task relationships
+  parentTaskId          String?
+  parentTask            Task?                 @relation("TaskSubTasks", fields: [parentTaskId], references: [id], onDelete: Cascade)
+  subTasks              Task[]                @relation("TaskSubTasks")
+
+  // Relations
+  projectId             String
+  project               Project               @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  assigneeId            String?
+  assignee              TeamMember?           @relation("TaskAssignee", fields: [assigneeId], references: [id])
+  timeEntries           TimeEntry[]
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([projectId, status])
+  @@index([parentTaskId])
+}
+
+// Team Member Management
+model TeamMember {
+  id                    String                @id @default(cuid())
+  name                  String
+  email                 String
+  role                  String?               // e.g., "Developer", "Designer", "Project Manager"
+  department            String?               // e.g., "Engineering", "Design", "Sales"
+  skills                String[]              @default([])
+  availability          String                @default("available") // available, busy, unavailable
+  image                 String?
+
+  // Relations
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  assignedTasks         Task[]                @relation("TaskAssignee")
+  actionTasks           ActionTask[]
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([userId])
+}
+
+// General Action Tasks (not project-specific)
+model ActionTask {
+  id                    String                @id @default(cuid())
+  title                 String
+  description           String?
+  category              String                // e.g., "Sales", "Marketing", "Operations", "Development"
+  status                ActionTaskStatus      @default(TODO)
+  priority              ActionTaskPriority    @default(MEDIUM)
+
+  // Timeline
+  dueDate               DateTime?
+  completedAt           DateTime?
+  estimatedHours        Float?
+  actualHours           Float                 @default(0)
+
+  // Source tracking
+  source                String?               // e.g., "action-plan", "manual", "lead-generation"
+  sourceId              String?               // Reference to source entity (e.g., lead ID, project ID)
+
+  // Assignment
+  assignedToId          String?
+  assignedTo            TeamMember?           @relation(fields: [assignedToId], references: [id])
+
+  // Tags and metadata
+  tags                  String[]              @default([])
+  metadata              Json?                 // Additional data specific to the task type
+
+  // Progress tracking
+  progressPercentage    Int                   @default(0)
+  notes                 String?
+
+  // Sub-task relationships
+  parentTaskId          String?
+  parentTask            ActionTask?           @relation("ActionTaskSubTasks", fields: [parentTaskId], references: [id], onDelete: Cascade)
+  subTasks              ActionTask[]          @relation("ActionTaskSubTasks")
+
+  // Relations
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([userId, status])
+  @@index([category])
+  @@index([dueDate])
+  @@index([priority])
+  @@index([parentTaskId])
+}
+
+model Milestone {
+  id                    String                @id @default(cuid())
+  name                  String
+  description           String?
+  dueDate               DateTime
+  completedAt           DateTime?
+  paymentAmount         Float?                // Payment tied to milestone
+  
+  projectId             String
+  project               Project               @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([projectId])
+}
+
+model Deliverable {
+  id                    String                @id @default(cuid())
+  name                  String
+  description           String?
+  status                String                @default("pending") // pending, in_progress, delivered, accepted
+  dueDate               DateTime?
+  deliveredAt           DateTime?
+  acceptedAt            DateTime?
+  
+  // File/Link
+  fileUrl               String?
+  linkUrl               String?
+  
+  projectId             String
+  project               Project               @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([projectId])
+}
+
+// Proposals & Contracts
+model Proposal {
+  id                    String                @id @default(cuid())
+  title                 String
+  status                ProposalStatus        @default(DRAFT)
+  
+  // Content
+  executiveSummary      String?
+  scope                 String?
+  deliverables          Json?                 // Array of deliverables
+  timeline              String?
+  terms                 String?
+  
+  // Financial
+  totalAmount           Float
+  validUntil            DateTime
+  
+  // Tracking
+  sentAt                DateTime?
+  viewedAt              DateTime?
+  acceptedAt            DateTime?
+  rejectedAt            DateTime?
+  rejectionReason       String?
+  shareToken            String?               @unique  // For client-facing proposal sharing
+  clientFeedback        String?               // Feedback from client during review
+  
+  // Relations
+  clientId              String?
+  client                Client?               @relation(fields: [clientId], references: [id])
+  leadId                String?
+  lead                  AgencyLead?           @relation(fields: [leadId], references: [id])
+  contract              Contract?
+  proposalItems         ProposalItem[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, status])
+  @@index([status])
+}
+
+model ProposalItem {
+  id                    String                @id @default(cuid())
+  description           String
+  quantity              Float                 @default(1)
+  rate                  Float
+  amount                Float
+  
+  proposalId            String
+  proposal              Proposal              @relation(fields: [proposalId], references: [id], onDelete: Cascade)
+  
+  @@index([proposalId])
+}
+
+model Contract {
+  id                    String                @id @default(cuid())
+  title                 String
+  status                ContractStatus        @default(DRAFT)
+  contractNumber        String                @unique
+  
+  // Terms
+  startDate             DateTime
+  endDate               DateTime?
+  terms                 String?
+  scope                 String?
+  
+  // Financial
+  totalValue            Float
+  paymentTerms          String?
+  paymentSchedule       Json?                 // Array of payment milestones
+  
+  // Signatures
+  signedByClientAt      DateTime?
+  signedByAgencyAt      DateTime?
+  clientSignatureName   String?
+  agencySignatureName   String?
+  
+  // Relations
+  clientId              String
+  client                Client                @relation(fields: [clientId], references: [id])
+  proposalId            String?               @unique
+  proposal              Proposal?             @relation(fields: [proposalId], references: [id])
+  projects              Project[]
+  invoices              Invoice[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, status])
+  @@index([clientId])
+  @@index([status])
+}
+
+// Time Tracking & Billing
+model TimeEntry {
+  id                    String                @id @default(cuid())
+  description           String
+  hours                 Float
+  date                  DateTime
+  billable              Boolean               @default(true)
+  status                TimeEntryStatus       @default(DRAFT)
+  
+  // Rates
+  hourlyRate            Float?
+  totalAmount           Float?
+  
+  // Relations
+  projectId             String
+  project               Project               @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  taskId                String?
+  task                  Task?                 @relation(fields: [taskId], references: [id])
+  invoiceId             String?
+  invoice               Invoice?              @relation(fields: [invoiceId], references: [id])
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, status])
+  @@index([projectId])
+  @@index([invoiceId])
+}
+
+model Invoice {
+  id                    String                @id @default(cuid())
+  invoiceNumber         String                @unique
+  status                InvoiceStatus         @default(DRAFT)
+  
+  // Dates
+  issueDate             DateTime
+  dueDate               DateTime
+  paidAt                DateTime?
+  
+  // Financial
+  subtotal              Float
+  taxRate               Float                 @default(0)
+  taxAmount             Float                 @default(0)
+  discount              Float                 @default(0)
+  totalAmount           Float
+  amountPaid            Float                 @default(0)
+  balanceDue            Float
+  
+  // Details
+  notes                 String?
+  terms                 String?
+  
+  // Relations
+  clientId              String
+  client                Client                @relation(fields: [clientId], references: [id])
+  projectId             String?
+  project               Project?              @relation(fields: [projectId], references: [id])
+  contractId            String?
+  contract              Contract?             @relation(fields: [contractId], references: [id])
+  timeEntries           TimeEntry[]
+  invoiceItems          InvoiceItem[]
+  payments              Payment[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, status])
+  @@index([clientId])
+  @@index([status])
+}
+
+model InvoiceItem {
+  id                    String                @id @default(cuid())
+  description           String
+  quantity              Float                 @default(1)
+  rate                  Float
+  amount                Float
+  
+  invoiceId             String
+  invoice               Invoice               @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  
+  @@index([invoiceId])
+}
+
+model Payment {
+  id                    String                @id @default(cuid())
+  amount                Float
+  paymentDate           DateTime
+  paymentMethod         String?               // credit_card, bank_transfer, check, etc.
+  transactionId         String?
+  notes                 String?
+  
+  invoiceId             String
+  invoice               Invoice               @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  
+  @@index([invoiceId])
+}
+
+// Communication Tracking
+model Communication {
+  id                    String                @id @default(cuid())
+  type                  CommunicationType
+  subject               String?
+  content               String?
+  direction             String                @default("outbound") // inbound, outbound
+  
+  // Tracking
+  sentAt                DateTime?
+  receivedAt            DateTime?
+  readAt                DateTime?
+  respondedAt           DateTime?
+  
+  // Relations
+  clientId              String?
+  client                Client?               @relation(fields: [clientId], references: [id])
+  clientContactId       String?
+  clientContact         ClientContact?        @relation(fields: [clientContactId], references: [id])
+  leadId                String?
+  lead                  AgencyLead?           @relation(fields: [leadId], references: [id])
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([clientId])
+  @@index([leadId])
+}
+
+// Outreach & Marketing
+model OutreachTemplate {
+  id                    String                @id @default(cuid())
+  name                  String
+  type                  String                // cold_email, follow_up, proposal, linkedin, etc.
+  subject               String?
+  content               String
+  variables             Json?                 // List of variables to replace
+  
+  // Performance
+  timesSent             Int                   @default(0)
+  responsesReceived     Int                   @default(0)
+  responseRate          Float                 @default(0)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  activities            OutreachActivity[]
+  
+  @@index([userId])
+}
+
+model OutreachActivity {
+  id                    String                @id @default(cuid())
+  type                  String                // email, linkedin, call, etc.
+  status                String                @default("scheduled") // scheduled, sent, responded, ignored
+  scheduledFor          DateTime?
+  sentAt                DateTime?
+  respondedAt           DateTime?
+  
+  // Content
+  subject               String?
+  content               String?
+  
+  // Relations
+  templateId            String?
+  template              OutreachTemplate?     @relation(fields: [templateId], references: [id])
+  leadId                String?
+  lead                  AgencyLead?           @relation(fields: [leadId], references: [id])
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, status])
+  @@index([leadId])
+}
+
+// Portfolio & Case Studies
+model PortfolioProject {
+  id                    String                @id @default(cuid())
+  title                 String
+  slug                  String                @unique
+  description           String?
+  
+  // Project Details
+  clientName            String?
+  industry              String?
+  serviceType           ServiceType?
+  duration              String?
+  teamSize              Int?
+  budget                String?               // Range like "$50k-$100k"
+  
+  // Content
+  challenge             String?
+  solution              String?
+  results               String?
+  testimonial           String?
+  testimonialAuthor     String?
+  testimonialRole       String?
+  
+  // Media
+  featuredImage         String?
+  images                Json?                 // Array of image URLs
+  videoUrl              String?
+  liveUrl               String?
+  githubUrl             String?
+  
+  // Technologies
+  technologies          String[]
+  
+  // Visibility
+  isPublished           Boolean               @default(false)
+  isFeatured            Boolean               @default(false)
+  order                 Int                   @default(0)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, isPublished])
+  @@index([slug])
+}
+
+// Skill & Service Management
+model Service {
+  id                    String                @id @default(cuid())
+  name                  String
+  slug                  String                @unique
+  description           String?
+  type                  ServiceType
+  
+  // Pricing
+  hourlyRate            Float?
+  minimumEngagement     Float?                // Minimum hours or project size
+  
+  // Display
+  isActive              Boolean               @default(true)
+  order                 Int                   @default(0)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId, isActive])
+}
+
+model Skill {
+  id                    String                @id @default(cuid())
+  name                  String
+  category              String                // frontend, backend, database, devops, etc.
+  proficiencyLevel      Int                   // 1-5 scale
+  yearsOfExperience     Float?
+  
+  // Validation
+  isCertified           Boolean               @default(false)
+  certificationName     String?
+  certificationDate     DateTime?
+  certificationExpiry   DateTime?
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@unique([userId, name])
+}
+
+// Lead Intelligence System - External Lead Data Integration
+
+// Lead Intelligence Enums
+enum LeadDataProvider {
+  APOLLO
+  ZOOMINFO
+  MANUAL
+}
+
+enum DataQualityScore {
+  EXCELLENT
+  GOOD
+  FAIR
+  POOR
+}
+
+enum IntentDataSignal {
+  TECHNOLOGY_RESEARCH
+  COMPETITOR_RESEARCH
+  HIRING_ACTIVITY
+  FUNDING_ACTIVITY
+  CONTENT_ENGAGEMENT
+  WEBSITE_ACTIVITY
+  SOCIAL_MENTIONS
+  JOB_CHANGE_SIGNALS
+  BUDGET_ALLOCATION
+  PROJECT_INITIATIVES
+}
+
+enum LeadIntelligenceCompanySize {
+  STARTUP           // 1-10 employees
+  SMALL_BUSINESS    // 11-50 employees
+  MID_MARKET        // 51-200 employees
+  ENTERPRISE        // 201-1000 employees
+  LARGE_ENTERPRISE  // 1000+ employees
+}
+
+enum LeadIntelligenceStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  PROPOSAL_SENT
+  NEGOTIATING
+  WON
+  LOST
+  NURTURING
+  DISQUALIFIED
+}
+
+// Lead Intelligence Models
+
+model LeadIntelligenceCompany {
+  id                    String               @id @default(cuid())
+
+  // Basic Company Information
+  name                  String
+  domain                String?              @unique
+  website               String?
+  linkedinUrl           String?
+  description           String?
+
+  // Basic Company Data
+  industry              String?
+  subIndustry           String?
+  companySize           LeadIntelligenceCompanySize?
+  employeeCount         Int?
+  foundedYear           Int?
+  headquarters          String?
+  locations             String[]             @default([])
+
+  // Financial Data
+  annualRevenue         String?
+  fundingStage          String?
+  totalFunding          String?
+
+  // Technology Stack
+  technologies          String[]             @default([])
+  techStack             Json?
+
+  // Enrichment Metadata
+  dataProvider          LeadDataProvider     @default(MANUAL)
+  apolloId              String?              @unique
+  zoomInfoId            String?              @unique
+  dataQuality           DataQualityScore     @default(FAIR)
+
+  // Intent Data
+  intentSignals         IntentDataSignal[]   @default([])
+  intentScore           Float?               @default(0.0)
+
+  // Timestamps
+  lastEnrichedAt        DateTime?
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+
+  // Relations
+  leads                 EnrichedLead[]
+
+  @@index([domain])
+  @@index([dataProvider])
+}
+
+model EnrichedLead {
+  id                    String               @id @default(cuid())
+
+  // Personal Information
+  firstName             String
+  lastName              String
+  fullName              String
+  email                 String               @unique
+  personalEmail         String?
+  phone                 String?
+  linkedinUrl           String?
+
+  // Professional Information
+  jobTitle              String
+  department            String?
+  seniority             String?
+  isDecisionMaker       Boolean              @default(false)
+
+  // Company Association
+  companyId             String
+  company               LeadIntelligenceCompany          @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  // Lead Management
+  status                LeadIntelligenceStatus           @default(NEW)
+  leadScore             Float?               @default(0.0)
+  qualificationNotes    String?
+  assignedToUserId      String?
+  assignedTo            User?                @relation(fields: [assignedToUserId], references: [id])
+
+  // Enrichment Data
+  dataProvider          LeadDataProvider     @default(MANUAL)
+  apolloPersonId        String?              @unique
+  zoomInfoPersonId      String?              @unique
+  dataQuality           DataQualityScore     @default(FAIR)
+
+  // Timestamps
+  lastEnrichedAt        DateTime?
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+
+  // Relations
+  activities            LeadIntelligenceActivity[]
+  searchResults         LeadIntelligenceSearchResult[]
+  dataConsents          LeadIntelligenceDataConsent[]
+  dataAttributions      LeadIntelligenceDataAttribution[]
+
+  @@index([email])
+  @@index([assignedToUserId])
+  @@index([status])
+  @@index([dataProvider])
+}
+
+model LeadIntelligenceSearch {
+  id                    String               @id @default(cuid())
+  userId                String
+  user                  User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  searchQuery           String
+  filters               Json?                // Search filters used
+  status                String               @default("PROCESSING") // PROCESSING, COMPLETED, FAILED
+  totalResults          Int                  @default(0)
+
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+  completedAt           DateTime?
+
+  // Relations
+  results               LeadIntelligenceSearchResult[]
+
+  @@index([userId])
+  @@index([status])
+}
+
+model LeadIntelligenceSearchResult {
+  id                    String               @id @default(cuid())
+
+  // Search Association
+  leadSearchId          String
+  leadSearch            LeadIntelligenceSearch           @relation(fields: [leadSearchId], references: [id], onDelete: Cascade)
+
+  // Basic Lead Data (before enrichment)
+  firstName             String?
+  lastName              String?
+  email                 String?
+  jobTitle              String?
+  companyName           String?
+  companyDomain         String?
+
+  // Metadata
+  dataProvider          LeadDataProvider
+  externalId            String               // ID from Apollo/ZoomInfo
+  processingStatus      String               @default("QUEUED") // QUEUED, PROCESSING, COMPLETED, FAILED
+
+  // Enrichment Link
+  enrichedLeadId        String?
+  enrichedLead          EnrichedLead?        @relation(fields: [enrichedLeadId], references: [id])
+  enrichmentQueue       LeadIntelligenceEnrichmentQueue[]
+
+  createdAt             DateTime             @default(now())
+  processedAt           DateTime?
+
+  @@index([leadSearchId])
+  @@index([processingStatus])
+}
+
+model LeadIntelligenceEnrichmentQueue {
+  id                    String               @id @default(cuid())
+
+  searchResultId        String
+  searchResult          LeadIntelligenceSearchResult     @relation(fields: [searchResultId], references: [id], onDelete: Cascade)
+
+  // Queue Management
+  priority              String               @default("NORMAL") // HIGH, NORMAL, LOW
+  status                String               @default("QUEUED") // QUEUED, PROCESSING, COMPLETED, FAILED, RETRYING
+  attempts              Int                  @default(0)
+
+  // Processing Details
+  dataProvider          LeadDataProvider?
+  dataQuality           DataQualityScore?
+  error                 String?
+
+  // Timestamps
+  scheduledAt           DateTime?
+  startedAt             DateTime?
+  completedAt           DateTime?
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+
+  @@index([status, priority])
+  @@index([scheduledAt])
+}
+
+model LeadIntelligenceActivity {
+  id                    String               @id @default(cuid())
+
+  // Lead Association
+  leadId                String
+  lead                  EnrichedLead         @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  // Activity Details
+  type                  String               // CALL, EMAIL, MEETING, NOTE, LINKEDIN_MESSAGE, DEMO, PROPOSAL_SENT, FOLLOW_UP, SCORING
+  description           String
+  metadata              Json?
+
+  // User Association
+  userId                String?
+  user                  User?                @relation(fields: [userId], references: [id])
+
+  createdAt             DateTime             @default(now())
+
+  @@index([leadId])
+  @@index([type])
+  @@index([userId])
+}
+
+model LeadIntelligenceEmailCampaign {
+  id                    String               @id @default(cuid())
+
+  name                  String
+  subject               String
+  content               String
+
+  // Campaign Settings
+  status                String               @default("DRAFT") // DRAFT, SCHEDULED, SENDING, SENT, PAUSED
+  scheduledAt           DateTime?
+
+  // Template Data
+  isTemplate            Boolean              @default(false)
+  templateVariables     Json?
+
+  // Targeting
+  targetCriteria        Json?                // Lead filtering criteria
+  estimatedReach        Int?
+
+  // Performance
+  sentCount             Int                  @default(0)
+  openCount             Int                  @default(0)
+  clickCount            Int                  @default(0)
+  replyCount            Int                  @default(0)
+
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+  userId                String
+  user                  User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+}
+
+model LeadIntelligenceApiUsageTracking {
+  id                    String               @id @default(cuid())
+
+  userId                String
+  user                  User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  provider              LeadDataProvider
+  endpoint              String
+  date                  DateTime             // Day-level tracking
+
+  // Usage Metrics
+  requestCount          Int                  @default(0)
+  successCount          Int                  @default(0)
+  errorCount            Int                  @default(0)
+  rateLimitedCount      Int                  @default(0)
+
+  // Timestamps
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+
+  @@unique([userId, provider, endpoint, date])
+  @@index([userId, provider, date])
+  @@index([date])
+}
+
+// GDPR Compliance Models
+
+model LeadIntelligenceDataConsent {
+  id                    String               @id @default(cuid())
+
+  leadId                String
+  lead                  EnrichedLead         @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  consentType           String               // MARKETING, PROCESSING, STORAGE, THIRD_PARTY_SHARING
+  consentGiven          Boolean
+  consentDate           DateTime
+  consentSource         String               // Where consent was obtained
+  legalBasis            String               // CONSENT, LEGITIMATE_INTEREST, CONTRACT, etc.
+
+  withdrawalDate        DateTime?
+  notes                 String?
+
+  createdAt             DateTime             @default(now())
+
+  @@index([leadId, consentType])
+}
+
+model LeadIntelligenceDataAttribution {
+  id                    String               @id @default(cuid())
+
+  leadId                String
+  lead                  EnrichedLead         @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  dataProvider          LeadDataProvider
+  sourceApiEndpoint     String?
+  dataFields            String[]
+  enrichmentDate        DateTime
+
+  termsOfService        String?
+  dataProcessingAgreement String?
+  complianceNotes       String[]             @default([])
+
+  createdAt             DateTime             @default(now())
+
+  @@index([leadId])
+  @@index([dataProvider])
+}
+
+model LeadIntelligenceDataDeletionRequest {
+  id                    String               @id @default(cuid())
+
+  leadId                String?
+  userEmail             String?
+
+  requestType           String               // RIGHT_TO_ERASURE, DATA_PORTABILITY, ACCOUNT_DELETION, INACTIVE_CLEANUP
+  status                String               @default("PENDING") // PENDING, IN_PROGRESS, COMPLETED, FAILED
+
+  requestDate           DateTime             @default(now())
+  completionDate        DateTime?
+
+  dataTypesToDelete     String[]
+  reason                String?
+
+  // Requester Information
+  requesterName         String
+  requesterEmail        String
+  verificationMethod    String
+
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+
+  @@index([status])
+  @@index([requestType])
+}
+
+// User Integration for API credentials
+model UserIntegration {
+  id                    String               @id @default(cuid())
+  userId                String
+  user                  User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  provider              String               // APOLLO, ZOOMINFO, LINKEDIN, etc.
+  accessToken           String
+  refreshToken          String?
+  expiresAt             DateTime?
+  scope                 String?
+
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+
+  @@unique([userId, provider])
+  @@index([userId])
+}
+
+// Email Automation Models
+
+model EmailTemplate {
+  id                    String                @id @default(cuid())
+  name                  String
+  subject               String
+  content               String                // HTML content
+  textContent           String?               // Plain text version
+  type                  EmailTemplateType
+  variables             String[]              // List of variables used in template
+  isActive              Boolean               @default(true)
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Analytics
+  sentCount             Int                   @default(0)
+  openCount             Int                   @default(0)
+  clickCount            Int                   @default(0)
+  replyCount            Int                   @default(0)
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  // Relations
+  sequenceSteps         EmailSequenceStep[]
+  emailSends            EmailSend[]
+
+  @@index([userId])
+  @@index([type])
+}
+
+model EmailSequence {
+  id                    String                @id @default(cuid())
+  name                  String
+  description           String?
+  status                EmailSequenceStatus   @default(DRAFT)
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Settings
+  isActive              Boolean               @default(false)
+  maxEmails             Int?                  // Maximum emails to send per day
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  // Relations
+  steps                 EmailSequenceStep[]
+  recipients            EmailSequenceRecipient[]
+
+  @@index([userId])
+  @@index([status])
+}
+
+model EmailSequenceStep {
+  id                    String                @id @default(cuid())
+  sequenceId            String
+  sequence              EmailSequence         @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+  templateId            String
+  template              EmailTemplate         @relation(fields: [templateId], references: [id], onDelete: Cascade)
+
+  stepNumber            Int                   // Order in sequence (1, 2, 3...)
+  delayDays             Int                   @default(0) // Days to wait before sending
+  delayHours            Int                   @default(0) // Additional hours to wait
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@unique([sequenceId, stepNumber])
+  @@index([sequenceId])
+}
+
+model EmailSequenceRecipient {
+  id                    String                @id @default(cuid())
+  sequenceId            String
+  sequence              EmailSequence         @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+
+  email                 String
+  name                  String?
+  customFields          Json?                 // Additional data for personalization
+  status                RecipientStatus       @default(ACTIVE)
+
+  // Sequence progress
+  currentStep           Int                   @default(0) // 0 = not started
+  nextSendAt            DateTime?
+  completedAt           DateTime?
+  unsubscribedAt        DateTime?
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  // Relations
+  emailSends            EmailSend[]
+
+  @@unique([sequenceId, email])
+  @@index([sequenceId])
+  @@index([email])
+  @@index([nextSendAt])
+}
+
+model EmailSend {
+  id                    String                @id @default(cuid())
+  templateId            String?
+  template              EmailTemplate?        @relation(fields: [templateId], references: [id])
+  recipientId           String?
+  recipient             EmailSequenceRecipient? @relation(fields: [recipientId], references: [id])
+
+  // Email details
+  toEmail               String
+  toName                String?
+  fromEmail             String
+  fromName              String?
+  subject               String
+  htmlContent           String
+  textContent           String?
+
+  // Status tracking
+  status                EmailSendStatus       @default(PENDING)
+  externalId            String?               // SendGrid message ID
+
+  // Analytics timestamps
+  sentAt                DateTime?
+  deliveredAt           DateTime?
+  openedAt              DateTime?
+  firstOpenedAt         DateTime?
+  clickedAt             DateTime?
+  firstClickedAt        DateTime?
+  bouncedAt             DateTime?
+  unsubscribedAt        DateTime?
+  repliedAt             DateTime?
+
+  // Metadata
+  metadata              Json?
+  errorMessage          String?
+
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([toEmail])
+  @@index([sentAt])
+}
+
+// ================================
+// LINKEDIN AUTOMATION MODELS
+// ================================
+
+// General Automation Enums
+enum AutomationStatus {
+  DRAFT
+  ACTIVE
+  PAUSED
+  COMPLETED
+}
+
+enum AutomationTrigger {
+  MANUAL
+  LEAD_CREATED
+  PROSPECT_CONNECTED
+  EMAIL_OPENED
+  FORM_SUBMITTED
+}
+
+enum AutomationStepType {
+  EMAIL
+  LINKEDIN_CONNECTION
+  LINKEDIN_MESSAGE
+  WAIT
+  CONDITION
+}
+
+// LinkedIn Automation Enums
+enum LinkedInConnectionStatus {
+  PENDING
+  CONNECTED
+  DECLINED
+  WITHDRAWN
+  EXPIRED
+}
+
+enum LinkedInProspectStatus {
+  NEW
+  CONTACTED
+  CONNECTED
+  QUALIFIED
+  CONVERTED
+  DISQUALIFIED
+}
+
+enum LinkedInAutomationStatus {
+  ACTIVE
+  PAUSED
+  COMPLETED
+  CANCELLED
+}
+
+enum LinkedInMessageType {
+  CONNECTION_REQUEST
+  FOLLOW_UP
+  NURTURE
+  PITCH
+  THANK_YOU
+}
+
+// LinkedIn Prospect Management
+model LinkedInProspect {
+  id                    String                @id @default(cuid())
+  
+  // LinkedIn Profile Data
+  linkedInId            String                @unique
+  firstName             String
+  lastName              String
+  headline              String?
+  location              String?
+  industry              String?
+  company               String?
+  profileUrl            String
+  connectionDegree      String                // 1st, 2nd, 3rd
+  premium               Boolean               @default(false)
+  
+  // Prospect Management
+  status                LinkedInProspectStatus @default(NEW)
+  score                 Int                   @default(50) // 0-100 lead score
+  notes                 String?
+  tags                  String[]              @default([])
+  source                String                @default("search") // search, import, referral
+  
+  // Contact Information
+  email                 String?
+  phone                 String?
+  
+  // Tracking
+  lastContact           DateTime?
+  nextFollowUp          DateTime?
+  
+  // User Association
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // Relations
+  connections           LinkedInConnection[]
+  messages              LinkedInMessage[]
+  automationActivities LinkedInAutomationActivity[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([userId])
+  @@index([status])
+  @@index([linkedInId])
+}
+
+// LinkedIn Connection Tracking
+model LinkedInConnection {
+  id                    String                @id @default(cuid())
+  
+  prospectId            String
+  prospect              LinkedInProspect      @relation(fields: [prospectId], references: [id], onDelete: Cascade)
+  
+  status                LinkedInConnectionStatus @default(PENDING)
+  message               String?               // Connection request message
+  
+  sentAt                DateTime              @default(now())
+  respondedAt           DateTime?
+  expiresAt             DateTime?
+  
+  // Metadata
+  metadata              Json?
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([prospectId])
+  @@index([status])
+  @@index([sentAt])
+}
+
+// LinkedIn Message Tracking
+model LinkedInMessage {
+  id                    String                @id @default(cuid())
+  
+  prospectId            String
+  prospect              LinkedInProspect      @relation(fields: [prospectId], references: [id], onDelete: Cascade)
+  
+  type                  LinkedInMessageType
+  content               String
+  status                String                @default("sent") // sent, read, replied
+  
+  sentAt                DateTime              @default(now())
+  readAt                DateTime?
+  repliedAt             DateTime?
+  
+  // Thread tracking
+  threadId              String?
+  isReply               Boolean               @default(false)
+  
+  // Metadata
+  metadata              Json?
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([prospectId])
+  @@index([type])
+  @@index([sentAt])
+}
+
+// LinkedIn Automation Sequences
+model LinkedInAutomationSequence {
+  id                    String                @id @default(cuid())
+  
+  name                  String
+  description           String?
+  status                LinkedInAutomationStatus @default(ACTIVE)
+  
+  // Limits and Settings
+  dailyLimit            Int                   @default(50)
+  weeklyLimit           Int                   @default(200)
+  isActive              Boolean               @default(true)
+  
+  // User Association
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // Relations
+  steps                 LinkedInAutomationStep[]
+  activities            LinkedInAutomationActivity[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([userId])
+  @@index([status])
+}
+
+// LinkedIn Automation Steps
+model LinkedInAutomationStep {
+  id                    String                @id @default(cuid())
+  
+  sequenceId            String
+  sequence              LinkedInAutomationSequence @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+  
+  stepNumber            Int                   // Order in sequence
+  type                  LinkedInMessageType   // connection_request, message, follow_up
+  delayDays             Int                   @default(0)
+  content               String?               // Message template
+  isActive              Boolean               @default(true)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@unique([sequenceId, stepNumber])
+  @@index([sequenceId])
+}
+
+// LinkedIn Automation Activity Log
+model LinkedInAutomationActivity {
+  id                    String                @id @default(cuid())
+  
+  prospectId            String?
+  prospect              LinkedInProspect?     @relation(fields: [prospectId], references: [id], onDelete: Cascade)
+  
+  sequenceId            String?
+  sequence              LinkedInAutomationSequence? @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+  
+  type                  String                // connection_request, message, profile_view, etc.
+  status                String                // success, failed, skipped
+  description           String
+  
+  // Metadata
+  metadata              Json?
+  errorMessage          String?
+  
+  // User Association
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  
+  @@index([userId])
+  @@index([type])
+  @@index([status])
+  @@index([prospectId])
+}
+
+// LinkedIn Search History
+model LinkedInSearch {
+  id                    String                @id @default(cuid())
+  
+  searchQuery           String
+  filters               Json?                 // Search filters used
+  totalResults          Int                   @default(0)
+  
+  // User Association
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  
+  @@index([userId])
+}
+
+// Revenue Analytics Data Storage
+model Deal {
+  id                    String                @id @default(cuid())
+  
+  clientName            String
+  value                 Float
+  stage                 String                // discovery, proposal, negotiation, closed-won, closed-lost
+  probability           Int                   // 0-100
+  expectedCloseDate     DateTime
+  source                String                // Network Referral, LinkedIn, Apollo.io, Cold Outreach
+  
+  // Tracking
+  lastActivity          DateTime?
+  notes                 String?
+  
+  // User Association
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([userId])
+  @@index([stage])
+  @@index([source])
+}
+
+// Business Activity Tracking
+model BusinessActivity {
+  id                    String                @id @default(cuid())
+  
+  type                  String                // email_sent, linkedin_connection, call_scheduled, proposal_sent
+  description           String
+  
+  // Associated Records
+  leadId                String?               // Reference to EnrichedLead
+  prospectId            String?               // Reference to LinkedInProspect
+  dealId                String?               // Reference to Deal
+  
+  // Metadata
+  metadata              Json?
+  
+  // User Association
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  
+  @@index([userId])
+  @@index([type])
+  @@index([leadId])
+  @@index([prospectId])
+}
+
+// ================================
+// GENERAL AUTOMATION MODELS
+// ================================
+
+// General Automation Sequences (for multi-channel campaigns)
+model AutomationSequence {
+  id                    String                @id @default(cuid())
+  
+  name                  String
+  description           String?
+  type                  String                // EMAIL, LINKEDIN, MIXED
+  trigger               AutomationTrigger
+  status                AutomationStatus      @default(DRAFT)
+  
+  // Targeting
+  targetAudience        Json?                 // Industries, job titles, company sizes, etc.
+  
+  // Timing
+  activatedAt           DateTime?
+  pausedAt              DateTime?
+  
+  // Relations
+  steps                 AutomationStep[]
+  recipients            AutomationRecipient[]
+  
+  // User Association
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([userId])
+  @@index([status])
+  @@index([type])
+}
+
+// Automation Steps
+model AutomationStep {
+  id                    String                @id @default(cuid())
+  
+  sequenceId            String
+  sequence              AutomationSequence    @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+  
+  stepNumber            Int
+  type                  AutomationStepType
+  name                  String
+  
+  // Timing
+  delayDays             Int                   @default(0)
+  delayHours            Int                   @default(0)
+  
+  // Content
+  templateId            String?               // Reference to EmailTemplate
+  customContent         String?
+  
+  // Conditions
+  conditions            Json?                 // Array of condition objects
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([sequenceId])
+  @@index([stepNumber])
+}
+
+// Automation Recipients
+model AutomationRecipient {
+  id                    String                @id @default(cuid())
+  
+  sequenceId            String
+  sequence              AutomationSequence    @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+  
+  // Recipient Info
+  leadId                String?               // Reference to EnrichedLead
+  prospectId            String?               // Reference to LinkedInProspect
+  email                 String
+  firstName             String?
+  lastName              String?
+  company               String?
+  jobTitle              String?
+  
+  // Custom Fields
+  customFields          Json?
+  
+  // Progress Tracking
+  currentStep           Int                   @default(1)
+  status                String                @default("ACTIVE") // ACTIVE, PAUSED, COMPLETED, UNSUBSCRIBED, BOUNCED
+  
+  // Timing
+  startedAt             DateTime              @default(now())
+  completedAt           DateTime?
+  lastActivityAt        DateTime              @default(now())
+  
+  // Metadata
+  metadata              Json?
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([sequenceId])
+  @@index([email])
+  @@index([status])
+  @@index([currentStep])
+}
+
+// Email Marketing Models
+model EmailCampaign {
+  id                    String                @id @default(cuid())
+  name                  String
+  type                  String                // newsletter, promotional, transactional, automation
+  subject               String
+  content               String                @db.Text
+  status                String                @default("draft") // draft, scheduled, active, paused, completed
+
+  // Scheduling
+  scheduledDate         DateTime?
+  sentAt                DateTime?
+
+  // Metadata
+  metadata              Json?
+
+  // Relations
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recipients            CampaignRecipient[]
+  opens                 CampaignOpen[]
+  clicks                CampaignClick[]
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([type])
+}
+
+
+model EmailSubscriber {
+  id                    String                @id @default(cuid())
+  email                 String
+  firstName             String?
+  lastName              String?
+  status                String                @default("active") // active, unsubscribed, bounced
+
+  // Subscription details
+  subscribedAt          DateTime              @default(now())
+  unsubscribedAt        DateTime?
+  lastActivity          DateTime?
+
+  // Custom fields
+  customFields          Json?
+
+  // Relations
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lists                 SubscriberList[]
+  campaignRecipients    CampaignRecipient[]
+  opens                 CampaignOpen[]
+  clicks                CampaignClick[]
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@unique([email, userId])
+  @@index([userId])
+  @@index([status])
+}
+
+model SubscriberList {
+  id                    String                @id @default(cuid())
+  name                  String
+  description           String?
+
+  // Relations
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subscribers           EmailSubscriber[]
+  campaignRecipients    CampaignRecipient[]
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([userId])
+}
+
+model CampaignRecipient {
+  id                    String                @id @default(cuid())
+
+  // Relations
+  campaignId            String
+  campaign              EmailCampaign         @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  subscriberId          String?
+  subscriber            EmailSubscriber?      @relation(fields: [subscriberId], references: [id], onDelete: Cascade)
+  recipientListId       String?
+  recipientList         SubscriberList?       @relation(fields: [recipientListId], references: [id], onDelete: Cascade)
+
+  // Individual recipient data (for non-subscriber recipients)
+  email                 String?
+  firstName             String?
+  lastName              String?
+
+  // Delivery status
+  status                String                @default("pending") // pending, sent, failed, bounced
+  sentAt                DateTime?
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([campaignId])
+  @@index([subscriberId])
+  @@index([status])
+}
+
+model CampaignOpen {
+  id                    String                @id @default(cuid())
+
+  // Relations
+  campaignId            String
+  campaign              EmailCampaign         @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  subscriberId          String?
+  subscriber            EmailSubscriber?      @relation(fields: [subscriberId], references: [id], onDelete: Cascade)
+
+  // Tracking data
+  email                 String
+  ipAddress             String?
+  userAgent             String?
+  openedAt              DateTime              @default(now())
+
+  @@index([campaignId])
+  @@index([subscriberId])
+  @@index([email])
+}
+
+model CampaignClick {
+  id                    String                @id @default(cuid())
+
+  // Relations
+  campaignId            String
+  campaign              EmailCampaign         @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  subscriberId          String?
+  subscriber            EmailSubscriber?      @relation(fields: [subscriberId], references: [id], onDelete: Cascade)
+
+  // Tracking data
+  email                 String
+  url                   String
+  ipAddress             String?
+  userAgent             String?
+  clickedAt             DateTime              @default(now())
+
+  @@index([campaignId])
+  @@index([subscriberId])
+  @@index([email])
+}
+
+
+// Recruiting Models
+model Candidate {
+  id                    String                @id @default(cuid())
+  name                  String
+  email                 String
+  phone                 String?
+  location              String?
+  currentRole           String?
+  experience            String?
+  education             String?
+  skills                String[]
+  status                String                @default("new") // new, active, interviewing, offered, hired, rejected
+  rating                Int?                  // 1-5 star rating
+  resumeUrl             String?
+  linkedInUrl           String?
+  portfolioUrl          String?
+
+  // Custom fields
+  customFields          Json?
+
+  // Relations
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  applications          JobApplication[]
+  interviews            Interview[]
+  notes                 CandidateNote[]
+  talentPools           TalentPoolCandidate[]
+  clientFeedback        ClientCandidateFeedback[]
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([email])
+}
+
+model JobApplication {
+  id                    String                @id @default(cuid())
+  position              String
+  company               String
+  department            String?
+  status                String                @default("new") // new, screening, interview, offer, hired, rejected, withdrawn
+  stage                 String?               // Current pipeline stage
+  salary                String?
+  location              String?
+  type                  String?               // full-time, part-time, contract
+  score                 Int?                  // Fit score 0-100
+
+  // Important dates
+  appliedDate           DateTime              @default(now())
+  lastActivity          DateTime              @default(now())
+
+  // Relations
+  candidateId           String
+  candidate             Candidate             @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  requisitionId         String?
+  requisition           JobRequisition?       @relation(fields: [requisitionId], references: [id], onDelete: SetNull)
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  interviews            Interview[]
+  notes                 ApplicationNote[]
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([userId])
+  @@index([candidateId])
+  @@index([requisitionId])
+  @@index([status])
+}
+
+model TalentPool {
+  id                    String                @id @default(cuid())
+  name                  String
+  description           String?
+  category              String                // Engineering, Product, Design, Data, etc.
+  tags                  String[]
+  qualityScore          Float?                // Average quality score
+
+  // Relations
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  candidates            TalentPoolCandidate[]
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([userId])
+  @@index([category])
+}
+
+model TalentPoolCandidate {
+  id                    String                @id @default(cuid())
+
+  // Relations
+  talentPoolId          String
+  talentPool            TalentPool            @relation(fields: [talentPoolId], references: [id], onDelete: Cascade)
+  candidateId           String
+  candidate             Candidate             @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+
+  // Pool-specific data
+  addedAt               DateTime              @default(now())
+  isActive              Boolean               @default(true)
+  notes                 String?
+
+  @@unique([talentPoolId, candidateId])
+  @@index([talentPoolId])
+  @@index([candidateId])
+}
+
+model Interview {
+  id                    String                @id @default(cuid())
+  type                  String                // phone, video, onsite, technical
+  status                String                @default("scheduled") // scheduled, completed, cancelled, rescheduled
+  scheduledAt           DateTime
+  duration              Int?                  // minutes
+  interviewer           String?
+  notes                 String?
+  score                 Int?                  // 1-5 rating
+  feedback              String?
+
+  // Relations
+  candidateId           String
+  candidate             Candidate             @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  applicationId         String?
+  application           JobApplication?       @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([candidateId])
+  @@index([applicationId])
+  @@index([userId])
+  @@index([scheduledAt])
+}
+
+model CandidateNote {
+  id                    String                @id @default(cuid())
+  content               String
+  type                  String?               // general, interview, phone_call, email
+
+  // Relations
+  candidateId           String
+  candidate             Candidate             @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([candidateId])
+  @@index([userId])
+}
+
+model ApplicationNote {
+  id                    String                @id @default(cuid())
+  content               String
+  type                  String?               // general, interview, follow_up
+
+  // Relations
+  applicationId         String
+  application           JobApplication        @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([applicationId])
+  @@index([userId])
+}
+
+// Job Requisition Model (Client Job Openings)
+model JobRequisition {
+  id                    String                @id @default(cuid())
+  title                 String
+  description           String
+  department            String?
+  location              String?
+  type                  String                @default("full-time") // full-time, part-time, contract
+  status                String                @default("open") // open, on-hold, filled, cancelled
+  priority              String                @default("medium") // low, medium, high, urgent
+  
+  // Requirements
+  requiredSkills        String[]
+  preferredSkills       String[]
+  experienceLevel       String?               // entry, mid, senior, lead, principal
+  minExperience         Int?                  // years
+  maxExperience         Int?                  // years
+  education             String?
+  certifications        String[]
+  
+  // Compensation
+  salaryMin             Float?
+  salaryMax             Float?
+  currency              String                @default("USD")
+  benefits              String[]
+  
+  // Timeline
+  startDate             DateTime?
+  targetFillDate        DateTime?
+  filledDate            DateTime?
+  
+  // Hiring Details
+  hiringManager         String?
+  numberOfPositions     Int                   @default(1)
+  positionsFilled       Int                   @default(0)
+  
+  // Client Portal Settings
+  isVisibleToClient     Boolean               @default(true)
+  shareToken            String?               @unique  // For client-facing portal access
+  
+  // Relations
+  clientId              String
+  client                Client                @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  applications          JobApplication[]
+  clientFeedback        ClientCandidateFeedback[]
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([clientId])
+  @@index([userId])
+  @@index([status])
+}
+
+// Client Feedback on Candidates
+model ClientCandidateFeedback {
+  id                    String                @id @default(cuid())
+  
+  // Feedback Details
+  rating                Int?                  // 1-5 star rating
+  status                String                @default("pending") // pending, interested, not-interested, interview-requested, rejected
+  comments              String?
+  strengths             String[]
+  concerns              String[]
+  
+  // Decision
+  moveForward           Boolean?              // true = move forward, false = reject, null = pending
+  interviewRequested    Boolean               @default(false)
+  preferredInterviewDates String[]            // Array of date strings
+  
+  // Relations
+  requisitionId         String
+  requisition           JobRequisition        @relation(fields: [requisitionId], references: [id], onDelete: Cascade)
+  candidateId           String
+  candidate             Candidate             @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  clientId              String
+  client                Client                @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@unique([requisitionId, candidateId, clientId])
+  @@index([requisitionId])
+  @@index([candidateId])
+  @@index([clientId])
+  @@index([status])
+}
+
+// Revenue Tracking Models
+model RevenueRecord {
+  id                    String                @id @default(cuid())
+  amount                Float
+  currency              String                @default("USD")
+  type                  RevenueType
+  status                RevenueStatus         @default(PENDING)
+  description           String?
+  category              String?               // consulting, retainer, project, subscription
+  source                String?               // client name or source
+  recurringPeriod       RecurringPeriod?      // for subscription revenue
+  
+  // Date tracking
+  recordedDate          DateTime              @default(now())
+  periodStart           DateTime
+  periodEnd             DateTime
+  
+  // Relations
+  clientId              String?
+  client                Client?               @relation(fields: [clientId], references: [id], onDelete: SetNull)
+  projectId             String?
+  project               Project?              @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([userId])
+  @@index([type])
+  @@index([status])
+  @@index([periodStart])
+  @@index([periodEnd])
+  @@index([clientId])
+  @@index([projectId])
+}
+
+model RevenueForecast {
+  id                    String                @id @default(cuid())
+  amount                Float
+  confidence            Float                 @default(50) // percentage 0-100
+  currency              String                @default("USD")
+  type                  RevenueType
+  description           String?
+  source                String?
+  
+  // Date tracking
+  forecastDate          DateTime              @default(now())
+  expectedDate          DateTime
+  monthYear             String                // YYYY-MM format for grouping
+  
+  // Relations
+  clientId              String?
+  client                Client?               @relation(fields: [clientId], references: [id], onDelete: SetNull)
+  projectId             String?
+  project               Project?              @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  userId                String
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+  
+  @@index([userId])
+  @@index([expectedDate])
+  @@index([monthYear])
+  @@index([clientId])
+  @@index([projectId])
+}
+
+enum RevenueType {
+  CONSULTING
+  RETAINER
+  PROJECT
+  SUBSCRIPTION
+  COMMISSION
+  BONUS
+  OTHER
+}
+
+enum RevenueStatus {
+  PENDING
+  RECEIVED
+  OVERDUE
+  CANCELLED
+}
+
+enum RecurringPeriod {
+  WEEKLY
+  MONTHLY
+  QUARTERLY
+  YEARLY
+}

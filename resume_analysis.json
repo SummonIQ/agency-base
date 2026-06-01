@@ -1,0 +1,100 @@
+{
+  "breakdown": {
+    "achievements": {
+      "feedback": [
+        "Strong use of action-oriented language and measurable achievements throughout the work experience."
+      ],
+      "good_examples": [
+        "Reduced deployment times by as much as 80% through pipeline optimization.",
+        "Improved the performance of the API by up to 80%."
+      ],
+      "needs_improvement": [
+        "More quantifiable metrics could be included in some roles."
+      ],
+      "score": 85
+    },
+    "formatting": {
+      "feedback": [
+        "The resume is well-structured with clear headings and bullet points."
+      ],
+      "incompatible_elements": [],
+      "score": 90
+    },
+    "grammar": {
+      "issues_found": 0,
+      "issues": [],
+      "score": 100
+    },
+    "keywords": {
+      "feedback": [
+        "The resume includes a good range of industry-standard technical terms."
+      ],
+      "missing": [],
+      "overused": [],
+      "score": 85,
+      "suggested": [
+        "Consider adding more specific keywords related to the job title being applied for."
+      ]
+    },
+    "readability": {
+      "feedback": [
+        "The information is presented in a clear and logical manner."
+      ],
+      "score": 90
+    },
+    "sections": {
+      "details": [
+        {
+          "feedback": [
+            "All essential sections are present and well-organized."
+          ],
+          "issues": [],
+          "name": "Contact Information",
+          "missing": [],
+          "score": 100
+        },
+        {
+          "feedback": ["Skills section is comprehensive and relevant."],
+          "issues": [],
+          "name": "Skills and Proficiencies",
+          "missing": [],
+          "score": 100
+        },
+        {
+          "feedback": [
+            "Work experience is detailed and showcases relevant achievements."
+          ],
+          "issues": [],
+          "name": "Work Experience",
+          "missing": [],
+          "score": 100
+        },
+        {
+          "feedback": [
+            "Training and certifications are relevant and well-presented."
+          ],
+          "issues": [],
+          "name": "Training and Certifications",
+          "missing": [],
+          "score": 100
+        }
+      ],
+      "score": 100
+    },
+    "spelling": {
+      "issues_found": 0,
+      "issues": [],
+      "score": 100
+    },
+    "strengths": [
+      "Strong action verbs used throughout the resume.",
+      "Good quantifiable achievements that demonstrate impact.",
+      "Clear contact information and well-defined sections."
+    ],
+    "weaknesses": [
+      "Could benefit from more specific keywords related to the job title."
+    ]
+  },
+  "score": 88,
+  "summary": "The resume is well-structured and contains a wealth of relevant information, showcasing a strong background in software engineering. It excels in the use of action-oriented language and measurable achievements, which are crucial for ATS optimization. However, there is room for improvement in the inclusion of specific keywords related to the job title being applied for, which could enhance the ATS score further."
+}

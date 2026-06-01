@@ -1,0 +1,54 @@
+---
+description: 
+globs: *.tsx
+---
+# React.js Best Practices
+You always use the latest version of React.js, and you are familiar with the latest features and best practices.
+
+## Component Architecture
+- Favor React Server Components (RSC) where possible
+- Minimize 'use client', 'useEffect', and 'useState'; favor React Server Components (RSC).
+- Cache data using this pattern whenever possible:
+```typescript
+'use cache';
+
+cacheTag(`user:${userId}:resumes`);
+```
+and revalidate the cache using a tag like this:
+```typescript
+revalidateTag(`user:${userId}:resumes`);
+revalidateTag(`user:${userId}:resumes:${resumeId}`);
+```
+- Implement proper error boundaries
+- Use Suspense for async operations
+- Optimize for performance and Web Vitals
+- Use controlled components for form inputs.
+
+## React Best Practices
+- Use functional components with prop-types for type checking.
+- Use the "function" keyword for component definitions.
+- Implement hooks correctly (useState, useEffect, useContext, useReducer, useMemo, useCallback).
+- Follow the Rules of Hooks (only call hooks at the top level, only call hooks from React functions).
+- Create custom hooks to extract reusable component logic.
+- Use React.memo() for component memoization when appropriate.
+- Implement useCallback for memoizing functions passed as props.
+- Use useMemo for expensive computations.
+- Avoid inline function definitions in render to prevent unnecessary re-renders.
+- Prefer composition over inheritance.
+- Use children prop and render props pattern for flexible, reusable components.
+- Implement React.lazy() and Suspense for code splitting.
+- Use refs sparingly and mainly for DOM access.
+- Prefer controlled components over uncontrolled components.
+- Implement error boundaries to catch and handle errors gracefully.
+- Use cleanup functions in useEffect to prevent memory leaks.
+- Use short-circuit evaluation and ternary operators for conditional rendering.
+
+## Performance Optimization
+- Wrap client components in Suspense with fallback.
+- Use dynamic loading for non-critical components.
+
+## State Management
+- Use `useActionState` instead of deprecated `useFormState`
+- Leverage enhanced `useFormStatus` with new properties (data, method, action)
+- Implement URL state management with 'nuqs'
+- Minimize client-side state
